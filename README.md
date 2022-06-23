@@ -4,6 +4,8 @@ This will be the storybook with HTML, CSS components for HENK.
 ## Published with and on chromatic
 ```
 npx chromatic --project-token=20a12445c189
+
+d65f4025a0d9
 ```
 
 ## View
