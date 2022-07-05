@@ -1,0 +1,54 @@
+/*
+tokens naming
+category-type-item-subitem-state
+
+color-background-button-primary-base
+color-background-button-primary-active
+color-background-button-primary-disabled
+
+categories: color, size, time, asset, content,
+*/
+
+/* css custom props (variables) */
+:root,
+::before,
+::after {
+  /*--color-background-button-base-base: var(--var-global-color-White);*/
+  /*--color-background-button-primary-base: var(--var-global-color-HENK-Black);*/
+  /*--color-background-button-primary-active: var(--var-global-color-accent1);*/
+  /*--color-background-button-primary-disabled: var(--var-global-color-HENK-Danger);*/
+  /*--color-background-button: var(--color-background-button-base-base);*/
+  /*--var-global-button-bgc-hover: var(--var-global-color-transparent);*/
+  /*--var-global-button-text-color: var(--var-global-color-Black);*/
+  /*--color-text-button: var(--var-global-color-HENK-Black);*/
+  /*--var-global-button-text-color-hover: var(--var-global-color-Black);*/
+  /*--var-global-button-border-color: var(--var-global-color-Black);*/
+  /*--var-global-button-border-color-hover: var(--var-global-color-Black);*/
+  /*--bg-default: var(--var-global-color-White);*/
+  /*--fg-default: var(--var-global-color-HENK-Black);*/
+  /*--org-footer-bg-color: var(--var-global-color-accent14);*/
+
+
+
+  /*buttons*/
+  --var-global-button-fontsize: 12;
+  --var-global-button-lineheight: 21;
+  --var-global-button-letterspacing: 0.2em;
+  --var-global-button-padding: 6px 28px;
+  --mobile-fontsize-button: 12;
+  --desktop-fontsize-button: 14;
+  /* new token naming */
+  /**
+  * @tokens Fontsize
+  * @presenter FontSize
+  */
+  --size-font-button: 12;
+  --size-lineheight-button: 21;
+  /* end fontsize */
+
+  /* css-vars */
+  --var-lineheight: 28;
+  --var-global-lineheight: 28;
+  --var-letterspacing: 1.2;
+  --var-letterspacing-ems: calc(var(--var-letterspacing) / var(--var-global-fontsize-root) * 1em);
+}

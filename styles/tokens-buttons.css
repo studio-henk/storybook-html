@@ -1,0 +1,47 @@
+:root,
+::before,
+::after {
+  /* buttons */
+  /* base button*/
+  --color-background-button-base-base: var(--color-White, #fff);
+  --color-background-button-base-hover: hsla(0deg 0% 100% / 85%);
+  --color-text-button-base-base: var(--color-HENK-Black, #000);
+  --color-border-button-base-base: var(--color-HENK-Black, #000);
+  --borderradius-button-base-base: 50px;
+  --letterspacing-font-button-base-base: 0.2;
+
+  /* primary */
+  --color-background-button-primary-base: hsla(0deg 0% 12% / 100%);
+  --color-background-button-primary-hover: hsla(0deg 0% 12% / 85%);
+  --color-text-button-primary-base: var(--color-HENK-White, #fff);
+  --color-border-button-primary-base: var(--color-HENK-Black, #000);
+
+  /* secondary */
+  --color-background-button-secondary-base: var(--color-White, #fff);
+  --color-background-button-secondary-hover: hsla(0deg 0% 100% / 85%);
+  --color-text-button-secondary-base: var(--color-HENK-Black, #000);
+  --color-border-button-secondary-base: var(--color-HENK-Black, #000);
+
+  /* tertiary */
+  --color-background-button-tertiary-base: transparent;
+  --color-background-button-tertiary-hover: transparent;
+  --color-text-button-tertiary-base: var(--color-HENK-Black, #000);
+  --color-border-button-tertiary-base: var(--color-HENK-Black, #000);
+
+  /* tertiary-inverted */
+  --color-border-button-tertiary-inverted: var(--color-HENK-White, #fff);
+
+  /* quaternary */
+  --color-background-button-quaternary-base: var(--color-accent14, beige);
+  --color-background-button-quaternary-hover: hsla(40deg 13% 77% / 85%);
+  --color-text-button-quaternary-base: var(--color-HENK-Black, #000);
+  --color-border-button-quaternary-base: transparent;
+
+  /* global */
+  --color-background-button: var(--color-background-button-base-base, #fff);
+  --color-background-button-hover: var(--color-background-button-base-hover, aqua);
+  --color-text-button: var(--color-text-button-base-base, #000);
+  --color-border-button: var(--color-border-button-base-base, #000);
+  --borderradius-button: var(--borderradius-button-base-base, 50px);
+  --letterspacing-font-button: var(--letterspacing-font-button-base-base, 0.2);
+}

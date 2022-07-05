@@ -6,7 +6,12 @@ module.exports = {
   "addons": [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
-    "@storybook/addon-interactions"
+    "@storybook/addon-interactions",
+    '@storybook/addon-a11y',
+    'storybook-design-token',
+    'storybook-dark-mode',
+    'storybook-addon-designs',
+    'storybook-jira-addon'
   ],
   "framework": "@storybook/html"
 }

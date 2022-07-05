@@ -6,7 +6,16 @@ export default {
   parameters: {
     // More on Story layout: https://storybook.js.org/docs/html/configure/story-layout
     layout: 'fullscreen',
-  },
+    backgrounds: {
+      grid: {
+        cellSize: 28,
+        opacity: 0.25,
+        cellAmount: 1,
+        offsetX: 28, // default is 0 if story has 'fullscreen' layout, 16 if layout is 'padded'
+        offsetY: 28, // default is 0 if story has 'fullscreen' layout, 16 if layout is 'padded'
+      },
+    },
+  }
 };
 
 const Template = () => createPage();

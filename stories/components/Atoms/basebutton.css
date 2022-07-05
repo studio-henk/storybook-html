@@ -1,0 +1,85 @@
+.sh-atom-button {
+  --size-padding-button: 6px 14px;
+
+  box-sizing: border-box;
+  display: inline-block;
+  /*display: inline-flex;*/
+  background-color: var(--color-background-button, #fff);
+  color: var(--color-text-button, #000);
+  border: 1px solid var(--color-border-button, #000);
+  border-radius: var(--borderradius-button, 50px);
+  /* make sure to override font-family browser form button styles*/
+  font-family: ff-scala-sans-pro, sans-serif;
+  font-size: calc(var(--size-font-button) / var(--fontsize-font-root) * 1rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: calc(var(--letterspacing-font-button, 0.1) * 1em);
+  line-height: calc(var(--size-lineheight-button, 21) / var(--size-font-button, 12));
+  white-space: nowrap;
+  padding: var(--size-padding-button, 6px 28px);
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s ease;
+}
+
+.sh-atom-button[data-variant="primary"] {
+  --color-background-button: var(--color-background-button-primary-base, #000);
+  --color-text-button: var(--color-text-button-primary-base, #fff);
+  --color-background-button-hover: var(--color-background-button-primary-hover, hsl(0deg 0% 12% / 85%));
+}
+
+.sh-atom-button[data-variant="secondary"] {
+  --color-background-button: var(--color-background-button-secondary-base, #fff);
+  --color-text-button: var(--color-HENK-Black, #000);
+  --color-background-button-hover: var(--color-background-button-secondary-hover, hsla(0deg 0% 100% / 85%));
+}
+
+.sh-atom-button[data-variant="tertiary"],
+.sh-atom-button[data-variant="tertiary-inverted"] {
+  --color-background-button: transparent;
+  --color-text-button: var(--color-text-button-tertiary-base, #fff);
+  --color-background-button-hover: var(--color-background-button-tertiary-hover, transparent);
+}
+
+.sh-atom-button[data-variant="tertiary-inverted"] {
+  --color-text-button: var(--color-HENK-White, #fff);
+  --color-border-button: var(--color-border-button-tertiary-inverted, red);
+}
+
+.sh-atom-button[data-variant="quaternary"] {
+  --color-background-button: var(--color-background-button-quaternary-base, #000);
+  --color-text-button: var(--color-text-button-quaternary-base, #fff);
+  --color-background-button-hover: var(--color-background-button-quaternary-hover, hsl(0deg 0% 12% / 85%));
+  --color-border-button: var(--color-border-button-quaternary-base, transparent);
+}
+
+.sh-atom-button[disabled] {
+  opacity: .5;
+}
+
+.sh-atom-button[disabled]:hover {
+  cursor: not-allowed;
+}
+
+.sh-atom-button[data-size="small"] {
+  padding: 6px 16px;
+  font-size: 12px;
+  line-height: 21px;
+}
+
+/* hovers */
+.sh-atom-button:focus,
+.sh-atom-button:hover {
+  text-decoration: none;
+  cursor: pointer;
+  background-color: var(--color-background-button-hover, #f00);
+}
+
+/* media queries */
+@media only screen and (min-width: 768px) {
+  .sh-atom-button {
+    --size-font-button: 14;
+    --size-lineheight-button: 28;
+    --size-padding-button: 7px 28px;
+  }
+}

@@ -1,0 +1,14 @@
+:root,
+::before,
+::after {
+  /* global */
+  /*color palette */
+  --color-Black: hsla(0deg 0% 0% / 100%);
+  --color-HENK-Black: hsla(0deg 0% 12% / 100%);
+  --color-White: hsla(0deg 0% 100% / 100%);
+  --color-HENK-White: hsla(90deg 12% 97% / 100%);
+  --color-accent5: hsla(41deg 31% 88% / 100%);
+  --color-accent14: hsla(40deg 13% 77% / 100%);
+
+
+}
