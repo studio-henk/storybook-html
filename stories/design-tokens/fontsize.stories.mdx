@@ -1,3 +1,5 @@
+import '../../styles/tokens-fontsize-px.css';
+
 import { Meta } from '@storybook/addon-docs';
 import { DesignTokenDocBlock } from 'storybook-design-token/dist/doc-blocks';
 
@@ -6,3 +8,19 @@ import { DesignTokenDocBlock } from 'storybook-design-token/dist/doc-blocks';
 # Fontsize
 
 <DesignTokenDocBlock categoryName="Fontsize" maxHeight={600} viewType="table" />
+
+## Food for Thought
+
+From [The Dilemma of Naming Fontsize variables](https://css-tricks.com/the-dilemma-of-naming-font-size-variables/)
+> What we need is a scale syntax that allows room for changes. Adding a new size to the scale should be easy without introducing breaking changes. I’m thinking of a kind of scale that is both **flexible** and **infinite**. It must be more sophisticated than $small, $medium and $large.
+
+> It should be also be descriptive and intuitive. Preferably, you shouldn’t have to look up the variable names in the settings file or the config, or wherever you store these things. I don’t have the slightest clue if $epsilon comes before or after $sigma. Do you?
+
+Another way would be to borrow from the way font-weight is set with numbers like 400 for **regular**. Taking this idea and applying it to font sizes would then look like:
+
+```css
+--size-font-100: 12px;
+--size-font-400: 16px;
+--size-font-500: 20px;
+--size-font-600: 21px;
+```

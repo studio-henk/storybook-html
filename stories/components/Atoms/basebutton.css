@@ -10,7 +10,7 @@
   border-radius: var(--borderradius-button, 50px);
   /* make sure to override font-family browser form button styles*/
   font-family: ff-scala-sans-pro, sans-serif;
-  font-size: calc(var(--size-font-button) / var(--fontsize-font-root) * 1rem);
+  font-size: calc(var(--size-font-button) / var(--size-font-root) * 1rem);
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: calc(var(--letterspacing-font-button, 0.1) * 1em);

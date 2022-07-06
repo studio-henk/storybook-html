@@ -22,3 +22,11 @@ Default.args = {
   placeholder: '',
 };
 Default.storyName = 'Default';
+
+// with placeholder
+export const Placeholder = Template.bind({});
+// More on args: https://storybook.js.org/docs/html/writing-stories/args
+Placeholder.args = {
+  placeholder: 'Enter text',
+};
+Placeholder.storyName = 'With placeholder text';

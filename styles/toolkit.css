@@ -1,6 +1,6 @@
 @import url(css-vars.css);
-@import url(tokens-colors-old.css);
 @import url(tokens-colors.css);
+@import url(tokens-colors-old.css);
 @import "tokens-buttons.css";
 @import url(tokens-fontsize.css);
 

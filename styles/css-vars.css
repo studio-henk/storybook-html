@@ -27,7 +27,8 @@ categories: color, size, time, asset, content,
   /*--bg-default: var(--var-global-color-White);*/
   /*--fg-default: var(--var-global-color-HENK-Black);*/
   /*--org-footer-bg-color: var(--var-global-color-accent14);*/
-
+/* @todo: remove when not needed */
+  --var-global-fontsize-root: var(--size-font-root, 16);
 
 
   /*buttons*/
@@ -37,12 +38,8 @@ categories: color, size, time, asset, content,
   --var-global-button-padding: 6px 28px;
   --mobile-fontsize-button: 12;
   --desktop-fontsize-button: 14;
-  /* new token naming */
-  /**
-  * @tokens Fontsize
-  * @presenter FontSize
-  */
-  --size-font-button: 12;
+
+  --size-font-button: 12px;
   --size-lineheight-button: 21;
   /* end fontsize */
 

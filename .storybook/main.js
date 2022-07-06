@@ -8,10 +8,10 @@ module.exports = {
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
     '@storybook/addon-a11y',
-    'storybook-design-token',
     'storybook-dark-mode',
     'storybook-addon-designs',
-    'storybook-jira-addon'
+    'storybook-jira-addon',
+    'storybook-design-token'
   ],
   "framework": "@storybook/html"
 }
