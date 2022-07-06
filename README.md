@@ -12,6 +12,9 @@ d65f4025a0d9
 ## View
 https://62b447f8021cfa180585b21c-msfeztdato.chromatic.com
 
+## main branch
+https://main--62b447f8021cfa180585b21c.chromatic.com
+
 ## Team Review
 https://www.chromatic.com/builds?appId=62b447f8021cfa180585b21c
 

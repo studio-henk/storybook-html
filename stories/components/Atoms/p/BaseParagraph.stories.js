@@ -26,6 +26,6 @@ Base.parameters = {
     // controls: { exclude: ['variant'] },
     design: {
         type: "figma",
-        url: "https://www.figma.com/file/qWDiZBpGWRBLwJh9qNVB7K/UI-Library?node-id=1350%3A74",
+        url: "https://www.figma.com/file/qWDiZBpGWRBLwJh9qNVB7K/UI-Library?node-id=1350%3A76",
     },
 };
