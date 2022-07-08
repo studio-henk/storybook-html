@@ -35,3 +35,7 @@ LineHeight
 Opacity
 Shadow
 Spacing
+
+## static images
+in package.json command with folder
+"storybook": "start-storybook -s ./public -p 6006",

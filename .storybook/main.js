@@ -14,4 +14,5 @@ module.exports = {
     'storybook-design-token'
   ],
   "framework": "@storybook/html",
+  staticDirs: ['../public'],
 }
