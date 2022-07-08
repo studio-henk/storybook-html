@@ -13,5 +13,5 @@ module.exports = {
     'storybook-jira-addon',
     'storybook-design-token'
   ],
-  "framework": "@storybook/html"
+  "framework": "@storybook/html",
 }

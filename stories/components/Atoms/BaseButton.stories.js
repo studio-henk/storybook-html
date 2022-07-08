@@ -6,10 +6,11 @@ export default {
   title: 'Components/Atoms/BaseButton',
   // More on argTypes: https://storybook.js.org/docs/html/api/argtypes
   argTypes: {
-    // backgroundColor: { control: 'color' },
+    element: {
+      control: { type: 'select' },
+      options: ['button', 'a', 'span'],
+    },
     label: { control: 'text' },
-    // onClick: { action: 'onClick' },
-    // primary: { control: 'boolean' },
     variant: {
         control: { type: 'select' },
         options: ['base', 'primary', 'secondary', 'tertiary', 'tertiary-inverted', 'quaternary']
@@ -111,3 +112,11 @@ Small.args = {
 
 // export const ArrayExclude = Template.bind({})
 Small.parameters = { controls: { exclude: ['variant', 'size'] } };
+
+// link as button
+export const LinkButton = Template.bind({});
+LinkButton.args = {
+    element: 'a',
+    label: 'Link Button',
+    variant: '',
+};

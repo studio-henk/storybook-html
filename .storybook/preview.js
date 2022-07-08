@@ -39,7 +39,7 @@ export const parameters = {
     viewports: INITIAL_VIEWPORTS,
   },
   backgrounds: {
-    default: 'white',
+    default: 'transparent',
     values: [
       {
         name: 'white',
@@ -59,11 +59,11 @@ export const parameters = {
       },
     ],
     grid: {
-        cellSize: 28,
+        cellSize: 4,
         opacity: 0.5,
-        cellAmount: 1,
-        offsetX: 28, // default is 0 if story has 'fullscreen' layout, 16 if layout is 'padded'
-        offsetY: 28, // default is 0 if story has 'fullscreen' layout, 16 if layout is 'padded'
+        cellAmount: 7,
+        offsetX: 0, // default is 0 if story has 'fullscreen' layout, 16 if layout is 'padded'
+        offsetY: 7, // default is 0 if story has 'fullscreen' layout, 16 if layout is 'padded'
     },
   },
 }

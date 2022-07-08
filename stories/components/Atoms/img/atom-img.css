@@ -1,0 +1,20 @@
+img {
+    max-width: 100%;
+    border: none;
+}
+
+.sh-atom-img {
+
+}
+
+.sh-atom-img[data-variant="rounded"] {
+  border-radius: 8px;
+}
+
+.sh-atom-img[data-variant="avatar"] {
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  object-position: top;
+}

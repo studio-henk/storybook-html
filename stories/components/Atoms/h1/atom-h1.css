@@ -1,0 +1,18 @@
+/* mobile */
+/*font-size: 35px;*/
+/*line-height: 45px;*/
+/*letter-spacing: 1.5px;*/
+
+/* desktop */
+/*font-size: 53px;*/
+/*line-height: 70px;*/
+/*text-align: center;*/
+/*letter-spacing: 0.04em;*/
+
+h1 {
+  /*font-size: calc(var(--size-font-xxxxxlarge) / var(--size-font-root) * 1rem);*/
+  font-size: clamp(35px, 4.55729167vw, 53px);
+  line-height: 70px;
+  text-align: left;
+  letter-spacing: 0.04em;
+}

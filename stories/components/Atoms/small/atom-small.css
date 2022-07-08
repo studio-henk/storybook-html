@@ -1,2 +1,3 @@
-p {
+small {
+  font-size: calc(var(--size-font-xxsmall) / var(--size-font-root) * 1rem);
 }
