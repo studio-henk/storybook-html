@@ -1,0 +1,5 @@
+.fs-capitalised {
+  font-size: clamp(var(--size-font-xxsmall-px), calc(var(--size-font-small) / 768 *100vw), var(--size-font-small-px));
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}

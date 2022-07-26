@@ -1,0 +1,16 @@
+.sh-molecule-section-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.sh-molecule-section-header[data-order="reverse"] {
+  flex-direction: column-reverse;
+}
+
+@media only screen and (min-width: 768px) {
+
+  .sh-molecule-section-header {
+    align-items: center;
+    text-align: center;
+  }
+}

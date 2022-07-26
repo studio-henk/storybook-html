@@ -1,7 +1,7 @@
 // import './basebutton.css';
 
 export const createBaseLabel = ({
-  label,
+  label = 'default label text'
 }) => {
   const baselabel = document.createElement('label');
   baselabel.innerText = label;

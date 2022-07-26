@@ -1,4 +1,6 @@
 import {createBaseH1} from "../components/Atoms/h1/BaseH1";
+import {createBaseButton} from "../components/Atoms/BaseButton";
+import {createOrgModal} from "../components/Organisms/OrgModal/OrgModal";
 
 export const createHomePage = ({
   variant = '',
@@ -12,16 +14,23 @@ export const createHomePage = ({
     text: title,
   })
 
-  // const h1 = `<h1>${title}</h1>`;
-  // const section = `<section>
-  //   <h2>Section title</h2>
-  //   <p>A paragraph.</p>
-  //   <p>A second paragraph.</p>
-  // </section>`;
-  // homepage.appendChild(section);
+  function onModalOpen() {
+    // alert('modal open');
+    // add modifier class --status-open, to modal
+    document.querySelector('.sh-org-modal').classList.add('--status-open');
+  }
+
+  const modalOpenButton = createBaseButton( {
+    buttonText: 'open modal',
+    onClick: onModalOpen,
+  })
+
+  const modal1 = createOrgModal({
+  })
+
   homepage.append(h1);
-  //homepage.insertAdjacentHTML('beforeend', h1);
-  //homepage.insertAdjacentHTML('beforeend', section);
+  homepage.append(modalOpenButton);
+  homepage.append(modal1);
 
   return homepage;
 };

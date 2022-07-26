@@ -10,36 +10,54 @@ export default {
       control: { type: 'select' },
       options: ['button', 'a', 'span'],
     },
-    label: { control: 'text' },
+    buttonText: {
+        name: 'buttonText',
+        type: {
+            name: 'string',
+            required: true
+        },
+        description: 'a text label for button',
+        table: {
+          type: { summary: 'string' },
+          defaultValue: { summary: 'button text' },
+        },
+        control: 'text'
+    },
     variant: {
         control: { type: 'select' },
         options: ['base', 'primary', 'secondary', 'tertiary', 'tertiary-inverted', 'quaternary']
     },
     size: {
-      control: { type: 'select' },
+      control: { type: 'radio' },
       options: ['base', 'small'],
+      table: {
+        type: { summary: 'string' },
+        defaultValue: { summary: 'base' },
+      },
     },
+    onClick: { action: 'onClick' },
   },
   decorators: [withDesign],
 };
 
 // More on component templates: https://storybook.js.org/docs/html/writing-stories/introduction#using-args
-const Template = ({ label, ...args }) => {
+const Template = ({ buttonText, ...args }) => {
   // You can either use a function to create DOM elements or use a plain html string!
   // return `<div>${label}</div>`;
-  return createBaseButton({ label, ...args });
+  return createBaseButton({ buttonText, ...args });
 };
 
 export const Base = Template.bind({});
 // More on args: https://storybook.js.org/docs/html/writing-stories/args
 Base.args = {
-  label: 'Base Button',
+    element: 'button',
+    buttonText: 'Base Button',
 };
 
 export const Primary = Template.bind({});
 // More on args: https://storybook.js.org/docs/html/writing-stories/args
 Primary.args = {
-  label: 'Primary Button',
+  buttonText: 'Primary Button',
   variant: 'primary',
 };
 
@@ -53,7 +71,7 @@ Primary.parameters = {
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-  label: 'Secondary Button',
+  buttonText: 'Secondary Button',
   variant: 'secondary',
 };
 Secondary.parameters = { controls: { exclude: ['variant'] } };
@@ -61,7 +79,7 @@ Secondary.parameters = { controls: { exclude: ['variant'] } };
 // tertiary button
 export const Tertiary = Template.bind({});
 Tertiary.args = {
-  label: 'Tertiary Button',
+  buttonText: 'Tertiary Button',
   variant: 'tertiary',
 };
 
@@ -73,7 +91,7 @@ Tertiary.parameters = {
 // tertiary button inverted
 export const TertiaryInverted = Template.bind({});
 TertiaryInverted.args = {
-  label: 'Tertiary Inverted Button',
+  buttonText: 'Tertiary Inverted Button',
   variant: 'tertiary-inverted',
 };
 
@@ -85,7 +103,7 @@ TertiaryInverted.parameters = {
 // quarternary button
 export const Quaternary = Template.bind({});
 Quaternary.args = {
-  label: 'Quaternary Button',
+  buttonText: 'Quaternary Button',
   variant: 'quaternary',
 };
 
@@ -97,7 +115,7 @@ Quaternary.parameters = {
 export const Disabled = Template.bind({});
 Disabled.args = {
   disabled: true,
-  label: 'Disabled Button',
+  buttonText: 'Disabled Button',
   variant: 'disabled',
 };
 
@@ -105,7 +123,7 @@ Disabled.parameters = { controls: { exclude: ['variant', 'size'] } };
 
 export const Small = Template.bind({});
 Small.args = {
-  label: 'Small Button',
+  buttonText: 'Small Button',
   variant: '',
   size: 'small',
 };
@@ -117,6 +135,6 @@ Small.parameters = { controls: { exclude: ['variant', 'size'] } };
 export const LinkButton = Template.bind({});
 LinkButton.args = {
     element: 'a',
-    label: 'Link Button',
+    buttonText: 'Link Button',
     variant: '',
 };

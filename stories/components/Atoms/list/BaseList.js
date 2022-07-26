@@ -26,13 +26,6 @@ export const createBaseList = ({
     }
   );
 
-  // if (variant === 'logo') {
-  //     baseList.src = HenkLogo.args.src;
-  // } else if (variant === 'avatar') {
-  //   baseList.src = Avatar.args.src;
-  // } else {
-  //   baseList.src = src;
-  // }
   baseList.className = 'sh-atom-list';
 
   if (variant) {

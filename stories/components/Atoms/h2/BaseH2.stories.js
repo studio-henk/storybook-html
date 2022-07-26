@@ -1,9 +1,9 @@
 import { withDesign } from "storybook-addon-designs";
-// import './atom-h1.css';
-import { createBaseH1 } from './BaseH1';
+// import './atom-h2.css';
+import { createBaseH2 } from './BaseH2';
 
 export default {
-  title: 'Components/Atoms/H1',
+  title: 'Components/Atoms/H2',
   argTypes: {
       text: {control: 'text'},
   },
@@ -13,13 +13,13 @@ export default {
 const Template = ({ text, ...args }) => {
   // You can either use a function to create DOM elements or use a plain html string!
   // return `<p>${label}</p>`;
-  return createBaseH1({ text, ...args });
+  return createBaseH2({ text, ...args });
 };
 
 export const Base = Template.bind({});
 // More on args: https://storybook.js.org/docs/html/writing-stories/args
 Base.args = {
-  text: 'This is a Heading level 1.',
+  text: 'This is a Heading level 2',
 };
 
 Base.parameters = {
@@ -50,3 +50,9 @@ Base.parameters = {
 //     text1: 'The &lt;p&gt; HTML element represents a paragraph. Paragraphs are usually represented in visual media as blocks of text separated from adjacent blocks by blank lines and/or first-line indentation, but HTML paragraphs can be any structural grouping of related content, such as images or form fields.',
 //     text2: 'Paragraphs are block-level elements, and notably will automatically close if another block-level element is parsed before the closing &lt;/p&gt; tag. See "Tag omission" below.',
 // };
+
+export const Capitalised = Template.bind({});
+Capitalised.args = {
+  text: 'This is a capitalised Heading level 2',
+  CSSclass: 'fs-capitalised'
+};

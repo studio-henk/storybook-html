@@ -1,0 +1,24 @@
+.sh-org-modal {
+  display: none;
+  background: rgba(0,0,0,.25);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99999;
+}
+
+.sh-org-modal.--status-open {
+  display: flex;
+  place-content: center;
+  place-items: center;
+}
+
+.sh-org-modal__modal-container {
+  position: relative;
+  background: aliceblue;
+  width: 90vw;
+  padding: 1rem;
+  border-radius: 8px;
+}

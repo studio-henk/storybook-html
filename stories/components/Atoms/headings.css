@@ -10,11 +10,11 @@ h6 {
 /*font-size: 33px;*/
 /*line-height: 50px;*/
 /*letter-spacing: 0.07em;*/
-h2 {
-  font-size: calc(var(--size-font-xxxlarge) / var(--size-font-root) * 1rem);
-  line-height: 50px;
-  letter-spacing: 0.07em;
-}
+/*h2 {*/
+/*  font-size: calc(var(--size-font-xxxlarge) / var(--size-font-root) * 1rem);*/
+/*  line-height: 50px;*/
+/*  letter-spacing: 0.07em;*/
+/*}*/
 
 h3 {
   /*font-size: 27px;*/

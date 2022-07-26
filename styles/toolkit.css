@@ -4,6 +4,7 @@
 @import "tokens-buttons.css";
 @import url(tokens-fontsize.css);
 @import "_reset.css";
+@import "_font-styles.css";
 @import "_theme-dark.css";
 
 * {

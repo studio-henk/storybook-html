@@ -2,27 +2,25 @@ import './basebutton.css';
 
 export const createBaseButton = ({
      element = 'button',
+     type = 'button',
      variant = '',
      size = '',
      backgroundColor,
-     label,
+     buttonText = 'button text',
      disabled = false,
      onClick,
  }) => {
     const btn = document.createElement(element);
     if (element === 'button') {
-        btn.type = 'button';
+        btn.type = type;
     }
     if (element === 'a') {
         btn.href = '#';
     }
-    btn.innerText = label;
+    btn.innerText = buttonText;
     btn.addEventListener('click', onClick);
-
-    // const mode = primary ? 'sh-atom-button--primary' : '';
-    // btn.className = ['sh-atom-button', `sh-atom-button--${size}`, mode].join(' ');
     btn.className = ['sh-atom-button'].join(' ');
-    btn.style.backgroundColor = backgroundColor;
+    //btn.style.backgroundColor = backgroundColor;
 
     if (size) {
         btn.setAttribute('data-size', size);
