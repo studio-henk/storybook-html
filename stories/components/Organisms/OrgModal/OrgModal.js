@@ -1,5 +1,5 @@
 import './_org-modal.css';
-import { createBaseButton } from '../../Atoms/BaseButton';
+import { createAtomButton } from '../../Atoms/atom-button/atom-button';
 
 export const createOrgModal = ({
     isOpen = false,
@@ -37,9 +37,9 @@ export const createOrgModal = ({
 
   // button
   OrgModalInner.appendChild(
-      createBaseButton({
+      createAtomButton({
         variant: 'primary',
-        buttonText: 'close',
+        buttonText: buttonText,
         onClick: onCloseModal,
       })
   )

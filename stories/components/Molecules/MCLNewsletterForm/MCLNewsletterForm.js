@@ -1,4 +1,4 @@
-import { createBaseButton } from '../../Atoms/BaseButton';
+import { createAtomButton } from '../../Atoms/atom-button/atom-button';
 import { createBaseLabel} from "../../Atoms/BaseLabel";
 import {createBaseInput} from "../../Atoms/BaseInput";
 
@@ -23,7 +23,7 @@ export const createMCLNewsletterForm = ({
   )
   // button
   mclnewsletterform.appendChild(
-      createBaseButton({
+      createAtomButton({
         type: 'submit',
         variant: 'primary',
         buttonText: buttonText,

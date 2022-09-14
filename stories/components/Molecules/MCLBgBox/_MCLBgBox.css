@@ -1,0 +1,8 @@
+.sh-molecule-bg-box {
+  background-color: var(--color-background-component-bgbox, transparent);
+  color: var(--color-text-component-bgbox, #000);
+}
+
+.sh-molecule-bg-box > *:first-child {
+  margin-top: 0;
+}

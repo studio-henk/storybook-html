@@ -21,6 +21,6 @@ const Template = ({ buttonText, ...args }) => {
 export const ModalOpen = Template.bind({});
 // More on args: https://storybook.js.org/docs/html/writing-stories/args
 ModalOpen.args = {
-  //buttonText: 'button text from story base',
+  buttonText: 'Close',
   isOpen: true
 };

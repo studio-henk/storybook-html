@@ -1,0 +1,19 @@
+/*
+configurable via style css variables
+1 unit is 4px
+so calc is unit size * unit num
+*/
+.sh-molecule-padding-box {
+  --size-spacing-units: 0;
+  --size-spacing-units-top: 4;
+  --size-spacing-units-right: 4;
+  --size-spacing-units-left: 4;
+  --size-spacing-units-bottom: 4;
+  /*padding: calc(var(--size-vertical-rhythm) * 1rem) calc(var(--size-horizontal-rhythm) * 1rem);*/
+  /*padding: 28px 16px;*/
+  padding: calc(var(--size-spacing-units-top, 0) * var(--size-spacing-unit-base)) calc(var(--size-spacing-units-right, 0) * var(--size-spacing-unit-base)) calc(var(--size-spacing-units-bottom, 0) * var(--size-spacing-unit-base)) calc(var(--size-spacing-units-left, 0) * var(--size-spacing-unit-base));
+}
+
+.sh-molecule-padding-box > *:first-child {
+  margin-top: 0;
+}

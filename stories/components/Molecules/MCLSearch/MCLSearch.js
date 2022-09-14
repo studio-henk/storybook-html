@@ -1,4 +1,4 @@
-import { createBaseButton } from '../../Atoms/BaseButton';
+import { createAtomButton } from '../../Atoms/atom-button/atom-button';
 import { createBaseLabel} from "../../Atoms/BaseLabel";
 import {createBaseInput} from "../../Atoms/BaseInput";
 
@@ -33,7 +33,7 @@ export const createMCLSearch = ({
       //   variant: 'primary',
       //   label: 'Search',
       // })
-      createBaseButton({
+      createAtomButton({
         variant: 'primary',
         buttonText: buttonText,
       })

@@ -1,8 +1,9 @@
-import { createBaseButton } from '../Atoms/BaseButton';
+import { createAtomButton } from '../Atoms/atom-button/atom-button';
 import { createBaseLabel} from "../Atoms/BaseLabel";
 import {createBaseInput} from "../Atoms/BaseInput";
 
 export const createOrgFooter = ({
+  buttonText = '',
   variant = '',
   size = '',
   backgroundColor,
@@ -26,9 +27,9 @@ export const createOrgFooter = ({
   )
   // button
   orgfooter.appendChild(
-      createBaseButton({
+      createAtomButton({
         variant: 'quaternary',
-        label: 'Sign up',
+        buttonText: buttonText,
         // onClick: onSubmitSearch,
       })
   )

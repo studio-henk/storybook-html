@@ -13,20 +13,6 @@ categories: color, size, time, asset, content,
 :root,
 ::before,
 ::after {
-  /*--color-background-button-base-base: var(--var-global-color-White);*/
-  /*--color-background-button-primary-base: var(--var-global-color-HENK-Black);*/
-  /*--color-background-button-primary-active: var(--var-global-color-accent1);*/
-  /*--color-background-button-primary-disabled: var(--var-global-color-HENK-Danger);*/
-  /*--color-background-button: var(--color-background-button-base-base);*/
-  /*--var-global-button-bgc-hover: var(--var-global-color-transparent);*/
-  /*--var-global-button-text-color: var(--var-global-color-Black);*/
-  /*--color-text-button: var(--var-global-color-HENK-Black);*/
-  /*--var-global-button-text-color-hover: var(--var-global-color-Black);*/
-  /*--var-global-button-border-color: var(--var-global-color-Black);*/
-  /*--var-global-button-border-color-hover: var(--var-global-color-Black);*/
-  /*--bg-default: var(--var-global-color-White);*/
-  /*--fg-default: var(--var-global-color-HENK-Black);*/
-  /*--org-footer-bg-color: var(--var-global-color-accent14);*/
 /* @todo: remove when not needed */
   --var-global-fontsize-root: var(--size-font-root, 16);
 

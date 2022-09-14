@@ -1,0 +1,21 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta title="Components/Atoms/Button/Pimcore" />
+
+# Button Intro
+
+## Use Buttons in Pimcore with Twig
+
+```twig
+{% include '../../Components/atoms/atom-button/_atom-button.twig' with {
+    'buttonType': 'a',
+    'buttonURL' : '/en/somewhere',
+    'buttonText': 'default button',
+    'buttonVariant': '',
+    'buttonState': '',
+    'buttonSize': '',
+    'buttonExpand': false,
+    'iconName': '',
+    'strokeColor': '#1f1f1f'
+} %}
+```

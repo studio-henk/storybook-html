@@ -10,8 +10,9 @@ module.exports = {
     '@storybook/addon-a11y',
     'storybook-dark-mode',
     'storybook-addon-designs',
-    'storybook-jira-addon',
-    'storybook-design-token'
+    //'storybook-jira-addon',
+    'storybook-design-token',
+    '@geometricpanda/storybook-addon-badges'
   ],
   "framework": "@storybook/html",
   staticDirs: ['../public'],

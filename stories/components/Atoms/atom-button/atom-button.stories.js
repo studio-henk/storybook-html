@@ -1,17 +1,12 @@
 import { withDesign } from "storybook-addon-designs";
-import { createBaseButton } from './BaseButton';
-
+import { createAtomButton } from './atom-button';
 // badges
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
 
-// More on default export: https://storybook.js.org/docs/html/writing-stories/introduction#default-export
 export default {
-  title: 'Components/Atoms/BaseButton',
-  parameters: {
-    badges: [BADGE.DEPRECATED, BADGE.OBSOLETE],
-  },
+  title: 'Components/Atoms/Button',
   argTypes: {
-    element: {
+    buttonElement: {
       control: { type: 'select' },
       options: ['button', 'a', 'span'],
     },
@@ -49,24 +44,27 @@ export default {
 const Template = ({ buttonText, ...args }) => {
   // You can either use a function to create DOM elements or use a plain html string!
   // return `<div>${label}</div>`;
-  return createBaseButton({ buttonText, ...args });
+  return createAtomButton({ buttonText, ...args });
 };
 
 export const Base = Template.bind({});
-// More on args: https://storybook.js.org/docs/html/writing-stories/args
 Base.args = {
-    element: 'button',
+    buttonElement: 'button',
     buttonText: 'Base Button',
+};
+// badge
+Base.parameters = {
+  badges: [BADGE.STABLE],
 };
 
 export const Primary = Template.bind({});
-// More on args: https://storybook.js.org/docs/html/writing-stories/args
 Primary.args = {
   buttonText: 'Primary Button',
   variant: 'primary',
 };
 
 Primary.parameters = {
+    badges: [BADGE.NEEDS_REVISION],
     controls: { exclude: ['variant'] },
     design: {
         type: "figma",
@@ -79,7 +77,12 @@ Secondary.args = {
   buttonText: 'Secondary Button',
   variant: 'secondary',
 };
-Secondary.parameters = { controls: { exclude: ['variant'] } };
+Secondary.parameters = {
+    badges: [BADGE.OBSOLETE],
+    controls: {
+        exclude: ['variant']
+    }
+};
 
 // tertiary button
 export const Tertiary = Template.bind({});
@@ -139,7 +142,7 @@ Small.parameters = { controls: { exclude: ['variant', 'size'] } };
 // link as button
 export const LinkButton = Template.bind({});
 LinkButton.args = {
-    element: 'a',
+    buttonElement: 'a',
     buttonText: 'Link Button',
     variant: '',
 };

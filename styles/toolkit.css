@@ -1,8 +1,14 @@
+@import "_config.css";
 @import url(css-vars.css);
+
+/*tokens*/
 @import url(tokens-colors.css);
 @import url(tokens-colors-old.css);
+@import "tokens/_tokens-size.css";
 @import "tokens-buttons.css";
 @import url(tokens-fontsize.css);
+
+/*reset*/
 @import "_reset.css";
 @import "_font-styles.css";
 @import "_theme-dark.css";
