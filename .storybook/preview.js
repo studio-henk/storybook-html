@@ -32,6 +32,7 @@ export const parameters = {
                         'Intro',
                         'Button', [
                             'Intro',
+                            'Base',
                             '*'
                         ]
                     ]

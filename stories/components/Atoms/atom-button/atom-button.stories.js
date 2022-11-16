@@ -23,13 +23,33 @@ export default {
         },
         control: 'text'
     },
-    variant: {
+    style: {
+        control: { type: 'select' },
+        options: ['plain', 'filled']
+    },
+    /*variant: {
         control: { type: 'select' },
         options: ['base', 'primary', 'secondary', 'tertiary', 'tertiary-inverted', 'quaternary']
+    },*/
+    role: {
+      control: { type: 'radio' },
+      options: ['Normal', 'primary', 'cancel', 'destructive'],
+      table: {
+        type: { summary: 'string' },
+        defaultValue: { summary: 'base' },
+      },
+    },
+    state: {
+      control: { type: 'radio' },
+      options: ['None', 'disabled'],
+      table: {
+        type: { summary: 'string' },
+        defaultValue: { summary: 'None' },
+      },
     },
     size: {
       control: { type: 'radio' },
-      options: ['base', 'small'],
+      options: ['base', 'small', 'xsmall'],
       table: {
         type: { summary: 'string' },
         defaultValue: { summary: 'base' },
@@ -60,19 +80,19 @@ Base.parameters = {
 export const Primary = Template.bind({});
 Primary.args = {
   buttonText: 'Primary Button',
-  variant: 'primary',
+  role: 'primary',
 };
 
 Primary.parameters = {
     badges: [BADGE.NEEDS_REVISION],
-    controls: { exclude: ['variant'] },
+    controls: { exclude: ['role'] },
     design: {
         type: "figma",
         url: "https://www.figma.com/file/qWDiZBpGWRBLwJh9qNVB7K/UI-Library?node-id=1320%3A74",
     },
 };
 
-export const Secondary = Template.bind({});
+/*export const Secondary = Template.bind({});
 Secondary.args = {
   buttonText: 'Secondary Button',
   variant: 'secondary',
@@ -82,10 +102,10 @@ Secondary.parameters = {
     controls: {
         exclude: ['variant']
     }
-};
+};*/
 
 // tertiary button
-export const Tertiary = Template.bind({});
+/*export const Tertiary = Template.bind({});
 Tertiary.args = {
   buttonText: 'Tertiary Button',
   variant: 'tertiary',
@@ -94,10 +114,10 @@ Tertiary.args = {
 Tertiary.parameters = {
   backgrounds: { default: 'example-light' },
   controls: { exclude: ['variant'] }
-};
+};*/
 
 // tertiary button inverted
-export const TertiaryInverted = Template.bind({});
+/*export const TertiaryInverted = Template.bind({});
 TertiaryInverted.args = {
   buttonText: 'Tertiary Inverted Button',
   variant: 'tertiary-inverted',
@@ -106,10 +126,10 @@ TertiaryInverted.args = {
 TertiaryInverted.parameters = {
   backgrounds: { default: 'example-dark' },
   controls: { exclude: ['variant'] }
-};
+};*/
 
 // quarternary button
-export const Quaternary = Template.bind({});
+/*export const Quaternary = Template.bind({});
 Quaternary.args = {
   buttonText: 'Quaternary Button',
   variant: 'quaternary',
@@ -118,31 +138,64 @@ Quaternary.args = {
 Quaternary.parameters = {
   // backgrounds: { default: 'example-light' },
   controls: { exclude: ['variant'] }
-};
+};*/
 
-export const Disabled = Template.bind({});
+/*export const Disabled = Template.bind({});
 Disabled.args = {
   disabled: true,
   buttonText: 'Disabled Button',
   variant: 'disabled',
-};
+};*/
 
-Disabled.parameters = { controls: { exclude: ['variant', 'size'] } };
+/*Disabled.parameters = { controls: { exclude: ['variant', 'size'] } };*/
 
-export const Small = Template.bind({});
+/*export const Small = Template.bind({});
 Small.args = {
   buttonText: 'Small Button',
   variant: '',
   size: 'small',
 };
-
-// export const ArrayExclude = Template.bind({})
-Small.parameters = { controls: { exclude: ['variant', 'size'] } };
+Small.parameters = { controls: { exclude: ['variant', 'size'] } };*/
 
 // link as button
+/*
 export const LinkButton = Template.bind({});
 LinkButton.args = {
     buttonElement: 'a',
     buttonText: 'Link Button',
     variant: '',
+};*/
+
+export const Plain = Template.bind({});
+Plain.args = {
+  buttonText: 'Plain Button',
+  style: 'plain',
+  // size: 'small',
 };
+Plain.parameters = { controls: { exclude: ['style', 'size'] } };
+
+export const Filled = Template.bind({});
+Filled.args = {
+  buttonText: 'Filled Button',
+  style: 'filled'
+};
+Filled.parameters = { controls: { exclude: ['style', 'size'] } };
+
+export const PlainIcon = Template.bind({});
+PlainIcon.args = {
+  buttonText: 'Plain Button',
+  style: 'plain',
+  icon: 'arrow-right'
+  // size: 'small',
+};
+PlainIcon.parameters = { controls: { exclude: ['style', 'size'] } };
+
+export const IconFilled = Template.bind({});
+IconFilled.args = {
+  buttonText: 'Icon Button',
+  icon: 'arrow-right',
+  style: 'filled',
+  // size: 'small',
+};
+IconFilled.parameters = { controls: { exclude: ['style', 'size'] } };
+
