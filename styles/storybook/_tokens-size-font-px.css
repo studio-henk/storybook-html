@@ -1,0 +1,23 @@
+/*:root,
+::before,
+::after {*/
+.design-token-container {
+  /**
+  * @tokens Fontsize
+  * @presenter FontSize
+  */
+  --size-font-xxsmall: 12px;
+  --size-font-xsmall: 13px;
+  --size-font-small: 14px;
+  --size-font-root: 16px; /* This is the Base FontSize  @presenter FontSize */
+  --size-font-medium: 20px;
+  --size-font-large: 21px;
+  --size-font-xlarge: 24px;
+  --size-font-xxlarge: 27px;
+  --size-font-xxxlarge: 33px;
+  --size-font-xxxxlarge: 35px;
+  --size-font-xxxxxlarge: 53px;
+  /**
+  * @tokens-end
+  */
+}

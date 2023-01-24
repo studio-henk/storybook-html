@@ -1,0 +1,10 @@
+.design-token-container {
+  /**
+  * @tokens Fonts
+  * @presenter LineHeight
+  */
+  --size-lineheight-root: 28px;
+  /**
+  * @tokens-end
+  */
+}

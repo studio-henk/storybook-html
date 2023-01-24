@@ -2,7 +2,7 @@ import { createMCLSearch } from './MCLSearch';
 
 // More on default export: https://storybook.js.org/docs/html/writing-stories/introduction#default-export
 export default {
-  title: 'Components/Molecules/MCLSearch',
+  title: 'Components/Molecules/MCLSearch_hidden_',
   // More on argTypes: https://storybook.js.org/docs/html/api/argtypes
   argTypes: {
     label: { control: 'text' },

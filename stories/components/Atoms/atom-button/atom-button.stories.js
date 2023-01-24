@@ -1,83 +1,134 @@
-import { withDesign } from "storybook-addon-designs";
-import { createAtomButton } from './atom-button';
+import {withDesign} from "storybook-addon-designs";
+import {createAtomButton} from './atom-button';
 // badges
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
+import {BADGE} from '@geometricpanda/storybook-addon-badges';
+import {Placeholder} from "../BaseInput.stories";
 
 export default {
-  title: 'Components/Atoms/Button',
-  argTypes: {
-    buttonElement: {
-      control: { type: 'select' },
-      options: ['button', 'a', 'span'],
-    },
-    buttonText: {
-        name: 'buttonText',
-        type: {
-            name: 'string',
-            required: true
+    title: 'Components/Atoms/Button/Button Stories',
+    component: createAtomButton,
+    argTypes: {
+        buttonElement: {
+            control: {type: 'radio'},
+            options: ['a', 'button', 'span'],
+            table: {
+                type: {summary: 'html element'},
+                defaultValue: {summary: 'a'},
+            },
         },
-        description: 'a text label for button',
-        table: {
-          type: { summary: 'string' },
-          defaultValue: { summary: 'button text' },
+        buttonText: {
+            name: 'buttonText',
+            type: {
+                name: 'string',
+                required: true
+            },
+            description: 'a text label for button',
+            table: {
+                type: {summary: 'string'},
+                defaultValue: {summary: 'button text'},
+            },
+            control: 'text'
         },
-        control: 'text'
+        style: {
+            control: {type: 'select'},
+            options: ['plain', 'soft']
+        },
+        accent: {
+            control: {type: 'select'},
+            options: [
+                'accent1',
+                'accent2', 'accent3', 'accent4', 'accent5', 'accent6', 'accent7', 'accent8', 'accent9', 'accent10', 'accent11', 'accent12', 'accent13', 'accent14', 'accent15', 'accent16', 'accent17'
+            ],
+            description: 'accent refers to a color from the HENK palette',
+            table: {
+                category: 'Colors',
+            }
+        },
+        textColor: {
+            control: {type: 'select'},
+            options: [
+                'white', 'black', 'henk-black', 'henk-white',
+                'accent1', 'accent2', 'accent3', 'accent4', 'accent5', 'accent6', 'accent7', 'accent8', 'accent9', 'accent10', 'accent11', 'accent12', 'accent13', 'accent14', 'accent15', 'accent16', 'accent17'
+            ],
+            table: {
+                category: 'Colors',
+            }
+        },
+        /*role: {
+          control: { type: 'radio' },
+          options: ['Normal', 'primary', 'cancel', 'destructive'],
+          table: {
+            type: { summary: 'string' },
+            defaultValue: { summary: 'base' },
+          },
+        },*/
+        size: {
+            control: {type: 'radio'},
+            options: ['base', 'small', 'xsmall'],
+            table: {
+                type: {summary: 'string'},
+                defaultValue: {summary: 'base'},
+            },
+        },
+        shape: {
+            control: {type: 'radio'},
+            options: ['none', 'circle', 'rect', 'rounded'],
+            table: {
+                type: {summary: 'shape'},
+                defaultValue: {summary: 'circle'},
+            },
+        },
+        // textTransform: {},
+        state: {
+            control: {type: 'radio'},
+            options: ['None', 'disabled'],
+            table: {
+                type: {summary: 'string'},
+                defaultValue: {summary: 'None'},
+            },
+        },
+        dataState: {
+            control: {type: 'radio'},
+            options: ['None', 'loading'],
+            table: {
+                type: {summary: 'This prop should be set by some javascript function when a ajax call is made.'},
+                defaultValue: {summary: 'loading'},
+            },
+        },
+        icon: {
+            control: {type: 'select'},
+            options: [
+                'icon-arrow-right', 'icon-arrow-left',
+            ],
+        },
+        onClick: {action: 'onClick'},
     },
-    style: {
-        control: { type: 'select' },
-        options: ['plain', 'filled']
-    },
-    /*variant: {
-        control: { type: 'select' },
-        options: ['base', 'primary', 'secondary', 'tertiary', 'tertiary-inverted', 'quaternary']
-    },*/
-    role: {
-      control: { type: 'radio' },
-      options: ['Normal', 'primary', 'cancel', 'destructive'],
-      table: {
-        type: { summary: 'string' },
-        defaultValue: { summary: 'base' },
-      },
-    },
-    state: {
-      control: { type: 'radio' },
-      options: ['None', 'disabled'],
-      table: {
-        type: { summary: 'string' },
-        defaultValue: { summary: 'None' },
-      },
-    },
-    size: {
-      control: { type: 'radio' },
-      options: ['base', 'small', 'xsmall'],
-      table: {
-        type: { summary: 'string' },
-        defaultValue: { summary: 'base' },
-      },
-    },
-    onClick: { action: 'onClick' },
-  },
-  decorators: [withDesign],
+    decorators: [withDesign],
 };
 
 // More on component templates: https://storybook.js.org/docs/html/writing-stories/introduction#using-args
-const Template = ({ buttonText, ...args }) => {
-  // You can either use a function to create DOM elements or use a plain html string!
-  // return `<div>${label}</div>`;
-  return createAtomButton({ buttonText, ...args });
+const Template = ({buttonText, ...args}) => {
+    return createAtomButton({buttonText, ...args});
 };
 
 export const Base = Template.bind({});
 Base.args = {
-    buttonElement: 'button',
     buttonText: 'Base Button',
+    buttonElement: 'a',
 };
 // badge
 Base.parameters = {
-  badges: [BADGE.STABLE],
+    controls: {exclude: ['onClick']},
+    badges: [BADGE.STABLE],
+    design: {
+        type: "figma",
+        url: "https://www.figma.com/file/qWDiZBpGWRBLwJh9qNVB7K/UI-Library?node-id=1934%3A75&t=g6XyYAI8wx3Wy5f3-1",
+    },
 };
 
-export const Primary = Template.bind({});
+// You also have the option to select a specific Frame to embed. From the share modal, check Link to selected frame.
+
+/*export const Primary = Template.bind({});
 Primary.args = {
   buttonText: 'Primary Button',
   role: 'primary',
@@ -90,54 +141,6 @@ Primary.parameters = {
         type: "figma",
         url: "https://www.figma.com/file/qWDiZBpGWRBLwJh9qNVB7K/UI-Library?node-id=1320%3A74",
     },
-};
-
-/*export const Secondary = Template.bind({});
-Secondary.args = {
-  buttonText: 'Secondary Button',
-  variant: 'secondary',
-};
-Secondary.parameters = {
-    badges: [BADGE.OBSOLETE],
-    controls: {
-        exclude: ['variant']
-    }
-};*/
-
-// tertiary button
-/*export const Tertiary = Template.bind({});
-Tertiary.args = {
-  buttonText: 'Tertiary Button',
-  variant: 'tertiary',
-};
-
-Tertiary.parameters = {
-  backgrounds: { default: 'example-light' },
-  controls: { exclude: ['variant'] }
-};*/
-
-// tertiary button inverted
-/*export const TertiaryInverted = Template.bind({});
-TertiaryInverted.args = {
-  buttonText: 'Tertiary Inverted Button',
-  variant: 'tertiary-inverted',
-};
-
-TertiaryInverted.parameters = {
-  backgrounds: { default: 'example-dark' },
-  controls: { exclude: ['variant'] }
-};*/
-
-// quarternary button
-/*export const Quaternary = Template.bind({});
-Quaternary.args = {
-  buttonText: 'Quaternary Button',
-  variant: 'quaternary',
-};
-
-Quaternary.parameters = {
-  // backgrounds: { default: 'example-light' },
-  controls: { exclude: ['variant'] }
 };*/
 
 /*export const Disabled = Template.bind({});
@@ -149,53 +152,143 @@ Disabled.args = {
 
 /*Disabled.parameters = { controls: { exclude: ['variant', 'size'] } };*/
 
-/*export const Small = Template.bind({});
-Small.args = {
-  buttonText: 'Small Button',
-  variant: '',
+export const StylePlain = Template.bind({});
+StylePlain.args = {
+    buttonText: 'Plain Button',
+    style: 'plain',
+};
+StylePlain.argTypes = {
+    style: {
+        control: false,
+        description: 'data-style="plain"',
+    }
+}
+StylePlain.parameters = {
+    controls: {exclude: ['buttonElement', 'buttonText', 'accent', 'size', 'shape', 'state', 'dataState', 'onClick']},
+    badges: [BADGE.STABLE],
+};
+
+export const StyleSoft = Template.bind({});
+StyleSoft.args = {
+    buttonText: 'Soft Button',
+    style: 'soft',
+    accent: 'accent5'
+};
+StyleSoft.argTypes = {
+    style: {
+        control: false,
+        description: 'data-style="soft"',
+    }
+}
+StyleSoft.parameters = {
+    controls: {exclude: ['buttonElement', 'buttonText', 'size', 'shape', 'state', 'dataState', 'onClick']},
+    badges: [BADGE.STABLE],
+};
+
+export const Accent = Template.bind({});
+Accent.args = {
+    buttonText: 'Accent button',
+    accent: 'accent1'
+};
+Accent.parameters = {
+    controls: {exclude: ['buttonElement', 'buttonText', 'style', 'size', 'shape', 'state', 'dataState', 'onClick']},
+    badges: [BADGE.STABLE],
+};
+
+export const TransColored = Template.bind({});
+TransColored.args = {
+    buttonText: 'TransColored button',
+    accent: 'transparent',
+    textColor: 'accent17'
+};
+TransColored.parameters = {
+    controls: {exclude: ['buttonElement', 'buttonText', 'style', 'accent', 'size', 'shape', 'state', 'dataState', 'onClick']},
+    badges: [BADGE.STABLE],
+};
+
+export const Size = Template.bind({});
+Size.args = {
+  buttonText: 'Sized Button',
   size: 'small',
 };
-Small.parameters = { controls: { exclude: ['variant', 'size'] } };*/
-
-// link as button
-/*
-export const LinkButton = Template.bind({});
-LinkButton.args = {
-    buttonElement: 'a',
-    buttonText: 'Link Button',
-    variant: '',
-};*/
-
-export const Plain = Template.bind({});
-Plain.args = {
-  buttonText: 'Plain Button',
-  style: 'plain',
-  // size: 'small',
+Size.parameters = {
+    controls: {exclude: ['buttonElement', 'buttonText', 'style', 'accent', 'textColor', 'shape', 'state', 'dataState', 'onClick']},
+    badges: [BADGE.STABLE],
 };
-Plain.parameters = { controls: { exclude: ['style', 'size'] } };
 
-export const Filled = Template.bind({});
-Filled.args = {
-  buttonText: 'Filled Button',
-  style: 'filled'
+export const Lowercase = Template.bind({});
+Lowercase.args = {
+  buttonText: 'Lowercase Button',
+  textTransform: 'none'
 };
-Filled.parameters = { controls: { exclude: ['style', 'size'] } };
-
-export const PlainIcon = Template.bind({});
-PlainIcon.args = {
-  buttonText: 'Plain Button',
-  style: 'plain',
-  icon: 'arrow-right'
-  // size: 'small',
+Lowercase.argTypes = {
+    textTransform: {
+        control: false,
+        description: 'data-text-transform="none"'
+    }
+}
+Lowercase.parameters = {
+    controls: {exclude: ['buttonElement', 'buttonText', 'style', 'accent', 'textColor', 'size', 'shape', 'state', 'dataState', 'onClick']},
+    badges: [BADGE.STABLE],
 };
-PlainIcon.parameters = { controls: { exclude: ['style', 'size'] } };
 
-export const IconFilled = Template.bind({});
-IconFilled.args = {
+export const Icon = Template.bind({});
+Icon.args = {
   buttonText: 'Icon Button',
-  icon: 'arrow-right',
-  style: 'filled',
-  // size: 'small',
+  icon: 'icon-arrow-right'
 };
-IconFilled.parameters = { controls: { exclude: ['style', 'size'] } };
+Icon.parameters = {
+    controls: {exclude: ['buttonElement', 'buttonText', 'style', 'accent', 'textColor', 'size', 'shape', 'state', 'dataState', 'onClick']},
+    badges: [BADGE.EXPERIMENTAL],
+};
+Icon.storyName = 'Button with icon';
 
+export const Shaped = Template.bind({});
+Shaped.args = {
+  buttonText: '',
+  shape: 'circle',
+  icon: 'icon-arrow-right'
+};
+/*Shaped.argTypes = {
+    textTransform: {
+        control: false,
+        description: 'data-text-transform="none"'
+    }
+}*/
+Shaped.parameters = {
+    controls: {exclude: ['buttonElement', 'buttonText', 'style', 'accent', 'textColor', 'size', 'shape', 'state', 'dataState', 'onClick']},
+    badges: [BADGE.EXPERIMENTAL],
+};
+Shaped.storyName = 'Circle button with icon only';
+
+export const Loading = Template.bind({});
+Loading.args = {
+    accent: 'accent16',
+    style: 'soft',
+    dataState: 'loading',
+    textColor: 'white',
+};
+Loading.argTypes = {
+    buttonText: {
+        control: false
+    }
+}
+Loading.parameters = {
+    controls: {
+        exclude: ['buttonElement', 'buttonText', 'style', 'size', 'shape', 'state', 'icon', 'onClick']
+    },
+    badges: [BADGE.STABLE],
+};
+
+
+export const LoadingTrans = Template.bind({});
+LoadingTrans.args = {
+    buttonText: 'Loading...',
+    accent: 'transparent',
+    dataState: 'loading',
+    textColor: 'accent9'
+};
+LoadingTrans.parameters = {
+    controls: {exclude: ['buttonElement', 'buttonText', 'style', 'accent', 'size', 'shape', 'icon', 'state', 'onClick']},
+    badges: [BADGE.STABLE],
+};

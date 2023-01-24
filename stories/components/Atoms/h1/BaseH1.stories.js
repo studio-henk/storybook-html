@@ -1,9 +1,13 @@
 import { withDesign } from "storybook-addon-designs";
 // import './atom-h1.css';
 import { createBaseH1 } from './BaseH1';
+import {BADGE} from "@geometricpanda/storybook-addon-badges";
 
 export default {
-  title: 'Components/Atoms/H1',
+  title: 'Components/Atoms/Base/H1',
+  parameters: {
+    badges: [BADGE.NEEDS_REVISION],
+  },
   argTypes: {
       text: {control: 'text'},
   },

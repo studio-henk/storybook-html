@@ -1,20 +1,55 @@
-/*variables that control base settings*/
-:root,
-::before,
-::after {
+/* variables that control base settings */
+:root, ::before, ::after {
+    /* colors */
+    /**
+    * @tokens Config/Colors
+    * @presenter Color
+    */
+    --color-background-page-primary-base: var(--color-white, #fff);
+    --color-background-page: var(--color-white, #fff);
+    --color-text-page: var(--color-henk-black, #000);
 
-  /*sizes from design as plugin numbers */
-  --size-font-body: 16;
-  --size-font-lineheight-body: 28;
+    --color-background-button: var(--color-henk-black);
+    --color-background-button-primary-base: var(--color-henk-black-hsl);
+    --color-text-button: var(--color-henk-white);
+    --color-text-button-primary-base: var(--color-henk-white);
+    --color-border-button: var(--color-henk-black);
 
-  /*spacings*/
-  /* current 4px */
-  /* calc is 4/16, divided by font size root */
-  --size-spacing-unit-base: calc(4 / var(--size-font-body) * 1rem);
+    /* nav */
+    /*dropdown .sh-atom-sup highlight "NEW" color*/
+    --color-text-sup-highlight-nav: var(--color-accent8);
 
-  /* calc to get line-height multiplier ie 1.75 */
-  --size-vertical-rhythm: calc(var(--size-font-lineheight-body, 28px) / var(--size-font-body, 16px));
+    /**
+    * @tokens-end
+    */
 
-  /*tmp, move to size tokens? */
-  --size-horizontal-rhythm: 1;
+    /* sizes from design as plugin numbers. in px */
+
+    /**
+    * @tokens Config/Fonts
+    * @presenter FontSize
+    */
+    --size-font-body: var(--size-font-root);
+
+    /**
+    * @tokens Config/Fonts
+    * @presenter LineHeight
+    */
+    --size-font-lineheight-body: var(--size-lineheight-root);
+
+    /**
+    * @tokens Config/Fonts
+    * @presenter LetterSpacing
+    */
+    --size-font-letterspacing-body: var(--size-letterspacing-root);
+
+    /**
+    * @tokens-end
+    */
+}
+
+@media only screen and (min-width: 992px) {
+    /*:root, ::before, ::after {
+        --size-font-letterspacing-body: 1.2;
+    }*/
 }

@@ -2,7 +2,7 @@ import { createBaseInput } from './BaseInput';
 
 // More on default export: https://storybook.js.org/docs/html/writing-stories/introduction#default-export
 export default {
-  title: 'Components/Atoms/BaseInput',
+  title: 'Components/Atoms/_hidden_BaseInput',
   // More on argTypes: https://storybook.js.org/docs/html/api/argtypes
   argTypes: {
     placeholder: { control: 'text' },

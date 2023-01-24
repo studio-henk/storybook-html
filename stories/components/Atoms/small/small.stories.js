@@ -1,7 +1,7 @@
 import './atom-small.css';
 
 export default {
-  title: 'Components/Atoms/Small'
+  title: 'Components/Atoms/Base/Small'
 };
 export const P = () => '<p><small>The &lt;small&gt; HTML element represents side-comments and small print, like copyright and legal text, independent of its styled presentation. By default, it renders text within it one font-size smaller, such as from small to x-small.</small></p>'
 // export const H2 = () => '<h2>Heading 2</h2>'

@@ -1,7 +1,7 @@
 import { createMoleculePaddingBox } from './molecule-padding-box';
 
 export default {
-  title: 'Components/Molecules/padding-box',
+  title: 'Components/Molecules/padding-box_hidden_',
   argTypes: {
     text: { control: 'text' },
     paddingTopUnits : {

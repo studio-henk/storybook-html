@@ -5,11 +5,16 @@
 :root,
 ::before,
 ::after {
+  /*--alpha: 100%;*/
   --color-transparent: transparent;
   --color-black: hsla(0deg 0% 0% / 100%);
+  --color-black-hsl: 0deg 0% 0%;
   --color-henk-black: hsla(0deg 0% 12% / 100%);
+  --color-henk-black-hsl: 0deg 0% 12%;
   --color-white: hsla(0deg 0% 100% / 100%);
+  --color-white-hsl: 0deg 0% 100%;
   --color-henk-white: hsla(90deg 12% 97% / 100%);
+  --color-henk-white-hsl: 90deg 12% 97%;
 
   /* accents */
   --color-accent1: #f3f1ec;
@@ -20,21 +25,25 @@
   --color-accent6: hsla(31deg 36% 69% / 100%);
   --color-accent7: #b5af9b;
   --color-accent8: hsla(26deg 60% 39% / 100%);
+  --color-accent9: orange;
   --color-accent10: #563f24;
+  --color-accent10-hsl: 32deg 41% 24%;
   --color-accent11: #9aabbc;
   --color-accent12: #60563e;
   --color-accent13: #988367;
   --color-accent14: hsla(40deg 13% 77% / 100%);
+  --color-accent14-hsl: 40deg 13% 77%;
   --color-accent15: #f1f0ee;
   --color-accent16: #6b7156;
   --color-accent17: #9E5B28;
   --color-henk-green-victorious: var(--color-accent16);
   --color-henk-danger: hsl(0deg 100% 50% / 100%);
-  --color-henk-danger-darker: hsl(0deg 100% 40% / 100%);
+  --color-henk-danger-dark: hsl(0deg 100% 40% / 100%);
   --color-henk-success: green;
   --color-henk-warning: orange;
   --color-henk-disabled: lightgrey;
 }
+
 /**
 * @tokens-end
 */

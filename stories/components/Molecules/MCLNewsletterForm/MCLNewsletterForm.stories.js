@@ -1,7 +1,7 @@
 import { createMCLNewsletterForm } from './MCLNewsletterForm';
 
 export default {
-  title: 'Components/Molecules/MCLNewsletterForm',
+  title: 'Components/Molecules/MCLNewsletterForm_hidden_',
   argTypes: {
     label: { control: 'text' },
     buttonText: { control: 'text' },

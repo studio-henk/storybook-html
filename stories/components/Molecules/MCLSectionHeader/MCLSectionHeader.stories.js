@@ -1,7 +1,7 @@
 import { createMCLSectionHeader } from './MCLSectionHeader';
 
 export default {
-  title: 'Components/Molecules/MCLSectionHeader',
+  title: 'Components/Molecules/MCLSectionHeader_hidden_',
   argTypes: {
     h1text: { control: 'text' },
     h2text: { control: 'text' },

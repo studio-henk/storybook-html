@@ -1,0 +1,17 @@
+import { Meta } from '@storybook/addon-docs';
+import '/styles/storybook/_tokens-size-font-px.css';
+import '/styles/storybook/_tokens-size-letterspacing-px.css';
+import '/styles/storybook/_tokens-size-lineheight-px.css';
+import { DesignTokenDocBlock } from 'storybook-design-token/dist/doc-blocks';
+import { BADGE } from '@geometricpanda/storybook-addon-badges';
+
+<Meta title="Configuration/Config Fonts" parameters={{ badges: [BADGE.BETA, BADGE.NEEDS_REVISION] }} />
+
+# Config Font settings
+
+- ```"_config.css"``` variables use the values from ```tokens/_tokens-size-font.css```
+- ```"_config.css"``` variables use the values from ```tokens/_tokens-size-spacings.css```
+
+## Fonts
+Connecting page elements CSS custom properties with the HENK tokens for font settings.
+<DesignTokenDocBlock categoryName="Config/Fonts" maxHeight={400} viewType="table" />

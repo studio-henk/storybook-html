@@ -1,0 +1,10 @@
+.design-token-container {
+  /**
+  * @tokens Fonts
+  * @presenter LetterSpacing
+  */
+  --size-letterspacing-root: 0.5px;
+  /**
+  * @tokens-end
+  */
+}

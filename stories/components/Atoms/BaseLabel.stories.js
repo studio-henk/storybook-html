@@ -2,7 +2,7 @@ import { createBaseLabel } from './BaseLabel';
 
 // More on default export: https://storybook.js.org/docs/html/writing-stories/introduction#default-export
 export default {
-  title: 'Components/Atoms/BaseLabel',
+  title: 'Components/Atoms/_hidden_BaseLabel',
   // More on argTypes: https://storybook.js.org/docs/html/api/argtypes
   argTypes: {
     label: { control: 'text' },

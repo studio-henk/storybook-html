@@ -1,0 +1,9 @@
+.sh-atom-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sh-atom-icon .sh-atom-icon__svg {
+
+}

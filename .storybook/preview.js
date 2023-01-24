@@ -25,21 +25,11 @@ export const parameters = {
             order: [
                 'Intro',
                 'Getting-Started',
-                'Design Tokens', ['Intro', 'Color', 'FontSize'],
-                'Components', [
-                    'Intro',
-                    'Atoms', [
-                        'Intro',
-                        'Button', [
-                            'Intro',
-                            'Base',
-                            '*'
-                        ]
-                    ]
-                ],
-                'Templates Pages', ['Intro'],
-                'Example'
-            ],
+                'Design Tokens', ['Intro', 'Color', 'Fontsize', 'Spacings'],
+                'Configuration', ['Intro', 'Config'],
+                'Components', ['Intro', 'Atoms', ['Intro', 'Base', 'Icon', 'Button', ['Intro', '*'], 'Form Controls', '*'], '*'],
+                'Templates Pages', ['Intro']
+            ]
         },
     },
     designToken: {

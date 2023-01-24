@@ -1,8 +1,11 @@
 import { createBaseCheckboxLabel } from './BaseCheckboxLabel';
-
+import {BADGE} from '@geometricpanda/storybook-addon-badges';
 // More on default export: https://storybook.js.org/docs/html/writing-stories/introduction#default-export
 export default {
-  title: 'Components/Atoms/BaseCheckboxLabel',
+  title: 'Components/Molecules/Form Controls/Checkbox',
+  parameters: {
+    badges: [BADGE.BETA, BADGE.EXPERIMENTAL],
+  },
   // More on argTypes: https://storybook.js.org/docs/html/api/argtypes
   argTypes: {
     checked: { control: 'boolean' },
@@ -46,14 +49,14 @@ ReversedOrder.args = {
   order: 'reverse'
 };
 
-export const EmptyLabel = Template.bind({});
+/*export const EmptyLabel = Template.bind({});
 // More on args: https://storybook.js.org/docs/html/writing-stories/args
 EmptyLabel.args = {
   checked: false,
   label: '',
   forAttr: 'hocker3',
   id: 'hocker3',
-};
+};*/
 
 export const CustomCheckbox = Template.bind({});
 // More on args: https://storybook.js.org/docs/html/writing-stories/args
@@ -62,16 +65,6 @@ CustomCheckbox.args = {
   label: 'custom checkbox',
   forAttr: 'hocker4',
   id: 'hocker4',
-  customCheckbox: true
-};
-
-export const CustomCheckboxSolo = Template.bind({});
-// More on args: https://storybook.js.org/docs/html/writing-stories/args
-CustomCheckboxSolo.args = {
-  checked: false,
-  label: '',
-  forAttr: 'hocker5',
-  id: 'hocker5',
   customCheckbox: true
 };
 
@@ -86,14 +79,4 @@ CustomCheckboxCircle.args = {
   variant: 'circle'
 };
 
-export const CustomCheckboxCircleSolo = Template.bind({});
-// More on args: https://storybook.js.org/docs/html/writing-stories/args
-CustomCheckboxCircleSolo.args = {
-  checked: false,
-  label: '',
-  forAttr: 'hocker7',
-  id: 'hocker7',
-  customCheckbox: true,
-  variant: 'circle'
-};
 

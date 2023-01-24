@@ -1,0 +1,21 @@
+import { Meta } from '@storybook/addon-docs';
+import '/styles/storybook/_tokens-size-font-px.css';
+import '/styles/storybook/_tokens-size-spacings-px.css';
+import { DesignTokenDocBlock } from 'storybook-design-token/dist/doc-blocks';
+import { BADGE } from '@geometricpanda/storybook-addon-badges';
+
+<Meta title="Configuration/Config Colors" parameters={{ badges: [BADGE.BETA, BADGE.NEEDS_REVISION] }} />
+
+# Config Colors
+
+- ```"_config.css"``` variables use the values from ```tokens/_tokens-colors.css```
+
+## Colours
+Connecting page elements CSS custom properties with the HENK color palette.
+<DesignTokenDocBlock categoryName="Config/Colors" maxHeight={400} viewType="table" />
+
+[//]: # (## Fonts)
+
+[//]: # (Connecting page elements CSS custom properties with the HENK tokens for font settings.)
+
+[//]: # (<DesignTokenDocBlock categoryName="Config/Fonts" maxHeight={400} viewType="table" />)

@@ -2,10 +2,20 @@ import { Meta } from '@storybook/addon-docs';
 
 <Meta title="Components/Organisms/Intro" />
 
-# Organisms Intro
+# Organisms
+
+![organisms](https://atomicdesign.bradfrost.com/images/content/atomic-design-organisms.png)
 
 ## What are Organisms?
 
-Something
+Organisms are relatively complex UI components composed of groups of molecules and/or atoms and/or other organisms. These organisms form distinct sections of an interface.
+
+Let’s revisit our search form molecule. A search form can often be found in the header of many web experiences, so let’s put that search form molecule into the context of a header organism.
+
+![header](https://atomicdesign.bradfrost.com/images/content/organism-header.png)
+
+The header forms a standalone section of an interface, even though it contains several smaller pieces of interface with their own unique properties and functionality.
+
+Organisms can consist of similar or different molecule types. A header organism might consist of dissimilar elements such as a logo image, primary navigation list, and search form. We see these types of organisms on almost every website we visit.
 
 [Taken from atomic design by Brad Frost](https://bradfrost.com/blog/post/atomic-web-design/#atoms)

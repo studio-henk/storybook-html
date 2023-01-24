@@ -1,0 +1,18 @@
+import { Meta } from '@storybook/addon-docs';
+import { BADGE } from '@geometricpanda/storybook-addon-badges';
+
+<Meta title="Configuration/Intro" parameters={{ badges: [BADGE.BETA, BADGE.NEEDS_REVISION] }} />
+
+# Configuration
+
+HENK's main stylesheet *toolkit.css* loads the tokens files first and _config.css uses the values:
+
+```css
+/*tokens*/
+@import url(tokens/_tokens-colors.css);
+@import url(tokens/_tokens-size-font.css);
+@import url(tokens/_tokens-size-spacings.css);
+
+@import "_config.css";
+```
+

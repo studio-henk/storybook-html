@@ -1,9 +1,13 @@
 import { withDesign } from "storybook-addon-designs";
 import './atom-paragraph.css';
 import { createBaseParagraph } from './BaseParagraph';
+import {BADGE} from "@geometricpanda/storybook-addon-badges";
 
 export default {
-  title: 'Components/Atoms/Paragraph',
+  title: 'Components/Atoms/Base/Paragraph',
+  parameters: {
+    badges: [BADGE.BETA],
+  },
   argTypes: {
       text: {control: 'text'},
   },

@@ -1,9 +1,13 @@
 import { withDesign } from "storybook-addon-designs";
 // import './atom-h2.css';
 import { createBaseH2 } from './BaseH2';
+import {BADGE} from "@geometricpanda/storybook-addon-badges";
 
 export default {
-  title: 'Components/Atoms/H2',
+  title: 'Components/Atoms/Base/H2',
+  parameters: {
+    badges: [BADGE.NEEDS_REVISION],
+  },
   argTypes: {
       text: {control: 'text'},
   },
@@ -51,8 +55,9 @@ Base.parameters = {
 //     text2: 'Paragraphs are block-level elements, and notably will automatically close if another block-level element is parsed before the closing &lt;/p&gt; tag. See "Tag omission" below.',
 // };
 
+/*
 export const Capitalised = Template.bind({});
 Capitalised.args = {
   text: 'This is a capitalised Heading level 2',
   CSSclass: 'fs-capitalised'
-};
+};*/

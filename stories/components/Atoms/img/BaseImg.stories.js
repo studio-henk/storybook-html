@@ -1,9 +1,13 @@
 // import { withDesign } from "storybook-addon-designs";
 // import './atom-h1.css';
 import { createBaseImg } from './BaseImg';
+import {BADGE} from "@geometricpanda/storybook-addon-badges";
 
 export default {
-  title: 'Components/Atoms/Image',
+  title: 'Components/Atoms/Base/Image',
+  parameters: {
+    badges: [BADGE.BETA, BADGE.EXPERIMENTAL],
+  },
   argTypes: {
     variant: {
         control: { type: 'select' },

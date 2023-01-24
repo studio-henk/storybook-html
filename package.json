@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "test-storybook": "test-storybook",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "chromatic": "npx chromatic --project-token=d65f4025a0d9"
@@ -28,16 +29,27 @@
     "@storybook/addon-interactions": "^6.5.9",
     "@storybook/addon-links": "^6.5.9",
     "@storybook/builder-webpack4": "^6.5.9",
+    "@storybook/builder-webpack5": "^6.5.15",
     "@storybook/html": "^6.5.9",
     "@storybook/manager-webpack4": "^6.5.9",
+    "@storybook/manager-webpack5": "^6.5.15",
     "@storybook/testing-library": "^0.0.13",
-    "babel-loader": "^8.2.5",
-    "chromatic": "^6.6.3",
+    "babel-loader": "^9.1.2",
+    "chromatic": "^6.14.0",
+    "html-webpack-plugin": "^5.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "storybook-addon-designs": "^6.3.1",
-    "storybook-dark-mode": "^1.1.0",
-    "storybook-design-token": "^2.5.0"
+    "storybook-dark-mode": "^2.0.5",
+    "storybook-design-token": "^2.8.2"
   },
   "dependencies": {
-    "@geometricpanda/storybook-addon-badges": "^0.2.2"
+    "@geometricpanda/storybook-addon-badges": "^0.2.2",
+    "@storybook/addon-viewport": "^6.5.15",
+    "@storybook/jest": "^0.0.10",
+    "@storybook/test-runner": "^0.9.3",
+    "@storybook/theming": "^6.5.15",
+    "lodash.camelcase": "^4.3.0",
+    "webpack": "^5.75.0"
   }
 }

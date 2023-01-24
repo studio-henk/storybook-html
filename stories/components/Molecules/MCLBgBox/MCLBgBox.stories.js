@@ -1,7 +1,7 @@
 import { createMCLBgBox } from './MCLBgBox';
 
 export default {
-  title: 'Components/Molecules/bg-box',
+  title: 'Components/Molecules/bg-box_hidden_',
   argTypes: {
     text: { control: 'text' },
     bgColor: {

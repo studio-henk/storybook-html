@@ -3,7 +3,7 @@
 import { createBaseList } from './BaseList';
 
 export default {
-  title: 'Components/Atoms/List',
+  title: 'Components/Atoms/Base/List',
   argTypes: {
     element: {
       control: { type: 'select' },

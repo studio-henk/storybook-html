@@ -1,7 +1,7 @@
 import { createOrgFooter } from './OrgFooter';
 
 export default {
-  title: 'Components/Organisms/OrgFooter',
+  title: 'Components/Organisms/OrgFooter_hidden',
   argTypes: {
     // backgroundColor: { control: 'color' },
     // label: { control: 'text' },

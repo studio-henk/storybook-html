@@ -1,166 +1,525 @@
-/* .sh-atom-button {
-  --size-padding-button: 6px 14px;
-
-  box-sizing: border-box;
-  display: inline-block;
-  !*display: inline-flex;*!
-  background-color: var(--color-background-button, #fff);
-  color: var(--color-text-button, #000);
-  border: 1px solid var(--color-border-button, #000);
-  border-radius: var(--borderradius-button, 50px);
-  !* make sure to override font-family browser form button styles*!
-  font-family: ff-scala-sans-pro, sans-serif;
-  font-size: calc(var(--size-font-button) / var(--size-font-root) * 1rem);
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: calc(var(--letterspacing-font-button, 0.1) * 1em);
-  line-height: calc(var(--size-lineheight-button, 21) / var(--size-font-button, 12));
-  white-space: nowrap;
-  padding: var(--size-padding-button, 6px 28px);
-  text-align: center;
-  text-decoration: none;
-  transition: all .3s ease;
-} */
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: since 2021
+*/
 
 .sh-atom-button {
-  box-sizing: border-box;
-  display: inline-block;
-  min-inline-size: fit-content;
-  border: 0;
-  background-color: var(--color-background-button, #fff);
-  color: var(--color-text-button, #000);
-  border-radius: unset;
-  /* background-color: var(--color-background-button, #fff);
-  color: var(--color-text-button, #000);
-  border: 1px solid var(--color-border-button, #000);
-  border-radius: clamp(40px, 5.04032258vw, 50px); */
-  font-family: ff-scala-sans-pro, sans-serif;
-  font-size: clamp(12px, 1.41129032vw, 14px);
-  text-transform: uppercase;
-  /* margin-top: calc(28 / var(--var-global-fontsize-root) * 1rem); */
-  letter-spacing: 0.2em;
-  white-space: nowrap; /* prevent multiple lines */
-  line-height: clamp(21px, 2.82258065vw, 28px);
-  font-weight: 400;
-  /* update: 2022-11-11 • 16:46 - CET
-    better vertical center alignment of text
-  */
-  /* padding: clamp(6px, 0.80645161vw, 8px) clamp(16px, 2.82258065vw, 28px); */
-  padding: clamp(6px, 0.80645161vw, 9px) clamp(16px, 2.82258065vw, 28px) clamp(6px, 0.80645161vw, 7px);
-  text-align: center;
-  text-decoration: none;
-  transition: all 0.3s ease;
+    box-sizing: border-box;
+    display: inline-block;
+    border-radius: 50px;
+    font-family: ff-scala-sans-pro, sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-top: calc(28 / var(--size-font-body) * 1rem);
+    letter-spacing: 0.2em;
+    white-space: nowrap;
+    line-height: 21px;
+    font-weight: 400;
+    padding: 7px 16px 6px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    background-color: var(--color-background-button, #000);
+    color: var(--color-text-button, #fff);
+    border: 1px solid var(--color-border-button, #000);
 }
 
-.sh-atom-button[data-role="primary"][data-style="filled"] {
-  --color-background-button: var(--color-background-button-primary-base, #000);
-  --color-text-button: var(--color-text-button-primary-base, #fff);
-  --color-background-button-hover: var(--color-background-button-primary-hover, hsl(0deg 0% 12% / 85%));
+.sh-atom-button:hover:not(span) {
+    cursor: pointer;
 }
 
-.sh-atom-button[data-role="destructive"] {
-  --color-background-button: var(--color-henk-danger, #f00);
+.sh-atom-button:focus, .sh-atom-button:hover {
+    text-decoration: none;
+    opacity: 0.85;
+    background-color: var(--color-background-button, #000);
+    color: var(--color-text-button, #fff);
+    border: 1px solid var(--color-border-button, #000);
+}
+
+@media only screen and (min-width: 992px) {
+    .sh-atom-button {
+        padding: 10px 28px;
+        font-size: 14px;
+        line-height: 28px;
+    }
+}
+
+.sh-atom-button[data-accent*="accent"], .sh-atom-button[data-accent="transparent"] {
+    --color-text-button: currentcolor;
+}
+
+.sh-atom-button[data-accent="transparent"] {
+    --color-background-button: var(--color-transparent);
+    --color-text-button: currentcolor;
+    --color-border-button: currentcolor;
+}
+
+.sh-atom-button[data-accent="transparent"][data-text-color] {
+    --color-border-button: currentcolor;
+}
+
+.sh-atom-button[data-accent="accent1"] {
+    --color-background-button: var(--color-accent1);
+    --color-text-button: var(--color-henk-black);
+}
+
+.sh-atom-button[data-accent="accent2"] {
+    --color-background-button: var(--color-accent2);
+    --color-text-button: var(--color-henk-black);
+}
+
+.sh-atom-button[data-accent="accent3"] {
+    --color-background-button: var(--color-accent3);
+    --color-text-button: var(--color-henk-black);
+}
+
+.sh-atom-button[data-accent="accent4"] {
+    --color-background-button: var(--color-accent4);
+    --color-text-button: var(--color-henk-black);
+}
+
+.sh-atom-button[data-accent="accent5"] {
+    --color-background-button: var(--color-accent5);
+    --color-text-button: var(--color-henk-black);
+}
+
+.sh-atom-button[data-accent="accent6"] {
+    --color-background-button: var(--color-accent6);
+    --color-text-button: var(--color-henk-black);
+}
+
+.sh-atom-button[data-accent="accent7"] {
+    --color-background-button: var(--color-accent7);
+    --color-text-button: var(--color-henk-black);
+}
+
+.sh-atom-button[data-accent="accent8"] {
+    --color-background-button: var(--color-accent8);
+    --color-text-button: var(--color-henk-black);
+}
+
+.sh-atom-button[data-accent="accent9"] {
+    --color-background-button: var(--color-accent9);
+    --color-text-button: var(--color-henk-black);
+}
+
+.sh-atom-button[data-accent="accent10"] {
+    --color-background-button: var(--color-accent10);
+    --color-text-button: var(--color-henk-black);
+}
+
+.sh-atom-button[data-accent="accent11"] {
+    --color-background-button: var(--color-accent11);
+    --color-text-button: var(--color-henk-black);
+}
+
+.sh-atom-button[data-accent="accent12"] {
+    --color-background-button: var(--color-accent12);
+    --color-text-button: var(--color-henk-black);
+}
+
+.sh-atom-button[data-accent="accent13"] {
+    --color-background-button: var(--color-accent13);
+    --color-text-button: var(--color-henk-black);
+}
+
+.sh-atom-button[data-accent="accent14"] {
+    --color-background-button: var(--color-accent14);
+    --color-text-button: var(--color-henk-black);
+}
+
+.sh-atom-button[data-accent="accent15"] {
+    --color-background-button: var(--color-accent15);
+    --color-text-button: var(--color-henk-black);
+}
+
+.sh-atom-button[data-accent="accent16"] {
+    --color-background-button: var(--color-accent16);
+    --color-text-button: var(--color-henk-black);
+}
+
+.sh-atom-button[data-accent="accent17"] {
+    --color-background-button: var(--color-accent17);
+    --color-text-button: var(--color-henk-black);
+}
+
+.sh-atom-button[data-accent="accent10"] {
+    --color-text-button: var(--color-henk-white);
+}
+
+.sh-atom-button[data-style="soft"] {
+    --color-border-button: var(--color-background-button);
 }
 
 .sh-atom-button[data-style="plain"] {
-  background-color: transparent;
-  border: 0;
-  border-radius: unset;
-  color: var(--color-text-button, #000);
+    padding: 0;
+    border: 0;
+    --color-background-button: var(--color-transparent, transparent);
+    --color-text-button: currentcolor;
 }
 
-.sh-atom-button[data-style="filled"] {
-  background-color: var(--color-background-button, #fff);
-  color: var(--color-text-button, #000);
-  border: 1px solid var(--color-border-button, #000);
-  border-radius: clamp(40px, 5.04032258vw, 50px);
+.sh-atom-button[data-animation="underline"] {
+    position: relative;
 }
 
-.sh-atom-button[data-style="plain"][data-role="destructive"] {
-  --color-background-button: transparent;
-  --color-text-button: var(--color-henk-danger, #f00);
+.sh-atom-button[data-animation="underline"]::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background: currentcolor;
+    display: block;
+    left: 0;
+    pointer-events: none;
+    transition: width 0.6s;
 }
 
-/* .sh-atom-button[data-variant="secondary"] {
-  --color-background-button: var(--color-background-button-secondary-base, #fff);
-  --color-text-button: var(--color-HENK-Black, #000);
-  --color-background-button-hover: var(--color-background-button-secondary-hover, hsla(0deg 0% 100% / 85%));
-} */
-
-/* .sh-atom-button[data-variant="tertiary"],
-.sh-atom-button[data-variant="tertiary-inverted"] {
-  --color-background-button: transparent;
-  --color-text-button: var(--color-text-button-tertiary-base, #fff);
-  --color-background-button-hover: var(--color-background-button-tertiary-hover, transparent);
-} */
-
-/*
-.sh-atom-button[data-variant="tertiary-inverted"] {
-  --color-text-button: var(--color-HENK-White, #fff);
-  --color-border-button: var(--color-border-button-tertiary-inverted, red);
+.sh-atom-button[data-animation="underline"]:focus::before, .sh-atom-button[data-animation="underline"]:hover::before {
+    width: 45%;
+    /* transition: width .075s cubic-bezier(0, 0, 1, 0.06),top .75s cubic-bezier(0, 0, 1, 0.06);
+     */
 }
 
-.sh-atom-button[data-variant="quaternary"] {
-  --color-background-button: var(--color-background-button-quaternary-base, #000);
-  --color-text-button: var(--color-text-button-quaternary-base, #fff);
-  --color-background-button-hover: var(--color-background-button-quaternary-hover, hsl(0deg 0% 12% / 85%));
-  --color-border-button: var(--color-border-button-quaternary-base, transparent);
-}
-*/
-
-/* hovers */
-.sh-atom-button:focus,
-.sh-atom-button:hover {
-  text-decoration: none;
-  cursor: pointer;
-  opacity: 0.85;
-}
-
-.sh-atom-button[disabled],
-.sh-atom-button[data-state="disabled"] {
-  opacity: .5;
-  --color-background-button: var(--color-henk-disabled);
-  --color-text-button: #000;
-}
-
-.sh-atom-button[disabled]:focus,
-.sh-atom-button[data-state="disabled"]:focus,
-.sh-atom-button[disabled]:hover,
-.sh-atom-button[data-state="disabled"]:hover {
-  cursor: not-allowed;
-  --color-background-button-hover: var(--color-henk-disabled);
-  --color-text-button: #000;
-}
-
-.sh-atom-button[data-size="small"] {
-  padding: 6px 16px;
-  font-size: 12px;
-  line-height: 21px;
-}
-
-.sh-atom-button[data-icon] {
-    display: flex;
+.sh-atom-button[data-animation="arrow-right"] {
+    display: inline-flex;
     align-items: center;
     gap: 8px;
 }
-.sh-atom-button[data-icon="arrow-right"] path {
-  transition: all .3s ease-in-out;
+
+.sh-atom-button[data-animation="arrow-right"] path {
+    transition: all 0.3s ease;
 }
 
-.sh-atom-button[data-icon="arrow-right"]:hover path:first-child {
-  transform: translateX(4px);
+.sh-atom-button[data-animation="arrow-right"]:focus path:first-child, .sh-atom-button[data-animation="arrow-right"]:hover path:first-child {
+    transform: translateX(5px);
 }
 
-.sh-atom-button[data-icon="arrow-right"]:hover path:first-child + path {
-  transform: scaleX(1.25);
+.sh-atom-button[data-animation="arrow-right"]:focus path:last-child, .sh-atom-button[data-animation="arrow-right"]:hover path:last-child {
+    d: path("M 1.875 7.5 L 18 7.5");
 }
 
-/* media queries */
-/*
-@media only screen and (min-width: 768px) {
-  .sh-atom-button {
-    --size-font-button: 14;
-    --size-lineheight-button: 28;
-    --size-padding-button: 7px 28px;
-  }
-}*/
+.sh-atom-button[data-role="primary"] {
+    --color-background-button: var(--color-henk-black, #000);
+    --color-text-button: var(--color-henk-white);
+    --color-border-button: var(--color-henk-black, #000);
+}
+
+.sh-atom-button[data-role="secondary"] {
+    --color-background-button: var(--color-transparent, transparent);
+    --color-text-button: var(--color-henk-black);
+    --color-border-button: var(--color-henk-black, #000);
+}
+
+.sh-atom-button[data-role="destructive"] > svg {
+    transition: transform 0.3s;
+}
+
+.sh-atom-button[data-role="destructive"]:focus, .sh-atom-button[data-role="destructive"]:hover {
+    animation: pulse 2s infinite;
+}
+
+.sh-atom-button[data-role="destructive"]:focus > svg, .sh-atom-button[data-role="destructive"]:hover > svg {
+    transform: scale(1.25);
+}
+
+.sh-atom-button[data-text-transform="none"] {
+    text-transform: none;
+    letter-spacing: 0.5px;
+    font-weight: 300;
+}
+
+.sh-atom-button[data-size="small"]:not([data-shape="circle"]) {
+    font-size: 10px;
+    line-height: 20px;
+    padding: 7px 1rem;
+}
+
+@media only screen and (min-width: 992px) {
+    .sh-atom-button[data-size="small"]:not([data-shape="circle"]) {
+        font-size: 12px;
+    }
+}
+
+.sh-atom-button[data-size="xsmall"]:not([data-shape="circle"]) {
+    font-size: 10px;
+    line-height: 20px;
+    padding: 5px 1rem;
+}
+
+@media only screen and (min-width: 992px) {
+    .sh-atom-button[data-size="xsmall"]:not([data-shape="circle"]) {
+        font-size: 12px;
+    }
+}
+
+.sh-atom-button[data-shape="circle"] {
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border-radius: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+}
+
+@media only screen and (min-width: 992px) {
+    .sh-atom-button[data-shape="circle"] {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.sh-atom-button[data-shape="circle"][data-size="small"] {
+    width: 30px;
+    height: 30px;
+}
+
+@media only screen and (min-width: 992px) {
+    .sh-atom-button[data-shape="circle"][data-size="small"] {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+.sh-atom-button[data-shape="circle"][data-size="xsmall"] {
+    width: 30px;
+    height: 30px;
+}
+
+.sh-atom-button[data-shape="rect"] {
+    border-radius: 0;
+}
+
+.sh-atom-button[data-shape="rounded"] {
+    border-radius: 8px;
+}
+
+.sh-atom-button[data-shape="icon-only"] {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+    padding: 0;
+    border: 0;
+    --color-background-button: var(--color-transparent, transparent);
+    --color-text-button: currentcolor, var(--color-henk-black);
+}
+
+.sh-atom-button[data-text-color="henk-black"] {
+    --color-text-button: var(--color-henk-black);
+}
+
+.sh-atom-button[data-text-color="black"] {
+    --color-text-button: var(--color-black);
+}
+
+.sh-atom-button[data-text-color="henk-white"] {
+    --color-text-button: var(--color-henk-white);
+}
+
+.sh-atom-button[data-text-color="white"] {
+    --color-text-button: var(--color-white);
+}
+
+.sh-atom-button[data-text-color="accent1"] {
+    --color-text-button: var(--color-accent1);
+}
+
+.sh-atom-button[data-text-color="accent2"] {
+    --color-text-button: var(--color-accent2);
+}
+
+.sh-atom-button[data-text-color="accent3"] {
+    --color-text-button: var(--color-accent3);
+}
+
+.sh-atom-button[data-text-color="accent4"] {
+    --color-text-button: var(--color-accent4);
+}
+
+.sh-atom-button[data-text-color="accent5"] {
+    --color-text-button: var(--color-accent5);
+}
+
+.sh-atom-button[data-text-color="accent6"] {
+    --color-text-button: var(--color-accent6);
+}
+
+.sh-atom-button[data-text-color="accent7"] {
+    --color-text-button: var(--color-accent7);
+}
+
+.sh-atom-button[data-text-color="accent8"] {
+    --color-text-button: var(--color-accent8);
+}
+
+.sh-atom-button[data-text-color="accent9"] {
+    --color-text-button: var(--color-accent9);
+}
+
+.sh-atom-button[data-text-color="accent10"] {
+    --color-text-button: var(--color-accent10);
+}
+
+.sh-atom-button[data-text-color="accent11"] {
+    --color-text-button: var(--color-accent11);
+}
+
+.sh-atom-button[data-text-color="accent12"] {
+    --color-text-button: var(--color-accent12);
+}
+
+.sh-atom-button[data-text-color="accent13"] {
+    --color-text-button: var(--color-accent13);
+}
+
+.sh-atom-button[data-text-color="accent14"] {
+    --color-text-button: var(--color-accent14);
+}
+
+.sh-atom-button[data-text-color="accent15"] {
+    --color-text-button: var(--color-accent15);
+}
+
+.sh-atom-button[data-text-color="accent16"] {
+    --color-text-button: var(--color-accent16);
+}
+
+.sh-atom-button[data-text-color="accent17"] {
+    --color-text-button: var(--color-accent17);
+}
+
+.sh-atom-button[data-state="muted"] .sh-atom-icon {
+    transition: opacity 0.3s;
+}
+
+.sh-atom-button[data-state="muted"] .unmuted {
+    opacity: 0;
+    position: absolute;
+}
+
+.sh-atom-button[data-state="muted"]:focus, .sh-atom-button[data-state="muted"]:hover {
+    position: relative;
+}
+
+.sh-atom-button[data-state="muted"]:focus .muted, .sh-atom-button[data-state="muted"]:hover .muted {
+    opacity: 0;
+}
+
+.sh-atom-button[data-state="muted"]:focus .unmuted, .sh-atom-button[data-state="muted"]:hover .unmuted {
+    opacity: 1;
+}
+
+.sh-atom-button[data-state="muted"]:focus::after, .sh-atom-button[data-state="muted"]:hover::after {
+    content: "click to unmute sound";
+    position: absolute;
+    left: 112%;
+    border: 1px solid var(--color-accent11, red);
+    background-color: var(--color-henk-white, red);
+    padding: 8px;
+    color: var(--color-henk-black);
+    font-size: 12px;
+    line-height: 20px;
+    z-index: 9999;
+    text-align: left;
+    text-indent: 0;
+    text-transform: none;
+    letter-spacing: normal;
+    border-radius: 4px;
+}
+
+.sh-atom-button[data-state="unmuted"] .sh-atom-icon {
+    transition: opacity 0.3s;
+}
+
+.sh-atom-button[data-state="unmuted"] .muted {
+    opacity: 0;
+    position: absolute;
+}
+
+.sh-atom-button[data-state="unmuted"]:focus, .sh-atom-button[data-state="unmuted"]:hover {
+    position: relative;
+}
+
+.sh-atom-button[data-state="unmuted"]:focus .muted, .sh-atom-button[data-state="unmuted"]:hover .muted {
+    opacity: 1;
+}
+
+.sh-atom-button[data-state="unmuted"]:focus .unmuted, .sh-atom-button[data-state="unmuted"]:hover .unmuted {
+    opacity: 0;
+}
+
+.sh-atom-button[data-state="unmuted"]:focus::after, .sh-atom-button[data-state="unmuted"]:hover::after {
+    content: "click to mute sound";
+    position: absolute;
+    left: 112%;
+    border: 1px solid var(--color-accent11, red);
+    background-color: var(--color-henk-white, red);
+    padding: 8px;
+    color: var(--color-henk-black);
+    font-size: 12px;
+    line-height: 20px;
+    z-index: 9999;
+    text-align: left;
+    text-indent: 0;
+    text-transform: none;
+    letter-spacing: normal;
+    border-radius: 4px;
+}
+
+.sh-atom-button[disabled], .sh-atom-button[aria-disabled], .sh-atom-button[data-state="disabled"] {
+    opacity: 0.5;
+}
+
+.sh-atom-button[disabled]:focus, .sh-atom-button[aria-disabled]:focus, .sh-atom-button[data-state="disabled"]:focus, .sh-atom-button[disabled]:hover, .sh-atom-button[aria-disabled]:hover, .sh-atom-button[data-state="disabled"]:hover {
+    cursor: not-allowed;
+}
+
+.sh-atom-button[data-icon] {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.sh-atom-button[data-icon-alignment="bottom"] {
+    flex-direction: column;
+}
+
+.sh-atom-button[data-alignment*="price"] {
+    display: inline-grid;
+    grid-template-columns: repeat(2, auto);
+    column-gap: 2vw;
+    justify-content: center;
+}
+
+.sh-atom-button[data-alignment="price-around"] {
+    justify-content: space-around;
+}
+
+.sh-atom-button[data-alignment="price-around"] .separator {
+    display: none;
+}
+
+.sh-atom-button[data-alignment="price-between"] {
+    justify-content: space-between;
+}
+
+.sh-atom-button[data-alignment="price-between"] .separator {
+    display: none;
+}
+
+.sh-atom-button[data-alignment="price-evenly"] {
+    justify-content: space-evenly;
+}
+
+.sh-atom-button[data-alignment="price-evenly"] .separator {
+    display: none;
+}
+
+.sh-atom-button[data-alignment*="separator"] {
+    grid-template-columns: repeat(3, auto);
+}

@@ -1,29 +1,12 @@
-@import "_config.css";
-@import url(css-vars.css);
-
-/*tokens*/
-@import url(tokens-colors.css);
-@import url(tokens-colors-old.css);
-@import "tokens/_tokens-size.css";
-@import "tokens-buttons.css";
-@import url(tokens-fontsize.css);
-
+@charset "utf-8";
 /*reset*/
-@import "_reset.css";
-@import "_font-styles.css";
-@import "_theme-dark.css";
+@import "base/_reset.css";
+/*tokens*/
+@import url(tokens/_tokens-colors.css);
+@import url(tokens/_tokens-size-font.css);
+@import url(tokens/_tokens-size-spacings.css);
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import "_config.css";
+@import "base/_base.css";
 
-html {
-  font-family: ff-scala-sans-pro, sans-serif;
-  font-weight: 300;
-  color: black;
-  line-height: calc(28 / 16);
-  font-feature-settings: "pnum" on,"lnum" on;
-  -webkit-font-smoothing: antialiased;
-}
+/*@import "_theme-dark.css";*/
