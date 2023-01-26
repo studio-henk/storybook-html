@@ -1,8 +1,15 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: since 2021
+/*---
+title:   Atom Button
+section: Buttons
+author: Nils Hendriks for Studio HENK
+date: 2023-01-26 • 18:39 - CET
+---
+
+Description here
+
+```example:html
+code here
+```
 */
 
 .sh-atom-button {
@@ -40,7 +47,7 @@
 
 @media only screen and (min-width: 992px) {
     .sh-atom-button {
-        padding: 10px 28px;
+        padding: 8px 28px;
         font-size: 14px;
         line-height: 28px;
     }
@@ -483,6 +490,14 @@
     justify-content: center;
     align-items: center;
     gap: 8px;
+}
+
+.sh-atom-button[data-icon] svg,
+.sh-atom-button[data-icon] .sh-atom-icon__svg {
+    width: unset;
+    height: unset;
+    position: unset;
+    top: unset;
 }
 
 .sh-atom-button[data-icon-alignment="bottom"] {

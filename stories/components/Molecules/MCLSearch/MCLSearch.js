@@ -1,6 +1,6 @@
 import { createAtomButton } from '../../Atoms/atom-button/atom-button';
 import { createAtomLabel} from "../../Atoms/AtomLabel";
-import {createBaseInput} from "../../Atoms/AtomInput";
+import {createAtomInput} from "../../Atoms/AtomInput";
 
 export const createMCLSearch = ({
   label,
@@ -20,21 +20,13 @@ export const createMCLSearch = ({
   )
   // input
   mclsearch.appendChild(
-    createBaseInput({
+    createAtomInput({
         placeholder: placeholder,
     })
-      // createBaseInput({
-      //   placeholder: 'Enter keyword',
-      // })
   )
   // button
   mclsearch.appendChild(
-      // createBaseButton({
-      //   variant: 'primary',
-      //   label: 'Search',
-      // })
       createAtomButton({
-        variant: 'primary',
         buttonText: buttonText,
       })
   )

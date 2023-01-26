@@ -1,6 +1,5 @@
 import {createMoleculeInputLabel} from './MoleculeInputLabel';
 import {BADGE} from '@geometricpanda/storybook-addon-badges';
-import {RequiredText} from "../../Atoms/AtomInput.stories";
 // More on default export: https://storybook.js.org/docs/html/writing-stories/introduction#default-export
 export default {
     title: 'Components/Molecules/Input Controls/Label + Input',
@@ -75,6 +74,12 @@ export default {
                 category: 'Atom Input',
             }
         },
+        patternTooltipText: {
+            control: 'text',
+            table: {
+                category: 'Atom Input',
+            }
+        },
         autocomplete: {
             control: 'text',
             table: {
@@ -144,7 +149,7 @@ StackedWithPlaceholder.args = {
     id: 'txt_firstname',
     placeholder: 'Enter your first name',
     dataStyle: 'labels-as-placeholders',
-    // initialValue: 'Nils ?'
+    // initialValue: 'HENK'
 };
 StackedWithPlaceholder.parameters = {
     badges: [BADGE.BETA],
@@ -159,7 +164,7 @@ StackedWithInitialValue.args = {
     id: 'txt_firstname',
     placeholder: ' ',
     dataStyle: 'labels-as-placeholders',
-    initialValue: 'Nils ?'
+    initialValue: 'HENK'
 };
 StackedWithInitialValue.parameters = {
     badges: [BADGE.BETA],
@@ -174,11 +179,31 @@ StackedWithInitialValueAndPlaceholder.args = {
     id: 'txt_firstname',
     placeholder: 'Enter your first name',
     dataStyle: 'labels-as-placeholders',
-    initialValue: 'Nils ?'
+    initialValue: 'HENK'
 };
 StackedWithInitialValueAndPlaceholder.parameters = {
     badges: [BADGE.BETA],
     controls: {include: ['labelText']}
+}
+
+export const UseCSSValidation = Template.bind({});
+UseCSSValidation.argTypes = {}
+UseCSSValidation.args = {
+    labelText: 'Invalid when ONLY a space is entered',
+    forAttr: 'txt_invalid1',
+    id: 'txt_invalid1',
+    name: 'txt_invalid1',
+    placeholder: ' ',
+    pattern: '.*\\S.*',
+    patternTooltipText: 'This field may not ONLY contain a space character.',
+    disabled: false,
+    required: true,
+    initialValue: ' '
+};
+UseCSSValidation.parameters = {
+    badges: [BADGE.BETA],
+    // controls: {include: ['labelText']}
+    controls: {exclude: ['autocomplete', 'form']}
 }
 
 export const Configurable = Template.bind({});
@@ -187,8 +212,10 @@ Configurable.args = {
     labelText: 'label text',
     forAttr: 'txt_1',
     id: 'txt_1',
-    name: 'country_selector01',
+    name: 'txt_1',
     placeholder: ' ',
+    pattern: '.*\\S.*',
+    patternTooltipText: 'This field may not ONLY contain a space character.',
     disabled: false,
     required: false,
     initialValue: ''
@@ -196,5 +223,5 @@ Configurable.args = {
 Configurable.parameters = {
     badges: [BADGE.BETA],
     // controls: {include: ['labelText']}
-    controls: {exclude: ['autocomplete', 'form', 'pattern']}
+    controls: {exclude: ['autocomplete', 'form']}
 }

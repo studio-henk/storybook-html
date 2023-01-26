@@ -45,3 +45,34 @@
 .atom-input-txt[placeholder=" "]:not(:placeholder-shown) + .atom-label[data-style="labels-as-placeholders"] {
     /*border: 1px solid lawngreen;*/
 }
+
+/*.atom-input-txt:invalid {
+    border: 1px solid red;
+}*/
+.atom-input-txt:required:not(:placeholder-shown):invalid {
+    border: 1px solid red;
+}
+
+/* when invalid show error msg after label */
+.atom-input-txt:required:not(:placeholder-shown):invalid + .atom-label::after {
+    /*content: "yada yada";*/
+    /*content: ' (source: ' attr(title) ') ';*/
+    content: attr(title);
+    position: absolute;
+    left: 0;
+    bottom: -28px;
+    color: hsl(0deg 100% 50%);
+    line-height: 28px;
+    font-size: max(min(2vw, 1em), 0.75rem);
+}
+
+@media only screen and (max-width: 303px) {
+    .atom-input-txt:required:not(:placeholder-shown):invalid + .atom-label::after {
+        font-size: 11px;
+    }
+}
+
+.atom-input-txt:required:not(:placeholder-shown):invalid + .atom-label[data-style="labels-as-placeholders"]::after {
+    bottom: -66px;
+    width: max-content;
+}

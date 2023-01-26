@@ -1,9 +1,10 @@
 export function returnIconSVG(iconName, strokeColor) {
     // const strokeColor = 'pink';
+    let iconSVG;
     if (!strokeColor) strokeColor = 'currentcolor';
     switch (iconName) {
         case 'iconArrowRight':
-            let iconSVG = `
+            iconSVG = `
             <svg
                 class="sh-atom-icon__svg"
                 width="15"
@@ -20,7 +21,7 @@ export function returnIconSVG(iconName, strokeColor) {
             </svg>
             `;
             return iconSVG;
-            break;
+            // break;
         case 'iconArrowLeft':
             iconSVG = `            
             <svg
@@ -41,7 +42,7 @@ export function returnIconSVG(iconName, strokeColor) {
             </svg>
             `;
             return iconSVG;
-            break;
+            // break;
         case 'iconArrowDown':
             iconSVG = `
                 <svg
@@ -65,7 +66,7 @@ export function returnIconSVG(iconName, strokeColor) {
                 </svg>
             `;
             return iconSVG;
-            break;
+            // break;
         case 'iconDisclosureCollapsed':
             iconSVG = `
                 <svg 
@@ -84,7 +85,30 @@ export function returnIconSVG(iconName, strokeColor) {
                 </svg>
             `;
             return iconSVG;
-            break;
+            // break;
+        case 'iconSearch':
+            iconSVG = `
+                <svg
+                    class="sh-atom-icon__svg"                      
+                    width="24" 
+                    height="24" 
+                    viewBox="0 0 24 24"
+                    aria-labelledby="${iconName}"
+                    id="${iconName}"
+                    xmlns="http://www.w3.org/2000/svg"
+               >
+                    <title>${iconName}</title>
+                    <desc>icon of a magnifying glass for search purposes</desc>
+                    <g 
+                        class="nc-icon-wrapper" 
+                        fill="${ strokeColor }"
+                        >
+                        <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+                    </g>
+                </svg>                
+            `;
+            return iconSVG;
+            // break;
         default:
             console.log('no icon name supplied.');
     }

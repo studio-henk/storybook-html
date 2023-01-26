@@ -1,0 +1,50 @@
+/*---
+title:   Molecule Search-form
+section: Forms
+author: Nils Hendriks for Studio HENK
+date: 2023-01-26 • 18:39 - CET
+---
+
+Use this class for the primary call to action button.
+Typically you'll want to use either a `<button>` or an `<a>` element
+
+```example:html
+<button class="btn btn--primary">Click</button>
+<a href="#" class="btn btn--primary">Click Me</a>
+```
+*/
+.molecule-search-form {
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.molecule-search-form.layout-horizontal {
+    align-items: flex-end;
+}
+
+.molecule-search-form.layout-horizontal > * {
+    flex: 1 1 auto;
+    margin: 0;
+}
+
+.molecule-search-form .molecule-input-label {
+    flex-basis: max-content;
+}
+
+/*.molecule-search-form .molecule-input-label {
+    flex-basis: 252px;
+}*/
+
+/* inline starts on tablet portrait */
+
+.molecule-search-form .molecule-input-label {
+    flex-basis: 605px;
+}
+
+.molecule-search-form .sh-atom-button {
+    flex-grow:0;
+}
+
+/*@media only screen and (min-width: 414px) {*/
+
+/*}*/

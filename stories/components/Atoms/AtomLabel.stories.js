@@ -16,6 +16,13 @@ export default {
           required: true
       },
     },
+    pattern: {
+      control: 'text',
+      /*table: {
+          type: {summary: 'string'},
+          defaultValue: {summary: '.*\\S.*'},
+      },*/
+    },
     /*dataStyle: {
       control: {type: 'select'},
       options: ['', 'labels-as-placeholders']

@@ -1,13 +1,13 @@
 import { createAtomButton } from '../Atoms/atom-button/atom-button';
 import { createAtomLabel} from "../Atoms/AtomLabel";
-import {createBaseInput} from "../Atoms/AtomInput";
+import { createAtomInput } from "../Atoms/AtomInput";
 
 export const createOrgFooter = ({
   buttonText = '',
-  variant = '',
+  dataStyle = '',
   size = '',
   backgroundColor,
-  label,
+  labelText,
   disabled = false,
   onClick,
 }) => {
@@ -16,20 +16,20 @@ export const createOrgFooter = ({
   // label
   orgfooter.appendChild(
       createAtomLabel({
-        label: 'Search the site',
+        labelText: 'Search the site',
       })
   )
   // input
   orgfooter.appendChild(
-      createBaseInput({
+      createAtomInput({
         placeholder: 'Enter keyword',
       })
   )
   // button
   orgfooter.appendChild(
-      createAtomButton({
-        variant: 'quaternary',
-        buttonText: buttonText,
+      createAtomButton(
+      {
+        // buttonText: buttonText,
         // onClick: onSubmitSearch,
       })
   )

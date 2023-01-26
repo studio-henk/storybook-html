@@ -8,6 +8,8 @@ export const createAtomLabel = ({
   labelText = 'label text',
   forAttr = '',
   dataStyle,
+  pattern = '',
+  patternTooltipText = '',
   checkmarkCircle = false
 }) => {
   const BaseLabel = document.createElement('label');
@@ -21,6 +23,10 @@ export const createAtomLabel = ({
 
   if (dataStyle) {
     BaseLabel.setAttribute('data-style', dataStyle);
+  }
+
+  if (pattern) {
+    BaseLabel.title = patternTooltipText;
   }
 
     if (checkmarkCircle === true) {

@@ -1,7 +1,6 @@
 import './_molecule-input-label.css';
 import {createAtomInput} from "../../Atoms/AtomInput";
 import {createAtomLabel} from "../../Atoms/AtomLabel";
-// import {createAtomLabel} from "../AtomLabel";
 
 export const createMoleculeInputLabel = ({
   labelText,
@@ -43,7 +42,9 @@ export const createMoleculeInputLabel = ({
     createAtomLabel({
         labelText: labelText,
         forAttr: forAttr,
-        dataStyle
+        dataStyle,
+        pattern: pattern,
+        patternTooltipText: patternTooltipText,
         /*checkmarkCircle: checkmarkCircle*/
     })
   )
