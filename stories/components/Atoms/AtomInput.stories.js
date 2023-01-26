@@ -21,6 +21,10 @@ export default {
     },
     placeholder: {
       control: 'text',
+      type: {
+          name: 'string',
+          required: false
+      },
     },
     required: {
       control: 'boolean',

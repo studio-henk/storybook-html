@@ -2,6 +2,7 @@
 .layout-container-input-label {
     display: flex;
     flex-direction: column-reverse;
+    width: 100%;
     /* in case child label has [data-style="labels-as-placeholders"]   */
     position: relative;
 }

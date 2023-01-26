@@ -2,7 +2,8 @@
     font-weight: 700;
 }
 
-input[type="checkbox"] {
+input[type="checkbox"],
+input[type="radio"] {
     display: block !important;
 }
 

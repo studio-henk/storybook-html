@@ -1,9 +1,8 @@
-import './_molecule-input-label.css';
-import {createAtomInput} from "../../Atoms/AtomInput";
+import './_molecule-label-textarea.css';
+import {createAtomTextarea} from "../../Atoms/atom-textarea/AtomTextarea";
 import {createAtomLabel} from "../../Atoms/AtomLabel";
-// import {createAtomLabel} from "../AtomLabel";
 
-export const createMoleculeInputLabel = ({
+export const createMoleculeLabelTextarea = ({
   labelText,
   forAttr,
   dataStyle,
@@ -12,26 +11,22 @@ export const createMoleculeInputLabel = ({
   placeholder: placeholder,
   required: required,
   disabled: disabled,
-  pattern: pattern,
-  patternTooltipText: patternTooltipText,
   autocomplete: autocomplete,
   form: form,
   initialValue: initialValue
 }) => {
   // create div
   const wrapperElement = document.createElement('div');
-  wrapperElement.className = ['molecule-input-label layout-container-input-label'].join(' ');
+  wrapperElement.className = ['molecule-label-textarea layout-container-input-label'].join(' ');
 
   // input
   wrapperElement.appendChild(
-    createAtomInput({
+    createAtomTextarea({
       name: name,
       id: id,
       placeholder: placeholder,
       required: required,
       disabled: disabled,
-      pattern: pattern,
-      patternTooltipText: patternTooltipText,
       autocomplete: autocomplete,
       form: form,
       initialValue: initialValue
@@ -44,7 +39,6 @@ export const createMoleculeInputLabel = ({
         labelText: labelText,
         forAttr: forAttr,
         dataStyle
-        /*checkmarkCircle: checkmarkCircle*/
     })
   )
 
