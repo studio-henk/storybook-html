@@ -2,19 +2,20 @@ import { createBaseCheckboxLabel } from './BaseCheckboxLabel';
 import {BADGE} from '@geometricpanda/storybook-addon-badges';
 // More on default export: https://storybook.js.org/docs/html/writing-stories/introduction#default-export
 export default {
-  title: 'Components/Molecules/Form Controls/Checkbox',
+  title: 'Components New/Form Controls/Checkbox',
   parameters: {
     badges: [BADGE.BETA, BADGE.EXPERIMENTAL],
   },
   // More on argTypes: https://storybook.js.org/docs/html/api/argtypes
   argTypes: {
     checked: { control: 'boolean' },
-    label: { control: 'text' },
+    labelText: { control: 'text' },
     forAttr: { control: 'text' },
     id: { control: 'text' },
     order: {
-      control: { type: 'radio' },
-      options: ['base', 'reverse'],
+      /*control: { type: 'radio' },
+      options: ['base', 'reverse'],*/
+      control: 'check', options: ['reverse'],
       table: {
         type: { summary: 'string' },
         defaultValue: { summary: 'base' },
@@ -34,7 +35,7 @@ export const Default = Template.bind({});
 // More on args: https://storybook.js.org/docs/html/writing-stories/args
 Default.args = {
   checked: false,
-  label: 'hello',
+  label: 'hello x',
   forAttr: 'hocker',
   id: 'hocker'
 };

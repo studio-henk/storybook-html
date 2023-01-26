@@ -1,6 +1,6 @@
 import { createAtomButton } from '../../Atoms/atom-button/atom-button';
-import { createBaseLabel} from "../../Atoms/BaseLabel";
-import {createBaseInput} from "../../Atoms/BaseInput";
+import { createAtomLabel} from "../../Atoms/AtomLabel";
+import {createBaseInput} from "../../Atoms/AtomInput";
 
 export const createMCLNewsletterForm = ({
   label,
@@ -11,7 +11,7 @@ export const createMCLNewsletterForm = ({
   mclnewsletterform.className = ['sh-molecule-newsletterform'].join(' ');
   // label
   mclnewsletterform.appendChild(
-      createBaseLabel({
+      createAtomLabel({
         label: label,
       })
   )

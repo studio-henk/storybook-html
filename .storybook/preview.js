@@ -27,6 +27,8 @@ export const parameters = {
                 'Getting-Started',
                 'Design Tokens', ['Intro', 'Color', 'Fontsize', 'Spacings'],
                 'Configuration', ['Intro', 'Config'],
+                'Base',
+                'Components New',
                 'Components', ['Intro', 'Atoms', ['Intro', 'Base', 'Icon', 'Button', ['Intro', '*'], 'Form Controls', '*'], '*'],
                 'Templates Pages', ['Intro']
             ]

@@ -1,0 +1,83 @@
+.atom-input-txt {
+    display: inline-flex;
+    width: 100%;
+    background-color: var(--color-background-input, var(--color-background-form, #fff));
+    color: var(--color-text-input, #000);
+    font-family: ff-scala-sans-pro, sans-serif;
+    font-weight: 300;
+    border-radius: 8px;
+    border: 1px solid var(--color-text-input, #000);
+    padding: 0.5em 1em;
+    letter-spacing: 1px;
+    font-size: calc(var(--size-font-input-text, 16px) / var(--size-font-root) * 1rem);
+    line-height: 28px;
+}
+
+.atom-input-txt:disabled, .atom-input-txt:disabled + label {
+    --color-background-input: #ebebeb;
+    cursor: not-allowed;
+}
+
+/* placeholder text element itself, not the input field */
+.atom-input-txt::placeholder {
+    /*border: 1px solid blue;*/
+    color: #000;
+    opacity: 0.5;
+}
+
+/* Element that is currently displaying placeholder text,
+* including <input> and <textarea> elements with the placeholder attribute present
+* that has, as yet, no value.
+*/
+
+/* has placeholder attr */
+.atom-input-txt[placeholder] {
+    /*border: 1px solid yellow;*/
+}
+
+/* does not have placeholder attr */
+.atom-input-txt:not([placeholder]) {
+    /*border: 1px solid green;*/
+}
+
+.atom-input-txt[value] {
+    /*border: 10px solid orangered;*/
+}
+
+.atom-input-txt:placeholder-shown {
+    /*border: 1px solid aqua;*/
+}
+
+.atom-input-txt:not(:placeholder-shown) {
+    /*border: 1px solid lime;*/
+}
+
+.atom-input-txt:placeholder-shown:not([placeholder=" "]) {
+    /*border: 1px solid burlywood;*/
+}
+
+.atom-input-txt:required {
+    /*border: 1px solid yellow;*/
+}
+
+.atom-input-txt:invalid {
+    /*border: 1px solid red;*/
+}
+
+.atom-input-txt:required:invalid {
+    /*border: 1px solid orange;*/
+}
+
+/* not supported yet */
+.atom-input-txt:required:user-invalid {
+    /*border: 1px solid magenta;*/
+}
+
+.atom-input-txt:valid {
+    /*border: 1px solid green;*/
+}
+
+/* not supported yet */
+.atom-input-txt:blank {
+    /*border: 1px solid coral;*/
+}

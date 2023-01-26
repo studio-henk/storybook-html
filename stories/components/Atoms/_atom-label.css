@@ -1,0 +1,47 @@
+.atom-label {
+    display: inline-flex;
+    line-height: 28px;
+}
+
+.atom-label[data-style="labels-as-placeholders"] {
+    cursor: text;
+    padding: 0 4px;
+    align-self: flex-start;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    position: absolute;
+    top: 12px;
+    left: 14px;
+    z-index: 9;
+    transition: top 0.3s ease, font-size 0.3s ease, background 0.3s;
+}
+
+.atom-input-txt:focus + .atom-label[data-style="labels-as-placeholders"],
+.atom-input-txt:placeholder-shown:not([placeholder=" "]) + .atom-label[data-style="labels-as-placeholders"],
+.atom-input-txt:not(:placeholder-shown) + .atom-label[data-style="labels-as-placeholders"],
+.atom-select + .atom-label[data-style="labels-as-placeholders"] {
+    top: -10px;
+    font-size: 12px;
+    background-color: var(--color-background-input, var(--color-background-form, #fff));
+}
+
+/* has placeholder attr */
+.atom-input-txt[placeholder] + .atom-label[data-style="labels-as-placeholders"] {
+    /*border: 1px solid mediumaquamarine;*/
+}
+
+/* has placeholder attr with just a space */
+.atom-input-txt[placeholder=" "] + .atom-label[data-style="labels-as-placeholders"] {
+    /*border: 1px solid aquamarine;*/
+}
+
+/* has placeholder attr with just a space and shown */
+.atom-input-txt[placeholder=" "]:placeholder-shown + .atom-label[data-style="labels-as-placeholders"] {
+    /*border: 1px solid forestgreen;*/
+}
+
+/* has placeholder attr with just a space and not shown */
+.atom-input-txt[placeholder=" "]:not(:placeholder-shown) + .atom-label[data-style="labels-as-placeholders"] {
+    /*border: 1px solid lawngreen;*/
+}

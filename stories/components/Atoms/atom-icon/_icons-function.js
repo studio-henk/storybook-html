@@ -42,6 +42,49 @@ export function returnIconSVG(iconName, strokeColor) {
             `;
             return iconSVG;
             break;
+        case 'iconArrowDown':
+            iconSVG = `
+                <svg
+                    class="sh-atom-icon__svg"
+                    width="16"
+                    height="38"
+                    viewBox="0 0 16 38"
+                    fill="none"
+                    aria-labelledby="${iconName}"
+                    id="${iconName}"
+                    xmlns="http://www.w3.org/2000/svg"                    
+                >
+                    <title>${iconName}</title>
+                    <desc>Arrow icon pointing down</desc>
+                    <path d="M1 29.875L8 36.875L15 29.875"
+                          stroke="${ strokeColor }"
+                          stroke-linecap="square"/>
+                    <path d="M8 1L8 35.7083"
+                          stroke="${ strokeColor }"
+                          stroke-linecap="square"/>
+                </svg>
+            `;
+            return iconSVG;
+            break;
+        case 'iconDisclosureCollapsed':
+            iconSVG = `
+                <svg 
+                    class="sh-atom-icon__svg"
+                    width="15" 
+                    height="8" 
+                    viewBox="0 0 15 8" 
+                    fill="none" 
+                    aria-labelledby="${iconName}"
+                    id="${iconName}"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <title>${iconName}</title>
+                    <desc>Arrow icon pointing down</desc>
+                    <path d="M14 1L7.5 7L1 1" stroke="${ strokeColor }" stroke-width="0.7" stroke-linecap="round"/>
+                </svg>
+            `;
+            return iconSVG;
+            break;
         default:
             console.log('no icon name supplied.');
     }

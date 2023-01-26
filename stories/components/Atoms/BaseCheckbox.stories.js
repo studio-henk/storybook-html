@@ -2,7 +2,7 @@ import { createBaseCheckbox } from './BaseCheckbox';
 
 // More on default export: https://storybook.js.org/docs/html/writing-stories/introduction#default-export
 export default {
-  title: 'Components/Atoms/_hidden_BaseCheckbox',
+  title: 'Components/Atoms/BaseCheckbox',
   // More on argTypes: https://storybook.js.org/docs/html/api/argtypes
   argTypes: {
     checked: { control: 'boolean' },

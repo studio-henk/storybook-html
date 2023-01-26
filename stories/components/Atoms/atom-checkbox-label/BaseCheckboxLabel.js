@@ -1,7 +1,6 @@
 import './sh-atom-checkbox-label.css';
-import {createBaseInput} from "../BaseInput";
 import {createBaseCheckbox} from "../BaseCheckbox";
-import {createBaseLabel} from "../BaseLabel";
+import {createAtomLabel} from "../AtomLabel";
 
 export const createBaseCheckboxLabel = ({
   checked = false,
@@ -18,17 +17,17 @@ export const createBaseCheckboxLabel = ({
   baseCheckboxLabel.className = ['sh-atom-checkbox-label'].join(' ');
 
   // order
-  if (order == 'reverse') {
+  if (order === 'reverse') {
     baseCheckboxLabel.setAttribute('data-order', order);
   }
 
   // custom
-  if (customCheckbox == true) {
+  if (customCheckbox === true) {
     baseCheckboxLabel.setAttribute('data-custom-checkbox', customCheckbox);
   }
 
   // custom
-  if (variant == 'circle') {
+  if (variant === 'circle') {
     baseCheckboxLabel.setAttribute('data-variant', variant);
     checkmarkCircle = true;
   }
@@ -43,8 +42,8 @@ export const createBaseCheckboxLabel = ({
 
   // label
   baseCheckboxLabel.appendChild(
-    createBaseLabel({
-        label: label,
+    createAtomLabel({
+        labelText: label,
         forAttr: forAttr,
         checkmarkCircle: checkmarkCircle
     })

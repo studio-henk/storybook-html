@@ -5,15 +5,21 @@
     * @tokens Config/Colors
     * @presenter Color
     */
+    /* page */
     --color-background-page-primary-base: var(--color-white, #fff);
     --color-background-page: var(--color-white, #fff);
     --color-text-page: var(--color-henk-black, #000);
 
+    /* button */
     --color-background-button: var(--color-henk-black);
     --color-background-button-primary-base: var(--color-henk-black-hsl);
     --color-text-button: var(--color-henk-white);
     --color-text-button-primary-base: var(--color-henk-white);
     --color-border-button: var(--color-henk-black);
+
+    /* form inputs / controls */
+    --color-background-input: var(--color-white);
+    --color-text-input: var(--color-henk-black);
 
     /* nav */
     /*dropdown .sh-atom-sup highlight "NEW" color*/
@@ -30,6 +36,7 @@
     * @presenter FontSize
     */
     --size-font-body: var(--size-font-root);
+    --size-font-input-text: var(--size-font-root);
 
     /**
     * @tokens Config/Fonts

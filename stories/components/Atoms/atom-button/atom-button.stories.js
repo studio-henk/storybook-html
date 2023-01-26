@@ -2,11 +2,12 @@ import {withDesign} from "storybook-addon-designs";
 import {createAtomButton} from './atom-button';
 // badges
 import {BADGE} from '@geometricpanda/storybook-addon-badges';
-import {Placeholder} from "../BaseInput.stories";
+import {Placeholder} from "../AtomInput.stories";
 
 export default {
     title: 'Components/Atoms/Button/Button Stories',
     component: createAtomButton,
+    parameters: { controls: { sort: 'requiredFirst' } },
     argTypes: {
         buttonElement: {
             control: {type: 'radio'},

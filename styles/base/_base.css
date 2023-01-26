@@ -177,3 +177,8 @@ figure img {
 figure img + figcaption {
     text-align: left;
 }
+
+/*
+label {
+    color: magenta;
+}*/

@@ -1,0 +1,7 @@
+.molecule-input-label,
+.layout-container-input-label {
+    display: flex;
+    flex-direction: column-reverse;
+    /* in case child label has [data-style="labels-as-placeholders"]   */
+    position: relative;
+}

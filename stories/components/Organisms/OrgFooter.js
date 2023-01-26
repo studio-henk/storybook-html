@@ -1,6 +1,6 @@
 import { createAtomButton } from '../Atoms/atom-button/atom-button';
-import { createBaseLabel} from "../Atoms/BaseLabel";
-import {createBaseInput} from "../Atoms/BaseInput";
+import { createAtomLabel} from "../Atoms/AtomLabel";
+import {createBaseInput} from "../Atoms/AtomInput";
 
 export const createOrgFooter = ({
   buttonText = '',
@@ -15,7 +15,7 @@ export const createOrgFooter = ({
   orgfooter.className = ['sh-org-footer'].join(' ');
   // label
   orgfooter.appendChild(
-      createBaseLabel({
+      createAtomLabel({
         label: 'Search the site',
       })
   )
