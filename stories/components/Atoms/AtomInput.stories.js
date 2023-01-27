@@ -5,6 +5,17 @@ export default {
   component:createAtomInput,
   parameters: { controls: { sort: 'requiredFirst' } },
   argTypes: {
+    type: {
+      control: {
+        type: 'select',
+        required: true
+      },
+      options: ['text', 'tel', 'email', 'month', 'number', 'password', 'search', ],
+      table: {
+          type: {summary: 'string'},
+          defaultValue: {summary: 'text'},
+      },
+    },
     name: {
       control: 'text',
       type: {
@@ -48,6 +59,14 @@ export default {
           defaultValue: {summary: 'off'},
       },
     },
+    inputmode: {
+      control: {type: 'select'},
+      options: ['text', 'decimal', 'numeric', 'tel', 'search', 'email', 'url'],
+      table: {
+          type: {summary: 'string'},
+          defaultValue: {summary: 'text'},
+      },
+    },
     initialValue: {
       control: 'text',
       description: 'if an initial value is needed.',
@@ -58,34 +77,6 @@ export default {
     }
   },
 };
-
-// basic input text html element
-/*const TemplateBasicInputElement = ({ ...args }) => {
-  const inputElement = `<input type="text" />`;
-  return inputElement;
-};*/
-
-/*export const HTMLInputText = TemplateBasicInputElement.bind({});
-HTMLInputText.parameters= {
-  badges: [BADGE.DEPRECATED],
-  controls: {include: []},
-}
-HTMLInputText.storyName = 'Default HTML Input Text';*/
-
-// current
-/*const TemplateCurrentHENKInputElement = ({ ...args }) => {
-  const inputElement = `<input type="text" class="basic-input__input" />`;
-  return inputElement;
-};*/
-/*
-export const CurrentHENKInputText = TemplateCurrentHENKInputElement.bind({});
-CurrentHENKInputText.parameters= {
-  badges: [BADGE.DEPRECATED],
-  controls: {include: []}
-}
-CurrentHENKInputText.storyName = 'Current HENK Input Text';
-*/
-
 
 const Template = ({ placeholder, ...args }) => {
   return createAtomInput({ placeholder, ...args });
@@ -160,7 +151,7 @@ InitialValue.parameters = {
 }
 InitialValue.storyName = 'InitialValue';
 
-export const WithFormRef = Template.bind({});
+/*export const WithFormRef = Template.bind({});
 WithFormRef.args = {
   form: '#someform'
 };
@@ -168,4 +159,16 @@ WithFormRef.parameters = {
   badges: [BADGE.BETA],
   controls: {include: ['form']},
 }
-WithFormRef.storyName = 'With Form Ref';
+WithFormRef.storyName = 'With Form Ref';*/
+
+export const EmailField = Template.bind({});
+EmailField.args = {
+  type: 'email',
+  inputmode: 'email',
+  autocomplete: 'email'
+};
+EmailField.parameters = {
+  badges: [BADGE.BETA],
+  controls: {include: ['type']},
+}
+EmailField.storyName = 'Email';

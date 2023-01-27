@@ -1,0 +1,16 @@
+/*---
+title:   Molecule Form Checkout
+section: Forms
+author: Nils Hendriks for Studio HENK
+date: 2023-01-27 • 10:52 - CET
+---
+*/
+
+.molecule-form-checkout {
+    /*background-color: pink;*/
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    justify-content: flex-start;
+    align-items: flex-start;
+}

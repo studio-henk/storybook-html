@@ -1,5 +1,6 @@
 import {createMoleculeInputLabel} from './MoleculeInputLabel';
 import {BADGE} from '@geometricpanda/storybook-addon-badges';
+import {number} from "../../../../storybook-static/4.5bd41b10f667462c92a8.manager.bundle";
 // More on default export: https://storybook.js.org/docs/html/writing-stories/introduction#default-export
 export default {
     title: 'Components/Molecules/Input Controls/Label + Input',
@@ -88,6 +89,14 @@ export default {
                 category: 'Atom Input',
             },
         },
+        inputmode: {
+            control: 'text',
+            table: {
+                type: {summary: 'string'},
+                defaultValue: {summary: 'text'},
+                category: 'Atom Input',
+            },
+        },
         initialValue: {
             control: 'text',
             description: 'if an initial value is needed.',
@@ -139,6 +148,40 @@ Stacked.args = {
 Stacked.parameters = {
     badges: [BADGE.BETA],
     controls: {include: ['labelText']}
+}
+
+export const StackedAutoComplete = Template.bind({});
+StackedAutoComplete.argTypes = {}
+StackedAutoComplete.args = {
+    labelText: 'Name',
+    forAttr: 'txt_name',
+    id: 'txt_name',
+    placeholder: ' ',
+    dataStyle: 'labels-as-placeholders',
+    autocomplete: 'name'
+};
+StackedAutoComplete.parameters = {
+    badges: [BADGE.BETA],
+    controls: {include: ['labelText', 'autocomplete']}
+}
+
+export const StackedAutoCompleteCC = Template.bind({});
+StackedAutoCompleteCC.argTypes = {}
+StackedAutoCompleteCC.args = {
+    labelText: 'Creditcard number',
+    forAttr: 'txt_cc',
+    id: 'txt_cc',
+    placeholder: ' ',
+    required: true,
+    pattern: '[0-9]{8,19}',
+    patternTooltipText: 'This field requires a valid creditcard number',
+    dataStyle: 'labels-as-placeholders',
+    autocomplete: 'cc-number',
+    inputmode: 'numeric'
+};
+StackedAutoCompleteCC.parameters = {
+    badges: [BADGE.BETA],
+    controls: {include: ['labelText', 'autocomplete', 'inputmode']}
 }
 
 export const StackedWithPlaceholder = Template.bind({});

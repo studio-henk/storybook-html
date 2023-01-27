@@ -17,7 +17,8 @@ code here
     display: inline-block;
     border-radius: 50px;
     font-family: ff-scala-sans-pro, sans-serif;
-    font-size: 12px;
+    /*font-size: 12px;*/
+    font-size: calc(var(--size-font-xxsmall) / var(--size-font-body) * 1rem);
     text-transform: uppercase;
     margin-top: calc(28 / var(--size-font-body) * 1rem);
     letter-spacing: 0.2em;
@@ -477,11 +478,21 @@ code here
     border-radius: 4px;
 }
 
-.sh-atom-button[disabled], .sh-atom-button[aria-disabled], .sh-atom-button[data-state="disabled"] {
+.sh-atom-button[disabled], .sh-atom-button[aria-disabled], .sh-atom-button[data-state="disabled"],
+.sh-atom-button[data-state="loading"] {
     opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
 }
 
-.sh-atom-button[disabled]:focus, .sh-atom-button[aria-disabled]:focus, .sh-atom-button[data-state="disabled"]:focus, .sh-atom-button[disabled]:hover, .sh-atom-button[aria-disabled]:hover, .sh-atom-button[data-state="disabled"]:hover {
+.sh-atom-button[disabled]:focus,
+.sh-atom-button[aria-disabled]:focus,
+.sh-atom-button[data-state="disabled"]:focus,
+.sh-atom-button[data-state="loading"]:focus,
+.sh-atom-button[disabled]:hover,
+.sh-atom-button[aria-disabled]:hover,
+.sh-atom-button[data-state="disabled"]:hover,
+.sh-atom-button[data-state="loading"]:hover {
     cursor: not-allowed;
 }
 

@@ -3,6 +3,7 @@ import {createAtomInput} from "../../Atoms/AtomInput";
 import {createAtomLabel} from "../../Atoms/AtomLabel";
 
 export const createMoleculeInputLabel = ({
+  type,
   labelText,
   forAttr,
   dataStyle,
@@ -14,6 +15,7 @@ export const createMoleculeInputLabel = ({
   pattern: pattern,
   patternTooltipText: patternTooltipText,
   autocomplete: autocomplete,
+  inputmode: inputmode,
   form: form,
   initialValue: initialValue
 }) => {
@@ -24,6 +26,7 @@ export const createMoleculeInputLabel = ({
   // input
   wrapperElement.appendChild(
     createAtomInput({
+      type: type,
       name: name,
       id: id,
       placeholder: placeholder,
@@ -32,6 +35,7 @@ export const createMoleculeInputLabel = ({
       pattern: pattern,
       patternTooltipText: patternTooltipText,
       autocomplete: autocomplete,
+      inputmode: inputmode,
       form: form,
       initialValue: initialValue
     })

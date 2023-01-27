@@ -81,3 +81,28 @@
 .atom-input-txt:blank {
     /*border: 1px solid coral;*/
 }
+
+.atom-input-txt:autofill {
+    /*-webkit-box-shadow: 0 0 0px 1000px white inset;*/
+    -webkit-box-shadow: 0 0 0px 1000px var(--color-accent5) inset;
+}
+
+.atom-input-txt:-webkit-autofill {
+    /*border: 3px solid darkorange;*/
+    -webkit-box-shadow: 0 0 0px 1000px var(--color-accent5) inset;
+}
+
+.atom-input-txt[data-com-onepassword-filled="light"] {
+}
+
+.atom-input-txt[data-com-onepassword-filled="dark"] {
+}
+
+.atom-input-txt[data-com-onepassword-filled="light"] {
+}
+
+.atom-input-txt[data-com-onepassword-filled],
+.atom-textarea[data-com-onepassword-filled] {
+    background-color: unset !important;
+    -webkit-box-shadow: 0 0 0px 1000px var(--color-accent5) inset;
+}

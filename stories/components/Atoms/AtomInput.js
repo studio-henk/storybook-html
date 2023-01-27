@@ -15,6 +15,7 @@ import './_atom-input.css';
 />*/
 
 export const createAtomInput = ({
+  type = 'text',
   name = '',
   id = '',
   placeholder,
@@ -23,15 +24,18 @@ export const createAtomInput = ({
   pattern = '',
   patternTooltipText = '',
   autocomplete = 'off',
+  inputmode = 'text',
   form,
   initialValue
 }) => {
   const baseInput = document.createElement('input');
   baseInput.className = ['atom-input-txt'].join(' ');
-  baseInput.type = 'text';
+  // baseInput.type = 'text';
+  baseInput.type = type;
   baseInput.name = name;
   baseInput.id = id;
   baseInput.autocomplete = autocomplete;
+  baseInput.inputMode = inputmode;
 
   if (placeholder) {
     // baseInput.setAttribute('placeholder', placeholder);
