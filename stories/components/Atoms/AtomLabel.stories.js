@@ -16,17 +16,6 @@ export default {
           required: true
       },
     },
-    pattern: {
-      control: 'text',
-      /*table: {
-          type: {summary: 'string'},
-          defaultValue: {summary: '.*\\S.*'},
-      },*/
-    },
-    /*dataStyle: {
-      control: {type: 'select'},
-      options: ['', 'labels-as-placeholders']
-    }*/
   },
 };
 
@@ -44,14 +33,3 @@ Default.parameters= {
 }
 Default.storyName = 'Atom Label';
 
-// export const BaseLabelCircle = Template.bind({});
-// BaseLabelCircle.args = {
-//   labelText: 'Label text',
-//   forAttr: 'forwho',
-//   checkmarkCircle: true
-// };
-// BaseLabelCircle.parameters= {
-//   badges: [BADGE.EXPERIMENTAL],
-//   controls: {include: ['labelText']},
-// }
-// BaseLabelCircle.storyName = 'Base Label Circle';

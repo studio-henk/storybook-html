@@ -7,7 +7,8 @@
     font-weight: 300;
     border-radius: 8px;
     border: 1px solid var(--color-text-input, #000);
-    padding: 0.5em 1em;
+    /*padding: 0.5em 1em;*/
+    padding: calc(7 / var(--size-font-root) * 1em) calc(var(--size-font-root) / var(--size-font-root) * 1em);
     letter-spacing: 1px;
     font-size: calc(var(--size-font-input-text, 16px) / var(--size-font-root) * 1rem);
     line-height: 28px;
@@ -16,6 +17,7 @@
 .atom-input-txt:disabled, .atom-input-txt:disabled + label {
     --color-background-input: #ebebeb;
     cursor: not-allowed;
+    opacity: 0.5;
 }
 
 /* placeholder text element itself, not the input field */
@@ -44,6 +46,11 @@
     /*border: 10px solid orangered;*/
 }
 
+/*
+stacked
+placeholder shown by ' ' (space)
+placeholder: ' ',
+*/
 .atom-input-txt:placeholder-shown {
     /*border: 1px solid aqua;*/
 }
@@ -52,20 +59,35 @@
     /*border: 1px solid lime;*/
 }
 
-.atom-input-txt:placeholder-shown:not([placeholder=" "]) {
-    /*border: 1px solid burlywood;*/
+[data-use-css-validation="true"] .atom-input-txt:placeholder-shown {
+    /*border: 1px solid mediumpurple;*/
 }
 
-.atom-input-txt:required {
-    /*border: 1px solid yellow;*/
+[data-use-css-validation="true"] .atom-input-txt:not(:placeholder-shown) {
+    /*border: 1px solid lightcoral;*/
 }
 
-.atom-input-txt:invalid {
-    /*border: 1px solid red;*/
+[data-use-css-validation="true"] .atom-input-txt:not(:placeholder-shown):valid {
+    /*border: 1px solid lightseagreen;*/
 }
 
-.atom-input-txt:required:invalid {
-    /*border: 1px solid orange;*/
+[data-use-css-validation="true"] .atom-input-txt:not(:placeholder-shown):invalid {
+    /*border: 1px solid magenta;*/
+}
+
+[data-use-css-validation="true"] .atom-input-txt:placeholder-shown:invalid {
+    border: 1px solid black;
+}
+
+.atom-input-txt:optional {
+    /*background-color: #9E5B28;*/
+}
+
+/*.atom-input-txt:required {
+    border: 1px solid yellow;
+}*/
+.atom-input-txt:not(:placeholder-shown):required {
+    /*border: 1px solid darkmagenta;*/
 }
 
 /* not supported yet */
@@ -73,8 +95,20 @@
     /*border: 1px solid magenta;*/
 }
 
+.atom-input-txt:invalid {
+    /*border: 8px dashed red;*/
+}
+
 .atom-input-txt:valid {
-    /*border: 1px solid green;*/
+    /*border: 8px solid green;*/
+}
+
+.atom-input-txt:required:valid {
+    /*border: 8px solid lightseagreen;*/
+}
+
+.atom-input-txt:required:invalid {
+    /*border: 1px solid orange;*/
 }
 
 /* not supported yet */
@@ -83,13 +117,16 @@
 }
 
 .atom-input-txt:autofill {
-    /*-webkit-box-shadow: 0 0 0px 1000px white inset;*/
-    -webkit-box-shadow: 0 0 0px 1000px var(--color-accent5) inset;
+    /*background-color: var(--color-accent5);*/
+    background-color: var(--color-autofill-input, #fff);
+    background-clip: content-box;
+    -webkit-box-shadow: 0 0 0 1000px var(--color-autofill-input) inset;
 }
 
 .atom-input-txt:-webkit-autofill {
-    /*border: 3px solid darkorange;*/
-    -webkit-box-shadow: 0 0 0px 1000px var(--color-accent5) inset;
+    background-color: var(--color-autofill-input);
+    background-clip: content-box;
+    -webkit-box-shadow: 0 0 0 1000px var(--color-autofill-input) inset;
 }
 
 .atom-input-txt[data-com-onepassword-filled="light"] {
@@ -103,6 +140,13 @@
 
 .atom-input-txt[data-com-onepassword-filled],
 .atom-textarea[data-com-onepassword-filled] {
-    background-color: unset !important;
-    -webkit-box-shadow: 0 0 0px 1000px var(--color-accent5) inset;
+    /*background-color: unset !important;*/
+    background-color: var(--color-autofill-input) !important;
+    background-clip: content-box;
+    -webkit-box-shadow: 0 0 0 1000px var(--color-autofill-input) inset;
 }
+
+/*
+.atom-input-txt:focus {
+    outline: initial;
+}*/

@@ -4,8 +4,27 @@
     box-sizing: border-box;
 }
 
-*:focus {
+/**:focus {
     outline: none;
+}*/
+:focus,
+:focus-visible {
+    /*outline: 1px solid var(--color-outline, blue);*/
+    /*outline-color: var(--color-outline, revert);*/
+    outline-width: 1px;
+    /*outline-offset: -8px;*/
+}
+
+@media only screen and (max-width: 767px) {
+    :focus,
+    :focus-visible {
+        /*outline-width: 1px;
+        outline-offset: -8px;*/
+    }
+}
+
+:focus-visible:not(:valid) {
+    /*outline-color: var(--color-henk-danger, revert);*/
 }
 
 html, body {
@@ -108,9 +127,9 @@ a[href*="mailto:"]:focus, a[href*="tel:"]:focus, a[href*="mailto:"]:hover, a[hre
     text-decoration-thickness: 0.5px;
 }
 
-p {
+/*p {
     margin: var(--size-vertical-rhythm) 0 0;
-}
+}*/
 
 header {
     width: 100%;

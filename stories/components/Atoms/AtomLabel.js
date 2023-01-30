@@ -13,7 +13,16 @@ export const createAtomLabel = ({
   checkmarkCircle = false
 }) => {
   const BaseLabel = document.createElement('label');
-  BaseLabel.innerText = labelText;
+  // what if contains HTML?
+  // ie: <em> or <a href>
+  const parser = new DOMParser();
+  // const htmlString = "<strong>Beware of the leopard</strong>";
+  const htmlString = labelText;
+  const doc3 = parser.parseFromString(htmlString, "text/html");
+  // console.log(doc3.body.firstChild);
+
+  // BaseLabel.innerText = labelText;
+  BaseLabel.innerHTML = labelText;
   BaseLabel.className = ['atom-label'].join(' ');
 
   if (forAttr) {
@@ -24,6 +33,16 @@ export const createAtomLabel = ({
   if (dataStyle) {
     BaseLabel.setAttribute('data-style', dataStyle);
   }
+
+  /*// if [data-style="labels-as-placeholders"] then add a span with the patterntooltiptext / title / error messag
+  if (dataStyle === 'labels-as-placeholders') {
+    // BaseLabel.setAttribute('data-style', dataStyle);
+    const errorMSGspan = `
+      <span>hello</span>
+    `;
+
+    BaseLabel.insertAdjacentHTML('beforeend', errorMSGspan);
+  }*/
 
   if (pattern) {
     BaseLabel.title = patternTooltipText;

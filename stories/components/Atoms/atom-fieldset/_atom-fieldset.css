@@ -1,0 +1,5 @@
+.atom-fieldset {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 1rem;
+}

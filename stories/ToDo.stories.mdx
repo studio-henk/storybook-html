@@ -9,84 +9,88 @@ import { Meta } from '@storybook/addon-docs';
 ### Cart/List
 ### Customer Data / Delivery
 #### Form
+    - checkbox terms and condition asterisk for required
+        - Ik heb de algemene voorwaarden, aflevervoorwaarden en het retourbeleid gelezen en ga hiermee akkoord.
 - molecule for checkout form with all fields
-    - Naam -> type text
-    - Email Adres -> type email
-    - Land -> select
-    - Postcode -> text
-    - Huisnummer -> text
-    - Toevoeging -> text
+    - Naam -> type text  ✅
+    - Email Adres -> type email  ✅
+    - Land -> select  ✅
+    - Postcode -> text  ✅
+    - Huisnummer -> text  ✅
+    - Toevoeging -> text  ✅
     - Telefoon nummer -> plugin?
     - special toggle button? for "levering op ander adres"
-    - alg voorwaarden checkbox
-    - inschrijven nieuwsbrief checkbox
-    - submit button? (in design submit will be done by button in action-console)
-- input with label moving from mid field to on top ✅
+    - alg voorwaarden checkbox ✅
+    - inschrijven nieuwsbrief checkbox ✅
+    - submit button? (in design submit will be done by button in action-console)  ✅
+    - input with label moving from mid field to on top ✅
     - label ✅
     - **communicate that placeholder attribute needs to have a space set for this to work**
-- custom select with arrow down and rouned corners ✅
+- custom select with arrow down and rounded corners ✅
 - textarea ✅
 - input type option ✅
 - inputmode ✅
-    text (default value),
+    text (default value), ✅
     decimal,
     numeric,
     tel,
     search,
-    email,
+    email, ✅
     url
 - radio buttons
-- check boxes
+- check boxes ✅
+    - custom checkbox focus style! ✅
 - autocomplete
-    - implement and describe use of correct values: https://www.w3.org/TR/WCAG21/#input-purposes
-    - example: "cc-number" for creditcard number
+    - implement and describe use of correct values: https://www.w3.org/TR/WCAG21/#input-purposes ✅
+    - example: "cc-number" for creditcard number ✅
     - ```<input autocomplete="cc-exp" id="exp-date" type="month">``` -> month not supported in safari but fallback is normal text field.
-    - autocomplete="off" is ignored by all browsers: https://bugs.chromium.org/p/chromium/issues/detail?id=46543
-        - css hack?
+    - css hack for autofill input bg colors ✅
+    - css hack for autofill by 1password plugin
         ```
         input:-webkit-autofill {
             -webkit-box-shadow: 0 0 0px 1000px white inset;
         }
         ```
-        - snippet for hack maybe?
-        ```
-        if (navigator.userAgent.toLowerCase().indexOf("chrome") >= 0) {
-            $(window).load(function(){
-                $('input:-webkit-autofill').each(function(){
-                    var text = $(this).val();
-                    var name = $(this).attr('name');
-                    $(this).after(this.outerHTML).remove();
-                    $('input[name=' + name + ']').val(text);
-                });
-            });
-        }
-        ```
-- layout for forms: 2 inputs next to each other
-- telephone field -> plugin for country dropdown
+- layout for forms: 2 inputs next to each other ✅
 - CSS validation
-    - add span with asterisk (*) for required fields
-    - if field invalid (also when empty) show error msg -> hint
+    - add span with asterisk (*) for required fields ✅
+    - if field invalid (also when empty) show error msg -> hint ✅
 - JS validation
 - submit handling
 ### Delivery
 ### Payment
 
 ## general
+- test checkbox label with inline link ✅
+- add button focus styles for tabbing ✅
+- fix outline for iOS / too close to label text? ✅
+- fix label effect for iOS / thicker? ✅
+- get all styles from v10 (what branch? checkout?) into storybook as CSS.
+- get postcss autoprefix working in storybook?
+- focus styles:
+    - prefer not to remove standard outline on inputs (accessibility) ✅
+    - maybe change its blue color to a HENK color.
+    - differentiate between mouse clicks and keyboard tab focus?
 - fix Firefox indent in select dropdown.
-- fix blue color select text
+- fix vertical-rhytm variable issue
+    ```
+        p {
+            margin: var(--size-vertical-rhythm) 0 0;
+        }
+    ```
+- fix tabbing in form, outline? ✅
+- label has gradient now ✅
+- fix blue color select text ✅
 - fix loading button disabled state ✅
 - fixed loading button spinner oval shape in safari. ✅
-- integrate Slack hook: [slackhook](https://www.chromatic.com/docs/integrations)
 - icon position left to text
 - search form
     - search icon ✅
     - mobile layout: button below input ✅
-    - check with Yvy about rounded corners input, bit weird with button
-- organize folders and docs: https://storybook.js.org/blog/structuring-your-storybook/
-- find out how to have doc page before component story
-- find out how to use a component on a doc page like this one
-- find out how to use a story of a component on a doc page like this one
+    - check with Yvy about rounded corners input, a bit weird with button
+- integrate Slack hook: [slackhook](https://www.chromatic.com/docs/integrations)
 
-## results
+## research results
 - figma plugin: need paid account to be able to show storybook component inside figma (shared library limit)
 - figma design addon: show figma design in storybook. stopped working. maybe rights issue?
+- autocomplete="off" is ignored by all browsers: https://bugs.chromium.org/p/chromium/issues/detail?id=46543

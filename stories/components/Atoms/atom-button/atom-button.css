@@ -13,12 +13,14 @@ code here
 */
 
 .sh-atom-button {
+    --size-font-button: var(--size-font-xxsmall, 12);
     box-sizing: border-box;
     display: inline-block;
     border-radius: 50px;
     font-family: ff-scala-sans-pro, sans-serif;
     /*font-size: 12px;*/
-    font-size: calc(var(--size-font-xxsmall) / var(--size-font-body) * 1rem);
+    /*font-size: calc(var(--size-font-xxsmall) / var(--size-font-body) * 1rem);*/
+    font-size: calc(var(--size-font-button) / var(--size-font-body) * 1rem);
     text-transform: uppercase;
     margin-top: calc(28 / var(--size-font-body) * 1rem);
     letter-spacing: 0.2em;
@@ -48,8 +50,8 @@ code here
 
 @media only screen and (min-width: 992px) {
     .sh-atom-button {
-        padding: 8px 28px;
-        font-size: 14px;
+        --size-font-button: var(--size-font-small, 14);
+        padding: 7px 28px;
         line-height: 28px;
     }
 }
@@ -548,4 +550,9 @@ code here
 
 .sh-atom-button[data-alignment*="separator"] {
     grid-template-columns: repeat(3, auto);
+}
+
+/* focus outline styles */
+.sh-atom-button:focus-visible {
+    outline-offset: 4px;
 }

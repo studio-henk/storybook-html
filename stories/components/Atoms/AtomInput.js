@@ -16,6 +16,7 @@ import './_atom-input.css';
 
 export const createAtomInput = ({
   type = 'text',
+  minLength,
   name = '',
   id = '',
   placeholder,
@@ -42,6 +43,10 @@ export const createAtomInput = ({
     baseInput.placeholder = placeholder;
   }
 
+  if (minLength) {
+    baseInput.minLength = minLength;
+  }
+
   if (required) {
     // baseInput.setAttribute('required', 'required');
     baseInput.required = required;
@@ -57,6 +62,10 @@ export const createAtomInput = ({
 
   if (pattern) {
     baseInput.pattern = pattern;
+    //baseInput.title = patternTooltipText;
+  }
+
+  if (patternTooltipText) {
     baseInput.title = patternTooltipText;
   }
 
