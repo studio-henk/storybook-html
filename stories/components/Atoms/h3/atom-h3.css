@@ -13,8 +13,8 @@ h2,
   /*font-size: clamp(35px, 4.55729167vw, 33px);*/
   /* 33 on 768px wide: 33 / 768 * 100 */
   /*font-size: clamp(var(--size-font-xlarge-px), 4.296875vw, var(--size-font-xxxlarge-px));*/
-  font-size: clamp(var(--size-font-xlarge-px), calc(var(--size-font-xxxlarge) / 768 *100vw), var(--size-font-xxxlarge-px));
-  line-height: 50px;
+  /*font-size: clamp(var(--size-font-xlarge-px), calc(var(--size-font-xxxlarge) / 768 *100vw), var(--size-font-xxxlarge-px));
+  line-height: 50px;*/
   /*text-align: left;*/
-  letter-spacing: 0.07em;
+  /*letter-spacing: 0.07em;*/
 }

@@ -1,4 +1,4 @@
-import './atom-h3.css';
+// import './atom-h3.css';
 
 export const createBaseH3 = ({
   variant = '',

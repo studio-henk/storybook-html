@@ -1,4 +1,4 @@
-import './atom-h2.css';
+// import './atom-h2.css';
 
 export const createBaseH2 = ({
   variant = '',

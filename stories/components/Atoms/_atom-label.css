@@ -3,6 +3,7 @@
     /*display: inline-flex;*/
     line-height: 28px;
     color: hsla(0, 0%, 0%, 0.3);
+    /*color: hsla(0, 0%, 0%, 0.54);*/
 }
 
 /* label effect */
@@ -22,6 +23,7 @@
 
 /* label effect */
 .atom-input-txt:focus + .atom-label[data-style="labels-as-placeholders"],
+.molecule-input-label > .iti + .atom-label[data-style="labels-as-placeholders"],
 .atom-input-txt:placeholder-shown:not([placeholder=" "]) + .atom-label[data-style="labels-as-placeholders"],
 .atom-input-txt:not(:placeholder-shown) + .atom-label[data-style="labels-as-placeholders"],
 .atom-select + .atom-label[data-style="labels-as-placeholders"] {
@@ -53,19 +55,19 @@
 }
 
 /* has placeholder attr */
-.atom-input-txt[placeholder] + .atom-label[data-style="labels-as-placeholders"] {
-    /*border: 1px solid mediumaquamarine;*/
-}
+/*.atom-input-txt[placeholder] + .atom-label[data-style="labels-as-placeholders"] {
+    border: 1px solid mediumaquamarine;
+}*/
 
 /* has placeholder attr with just a space */
-.atom-input-txt[placeholder=" "] + .atom-label[data-style="labels-as-placeholders"] {
-    /*border: 1px solid aquamarine;*/
-}
+/*.atom-input-txt[placeholder=" "] + .atom-label[data-style="labels-as-placeholders"] {
+    border: 1px solid aquamarine;
+}*/
 
 /* has placeholder attr with just a space and shown */
-.atom-input-txt[placeholder=" "]:placeholder-shown + .atom-label[data-style="labels-as-placeholders"] {
-    /*border: 1px solid forestgreen;*/
-}
+/*.atom-input-txt[placeholder=" "]:placeholder-shown + .atom-label[data-style="labels-as-placeholders"] {
+    border: 1px solid forestgreen;
+}*/
 
 /* has placeholder attr with just a space and not shown */
 .atom-input-txt[placeholder=" "]:not(:placeholder-shown) + .atom-label[data-style="labels-as-placeholders"] {

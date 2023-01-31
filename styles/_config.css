@@ -26,6 +26,10 @@
     /*dropdown .sh-atom-sup highlight "NEW" color*/
     --color-text-sup-highlight-nav: var(--color-accent8);
 
+    /* text selection */
+    --color-text-selection-bg: var(--color-accent5);
+    --color-text-selection-text: var(--color-henk-black);
+
     /*
     outline color for focused elements
     turned off it falls back to browser default (blue)
