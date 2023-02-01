@@ -45,3 +45,12 @@
     font-size: 14px;
     line-height: 1.4;
 }
+
+/* show and hide by vanilla JS */
+[data-show="false"] {
+    display: none;
+}
+
+[data-show="true"] {
+    display: block;
+}

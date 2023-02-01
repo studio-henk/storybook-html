@@ -1,6 +1,7 @@
 @charset "utf-8";
 /*reset*/
 @import "base/_reset.css";
+@import "screen-reader/_screen-reader.css";
 /*tokens*/
 @import url(tokens/_tokens-colors.css);
 @import url(tokens/_tokens-size-font.css);

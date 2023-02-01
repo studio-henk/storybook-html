@@ -5,6 +5,7 @@ import {createAtomButton} from "../../Atoms/atom-button/atom-button";
 import {createMoleculeInputLabel} from "../../Molecules/molecule-input-label/MoleculeInputLabel";
 import {createMoleculeLabelSelect} from "../../Molecules/molecule-label-select/MoleculeLabelSelect";
 import {createMoleculeLabelCheckbox} from "../../Molecules/molecule-label-checkbox/MoleculeLabelCheckbox";
+import {createMoleculeLabelRadio} from "../../Molecules/molecule-label-radio/MoleculeLabelRadio";
 
 export const createForm = ({
                                formTitle = 'title',
@@ -25,11 +26,17 @@ export const createForm = ({
                                checkbox2Required,
                                patternField2,
                                patternTooltipTextField2,
+                               fieldCompanyNameLabelText,
+                               fieldCompanyNameRequired,
+                               isShown,
+                               ...args
                            }) => {
 
     // create wrapper
     const wrapperElement = document.createElement('div');
     wrapperElement.className = ['molecule-form-checkout'].join(' ');
+    // wrapperElement.id = 'app-vue-checkout-form';
+    // wrapperElement.setAttribute('v-cloak', '');
 
     if (showRequired) {
         wrapperElement.setAttribute('data-show-required-fields', true);
@@ -44,10 +51,75 @@ export const createForm = ({
     formElement.className = ['molecule-form-checkout__form'].join(' ');
     formElement.noValidate = true;
 
+    // radio buttons
+    const radioButtons1 = createMoleculeLabelRadio({
+        legendText: 'Kies uw type aankoop',
+        /*required: true,*/
+        customRadio: true,
+        layout: 'horizontal',
+        dataStyle: 'no-panel',
+        data: [
+            {
+                id: 'radio-custom1',
+                checked: true,
+                disabled: false,
+                groupName: 'group-custom',
+                customRadio: false,
+                labelText: 'Particulier',
+                forAttr: 'radio-custom1',
+            },
+            {
+                id: 'radio-custom2',
+                checked: false,
+                disabled: false,
+                groupName: 'group-custom',
+                customRadio: false,
+                labelText: 'Zakelijk',
+                forAttr: 'radio-custom2',
+            }
+        ]
+    })
+
     // title
     const h1 = createBaseH1({
         text: formTitle,
         className: 'h2',
+    })
+
+    function otherFunc (e) {
+        console.log('hello other func');
+        let target = e.target;
+        switch (target.id) {
+            case 'radio-custom1':
+                console.log('private');
+                document.querySelector('[data-show="true"]').setAttribute('data-show', 'false');
+                break;
+            case 'radio-custom2':
+                console.log('business');
+                document.querySelector('[data-show="false"]').setAttribute('data-show', 'true');
+                break;
+        }
+    }
+
+    function formStuff () {
+        console.log('hello form stuff');
+        document.addEventListener('change', otherFunc);
+    }
+    setTimeout(() => {
+        formStuff();
+    }, 150)
+
+    // company name
+    const formFieldCompany = createMoleculeInputLabel({
+        name: 'txt_company_name',
+        id: 'txt_company_name',
+        forAttr: 'txt_company_name',
+        labelText: fieldCompanyNameLabelText,
+        required: fieldCompanyNameRequired,
+        dataStyle: dataStyle,
+        placeholder: ' ',
+        autocomplete: 'organization',
+        isShown: false,
     })
 
     const formField1 = createMoleculeInputLabel({
@@ -141,6 +213,7 @@ export const createForm = ({
     // add fieldset for checkboxes
     const fieldsetElement = document.createElement('fieldset');
     fieldsetElement.className = ['molecule-form-checkout__fieldset atom-fieldset'].join(' ');
+    fieldsetElement.setAttribute('data-style', 'no-panel');
 
     function runTelField() {
         var input = document.querySelector("#txt_telephone");
@@ -214,6 +287,8 @@ export const createForm = ({
     })
 
     formElement.append(h1);
+    formElement.append(radioButtons1);
+    formElement.append(formFieldCompany);
     formElement.append(formField1);
     formElement.append(formField2);
     formElement.append(formField3Select);

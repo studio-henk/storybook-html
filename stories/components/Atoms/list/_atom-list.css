@@ -1,0 +1,13 @@
+[data-style="list-style-em-dash"] {
+    list-style: none;
+}
+
+[data-style="list-style-em-dash"] li::before {
+    content: "\2014";
+    margin-right: 14px;
+    margin-left: -30px;
+}
+
+[data-style="list-style-em-dash"] li {
+    margin-left: 30px;
+}

@@ -1,7 +1,5 @@
 import { createForm } from "./OrganismFormCheckout";
 
-// import 'intl-tel-input/build/css/intlTelInput.css';
-
 export default {
     title: 'Components/Organisms/Checkout Form',
     argTypes: {
@@ -33,6 +31,10 @@ Base.args = {
     field2LabelText: 'Email Adres',
     field3SelectLabelText: 'Land',
     field4LabelText: 'Postcode',
+    fieldTelLabelText: 'Telefoon nummer',
+    fieldCompanyNameLabelText: 'Bedrijf',
+    fieldCompanyNameRequired: false,
+    // vueShow: 'customerKind == "business"',
 };
 
 export const formShowRequired = Template.bind({});
@@ -47,7 +49,10 @@ formShowRequired.args = {
     field3SelectLabelText: 'Land',
     field4LabelText: 'Postcode',
     field4Required: true,
-    checkbox1Required: true
+    fieldTelLabelText: 'Telefoon nummer',
+    checkbox1Required: true,
+    fieldCompanyNameLabelText: 'Bedrijf',
+    fieldCompanyNameRequired: false,
 };
 
 export const formShowRequiredWithCSSValidation = Template.bind({});
@@ -67,72 +72,13 @@ formShowRequiredWithCSSValidation.args = {
     field4Required: true,
     fieldTelLabelText: 'Telefoon nummer',
     checkbox1Required: true,
+    fieldCompanyNameLabelText: 'Bedrijf',
+    fieldCompanyNameRequired: false,
 };
 
 formShowRequiredWithCSSValidation.storyName = "With CSS validation";
 
-function runTelField () {
-    var input = document.querySelector("#txt_telephone");
-    window.intlTelInput(input, {
-        // options here
-        // preferredCountries: ["nl", "be"],
-        initialCountry: "nl",
-        separateDialCode: true,
-        onlyCountries: ["at", "be", "nl", "de", "fr", "it", "lu"],
-        autoPlaceholder: "aggressive",
-        utilsScript: "./intlTelInput/js/utils.js"
-    });
-    // remove country names between ()
-    const countryElems = document.querySelectorAll('.iti__country-name');
-    // console.table(countryElems);
-    for (const countryElem of countryElems) {
-        // console.log(countryElem.innerText);
-        let countryName = countryElem.innerText;
-        // console.log(countryName);
-        if (countryName.includes('(')) {
-            // console.log('I have a ( character !');
-            // countryName.replace(/(.*)/, 'hello');
-            // console.log(countryName);
-            const newCountryName = countryName.replace(/\s*\(.*?\)\s*/g, '');
-            // console.log(newCountryName);
-            countryElem.innerText = newCountryName;
-        }
-        // console.log(countryName);
-    }
-}
-
-/*var test2 = function() {
-    console.log('test2: do something !');
-}*/
-// test2();
 /*window.parent.window.GLOBAL = {
-    mydata: 'hello'
-  };*/
-
-
-/*const formStories = window.parent.document.querySelectorAll('a[data-parent-id="components-organisms-checkout-form"]');
-console.log(formStories);
-for (const formStory of formStories) {
-    console.log(formStory);
-}*/
-
-// Alternative to load event
-/*document.onreadystatechange = () => {
-  if (document.readyState === "complete") {
-    runTelField();
-  }
+    myData: 'hello'
 };*/
 
-/*window.parent.window.addEventListener('hashchange', () => {
-  console.log('The hash has changed!');
-}, false);*/
-
-/*
-window.addEventListener('hashchange', () => {
-  console.log('The hash has changed!');
-}, false);*/
-
-/*
-window.parent.window.addEventListener('unload', () => {
-  console.log('The hash has changed!');
-}, false);*/

@@ -41,7 +41,7 @@ Base.parameters = {
     },
     design: {
         type: "figma",
-        url: "https://www.figma.com/file/qWDiZBpGWRBLwJh9qNVB7K/UI-Library?node-id=1350%3A76",
+        url: "https://www.figma.com/file/DHpJJWTOUv4MpfeCEx3pe6/UI?node-id=16%3A144&t=rsNgWdfYtt2CC04f-1",
     },
 };
 

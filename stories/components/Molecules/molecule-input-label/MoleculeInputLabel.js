@@ -20,11 +20,19 @@ export const createMoleculeInputLabel = ({
     autocomplete: autocomplete,
     inputmode: inputmode,
     form: form,
-    initialValue: initialValue
+    initialValue: initialValue,
+    isShown,
 }) => {
   // create div
   const wrapperElement = document.createElement('div');
   wrapperElement.className = ['molecule-input-label layout-container-input-label'].join(' ');
+
+  /*if (vueShow) {
+    // v-show="customerKind == 'business' "
+    wrapperElement.setAttribute('v-show', vueShow);
+  }*/
+
+  wrapperElement.setAttribute('data-show', isShown);
 
   if (showRequired) {
     wrapperElement.setAttribute('data-show-required-fields', true);

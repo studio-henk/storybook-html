@@ -1,38 +1,28 @@
 <!--
 <script>
-    function runTelField () {
-    var input = document.querySelector("#txt_telephone");
-    window.intlTelInput(input, {
-        // options here
-        // preferredCountries: ["nl", "be"],
-        initialCountry: "nl",
-        separateDialCode: true,
-        onlyCountries: ["at", "be", "nl", "de", "fr", "it", "lu"],
-        autoPlaceholder: "aggressive",
-        utilsScript: "./intlTelInput/js/utils.js"
-    });
-    // remove country names between ()
-    const countryElems = document.querySelectorAll('.iti__country-name');
-    // console.table(countryElems);
-    for (const countryElem of countryElems) {
-        // console.log(countryElem.innerText);
-        let countryName = countryElem.innerText;
-        // console.log(countryName);
-        if (countryName.includes('(')) {
-            // console.log('I have a ( character !');
-            // countryName.replace(/(.*)/, 'hello');
-            console.log(countryName);
-            const newCountryName = countryName.replace(/\s*\(.*?\)\s*/g, '');
-            console.log(newCountryName);
-            countryElem.innerText = newCountryName;
+    const app = new Vue({
+    delimiters: ['[[', ']]'],
+    el: "#app-vue-checkout-form",
+    data: {
+        appName: 'appCheckoutFormVue',
+        loading: true,
+        errored: false,
+        customerKind: 'private',
+    },
+    methods: {
+        someFunctionName() {
         }
-        // console.log(countryName);
+    },
+    created() {
+        console.log(this.appName + ' created');
+    },
+    mounted() {
+        console.log(this.appName + ' mounted');
+        this.$nextTick(function () {
+            // Code that will run only after the
+            // entire view has been rendered
+            this.loading = false;
+        });
     }
-}
-    // Alternative to load event
-    document.onreadystatechange = () => {
-      if (document.readyState === "complete") {
-        runTelField();
-      }
-    };
+});
 </script>-->

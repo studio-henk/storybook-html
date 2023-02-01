@@ -1,10 +1,11 @@
-// import './atom-list.css';
+import './_atom-list.css';
 // import {HenkLogo} from "./BaseImg.stories";
 // import {Avatar} from "./BaseImg.stories";
 
 export const createBaseList = ({
     element = 'ul',
     variant = '',
+    dataStyle,
     data = [
         {
             id: 1,
@@ -21,7 +22,8 @@ export const createBaseList = ({
   baseList.data.forEach(
     element => {
         const listItem = document.createElement('li');
-        listItem.innerText = element.text;
+        /*listItem.innerText = element.text;*/
+        listItem.innerHTML = element.text;
         baseList.append(listItem);
     }
   );
@@ -30,6 +32,10 @@ export const createBaseList = ({
 
   if (variant) {
     baseList.setAttribute('data-variant', variant);
+  }
+
+  if (dataStyle) {
+    baseList.setAttribute('data-style', dataStyle);
   }
 
   return baseList;

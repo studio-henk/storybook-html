@@ -43,11 +43,12 @@ export const parameters = {
             order: [
                 'Intro',
                 'Getting-Started',
+                'ToDo',
+                'Done',
                 'Design Tokens', ['Intro', 'Color', 'Fontsize', 'Spacings'],
                 'Configuration', ['Intro', 'Config'],
                 'Base',
-                'Components New',
-                'Components', ['Intro', 'Atoms', ['Intro', 'Base', 'Icon', 'Button', ['Intro', '*'], 'Form Controls', '*'], '*'],
+                'Components', ['Intro', 'Atoms', ['Intro', 'Base', 'Icon', 'Button', ['Intro', '*'], 'Input Controls', '*'], '*'],
                 'Templates Pages', ['Intro']
             ]
         },

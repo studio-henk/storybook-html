@@ -2,8 +2,8 @@
     /* unset because of possible link inside */
     /*display: inline-flex;*/
     line-height: 28px;
-    color: hsla(0, 0%, 0%, 0.3);
-    /*color: hsla(0, 0%, 0%, 0.54);*/
+    /*color: hsla(0, 0%, 0%, 0.3);*/
+    color: hsla(0, 0%, 0%, 0.54);
 }
 
 /* label effect */

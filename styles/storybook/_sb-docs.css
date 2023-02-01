@@ -4,7 +4,7 @@
 
 input[type="checkbox"],
 input[type="radio"] {
-    display: block !important;
+    /*display: block !important;*/
 }
 
 .doc-flex {
