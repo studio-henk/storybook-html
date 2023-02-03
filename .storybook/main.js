@@ -15,7 +15,7 @@ module.exports = {
         'storybook-addon-designs',
         //'storybook-jira-addon',
         {name: 'storybook-design-token', options: {preserveCSSVars: true}},
-        '@geometricpanda/storybook-addon-badges'
+        '@geometricpanda/storybook-addon-badges',
     ],
     framework: '@storybook/html',
     staticDirs: ['../public'],

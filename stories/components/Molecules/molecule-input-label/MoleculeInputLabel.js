@@ -21,18 +21,17 @@ export const createMoleculeInputLabel = ({
     inputmode: inputmode,
     form: form,
     initialValue: initialValue,
-    isShown,
+    // isShown,
+    dataIf,
+    helpText,
 }) => {
   // create div
   const wrapperElement = document.createElement('div');
   wrapperElement.className = ['molecule-input-label layout-container-input-label'].join(' ');
 
-  /*if (vueShow) {
-    // v-show="customerKind == 'business' "
-    wrapperElement.setAttribute('v-show', vueShow);
-  }*/
-
-  wrapperElement.setAttribute('data-show', isShown);
+    if (dataIf) {
+        wrapperElement.setAttribute('data-if', dataIf);
+    }
 
   if (showRequired) {
     wrapperElement.setAttribute('data-show-required-fields', true);
@@ -72,6 +71,15 @@ export const createMoleculeInputLabel = ({
         /*checkmarkCircle: checkmarkCircle*/
     })
   )
+
+  // helptext span
+  if (helpText) {
+    const helpMSGSpan = `
+      <span class="molecule-input-label__message-help">${helpText}</span>
+    `;
+
+    wrapperElement.insertAdjacentHTML('beforeend', helpMSGSpan);
+  }
 
   // if [data-style="labels-as-placeholders"] then add a span with the patterntooltiptext / title / error messag
   if (dataStyle === 'labels-as-placeholders' && useCSSvalidation) {

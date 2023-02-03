@@ -12,26 +12,33 @@ export const createMoleculeLabelCheckbox = ({
   order,
   customCheckbox = false,
   variant,
-  checkmarkCircle
+  checkmarkCircle,
+  alignment,
 }) => {
   // create div
   const baseCheckboxLabel = document.createElement('div');
   baseCheckboxLabel.className = ['sh-atom-checkbox-label'].join(' ');
 
   // order
-  if (order === 'reverse') {
+  // if (order === 'reverse') {
+  if (order) {
     baseCheckboxLabel.setAttribute('data-order', order);
   }
 
   // custom
   if (customCheckbox === true) {
-    baseCheckboxLabel.setAttribute('data-custom-checkbox', customCheckbox);
+    baseCheckboxLabel.setAttribute('data-custom-checkbox', 'true');
   }
 
   // custom
   if (variant === 'circle') {
     baseCheckboxLabel.setAttribute('data-variant', variant);
     checkmarkCircle = true;
+  }
+
+  // alignment
+  if (alignment) {
+    baseCheckboxLabel.setAttribute('data-alignment', alignment);
   }
 
   // input

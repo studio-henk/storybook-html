@@ -1,7 +1,9 @@
 .molecule-input-label,
 .layout-container-input-label {
     display: flex;
-    flex-direction: column-reverse;
+    /* dont remember why I did this, but causes issue on mobile */
+    /*flex-direction: column-reverse;*/
+    flex-direction: column;
     width: 100%;
     /* in case child label has [data-style="labels-as-placeholders"]   */
     position: relative;
@@ -42,15 +44,24 @@
     top: 46px;
     width: 100%;
     text-align: right;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.4;
 }
 
 /* show and hide by vanilla JS */
-[data-show="false"] {
+[data-show="no"] {
     display: none;
 }
 
-[data-show="true"] {
+[data-show="yes"] {
     display: block;
+}
+
+.molecule-input-label .atom-label + .molecule-input-label__message-help {
+    margin: 5px 0 5px 1rem;
+    /*position: absolute;
+    top: 42px;*/
+    font-size: 12px;
+    line-height: 20px;
+    color: hsla(0, 0%, 0%, 0.5);
 }

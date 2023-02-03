@@ -10,22 +10,31 @@ import { Meta } from '@storybook/addon-docs';
 - action console
 - info boxes
 ### Customer Data / Delivery
-- radio buttons
-    - data-style="no-panel" -> no border, no legend
-    - disabled also on group, not single radio, like required
-    - add values for radio buttons, optional with text control, otherwise selected value will be "on"
+- action console
+- info boxes
 
 #### Form
-- label 0.5 redo
-- remove console logs from ? (homepage)
-    - blog brick? blogbreakpointtchecker2
-    - reviewbrick
-    - blogSwiper
-- maybe not, fix outline for checkbox, custom checkbox.
+- CSS validation
+    - other fields (patterns)
+- fix isSHown prop for field visibility ✅
+    - rename to showField ✅
+    - boolean? or string, yes / no? ✅
+- rename form functions ✅
+    - add eventlistener for page ✅
+    - sub func for form ✅
+- radio buttons
+    - add values for radio buttons, optional with text control, otherwise selected value will be "on" ✅
+    - story private vs business: use correct ID's ✅
+    - animate something for showing company field?
+- add help text below phone field. 'Verklaren waar we het telefoon nummer voor gebruiken' ✅
+- check if telephone dropdown menu can be wide on mobile. ✅
+- toggle for 'Levering op ander adres'
+    - use basic custom checkbox for now ✅
+    - show form again but for different address -> change field names, form name? form in form?
+    - special toggle button? for "levering op ander adres"
+- rename CSS class ```sh-atom-checkbox-label```
+- fix Firefox indent in select dropdown.
 - check why stefan's chrome still shows blue background when autofill for select element
-- text selection background color, now browser default light blue. mail
-- molecule for checkout form with all fields
-- special toggle button? for "levering op ander adres"
 - **communicate that placeholder attribute needs to have a space set for this to work**
 - inputmode
     decimal,
@@ -35,8 +44,6 @@ import { Meta } from '@storybook/addon-docs';
     url
 - radio buttons
 - autocomplete
-- CSS validation
-    - other fields (patterns)
 - JS validation
 - submit handling
 ### Delivery
@@ -44,8 +51,11 @@ import { Meta } from '@storybook/addon-docs';
 
 ## general
 - get all styles from v10 (what branch? checkout?) into storybook as CSS.
+- remove console logs from ? (homepage)
+    - blog brick? blogbreakpointtchecker2
+    - reviewbrick
+    - blogSwiper
 - get postcss autoprefix working in storybook?
-- fix Firefox indent in select dropdown.
 - fix vertical-rhytm variable issue
     ```
         p {
@@ -58,7 +68,4 @@ import { Meta } from '@storybook/addon-docs';
 - integrate Slack hook: [slackhook](https://www.chromatic.com/docs/integrations)
 
 ## research results
-- figma plugin: need paid account to be able to show storybook component inside figma (shared library limit)
-- figma design addon: show figma design in storybook. stopped working. maybe rights issue?
-- check figma storybook when yvy accepts invite.
 - autocomplete="off" is ignored by all browsers: https://bugs.chromium.org/p/chromium/issues/detail?id=46543

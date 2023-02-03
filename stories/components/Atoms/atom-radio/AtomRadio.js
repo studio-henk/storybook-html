@@ -6,6 +6,7 @@ export const createAtomRadio = ({
   name = '',
   disabled = false,
   required = false,
+  value,
 }) => {
   const atomRadio = document.createElement('input');
   atomRadio.type = 'radio';
@@ -13,6 +14,7 @@ export const createAtomRadio = ({
 
   if (checked) {
     atomRadio.setAttribute('checked', 'checked');
+    atomRadio.checked = checked;
   }
 
   if (id) {
@@ -21,6 +23,10 @@ export const createAtomRadio = ({
 
   if (name) {
     atomRadio.name = name;
+  }
+
+  if (value) {
+    atomRadio.value = value;
   }
 
   if (disabled) {

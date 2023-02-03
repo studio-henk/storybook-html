@@ -11,6 +11,19 @@ input.atom-radio[type="radio"] {
     cursor: not-allowed;
 }
 
+input.atom-radio[type="radio"] + .atom-label {
+    /*TODO: hook up to css var and alias in config */
+    color: #000;
+    padding-left: 14px;
+}
+
+input.atom-radio[type="radio"]:checked {
+    color: hsl(120deg 100% 25%);
+}
+input.atom-radio[type="radio"]:checked + label {
+    color: hsl(120deg 100% 25%);
+}
+
 [data-custom-radio="true"] .atom-radio {
     appearance: none;
     border-radius: 50%;
@@ -25,10 +38,4 @@ input.atom-radio[type="radio"] {
 
 [data-custom-radio="true"] .atom-radio:checked {
   border: 6px solid black;
-}
-
-input.atom-radio[type="radio"] + .atom-label {
-    /*TODO: hook up to css var and alias in config */
-    color: #000;
-    padding-left: 14px;
 }

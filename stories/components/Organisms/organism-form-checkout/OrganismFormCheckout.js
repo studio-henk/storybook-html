@@ -28,15 +28,12 @@ export const createForm = ({
                                patternTooltipTextField2,
                                fieldCompanyNameLabelText,
                                fieldCompanyNameRequired,
-                               isShown,
                                ...args
                            }) => {
 
     // create wrapper
     const wrapperElement = document.createElement('div');
     wrapperElement.className = ['molecule-form-checkout'].join(' ');
-    // wrapperElement.id = 'app-vue-checkout-form';
-    // wrapperElement.setAttribute('v-cloak', '');
 
     if (showRequired) {
         wrapperElement.setAttribute('data-show-required-fields', true);
@@ -54,28 +51,29 @@ export const createForm = ({
     // radio buttons
     const radioButtons1 = createMoleculeLabelRadio({
         legendText: 'Kies uw type aankoop',
-        /*required: true,*/
         customRadio: true,
         layout: 'horizontal',
         dataStyle: 'no-panel',
         data: [
             {
-                id: 'radio-custom1',
+                id: 'radio-private',
                 checked: true,
                 disabled: false,
-                groupName: 'group-custom',
+                groupName: 'group-customerKind',
                 customRadio: false,
                 labelText: 'Particulier',
-                forAttr: 'radio-custom1',
+                forAttr: 'radio-private',
+                value: 'private',
             },
             {
-                id: 'radio-custom2',
+                id: 'radio-business',
                 checked: false,
                 disabled: false,
-                groupName: 'group-custom',
+                groupName: 'group-customerKind',
                 customRadio: false,
                 labelText: 'Zakelijk',
-                forAttr: 'radio-custom2',
+                forAttr: 'radio-business',
+                value: 'business',
             }
         ]
     })
@@ -85,29 +83,6 @@ export const createForm = ({
         text: formTitle,
         className: 'h2',
     })
-
-    function otherFunc (e) {
-        console.log('hello other func');
-        let target = e.target;
-        switch (target.id) {
-            case 'radio-custom1':
-                console.log('private');
-                document.querySelector('[data-show="true"]').setAttribute('data-show', 'false');
-                break;
-            case 'radio-custom2':
-                console.log('business');
-                document.querySelector('[data-show="false"]').setAttribute('data-show', 'true');
-                break;
-        }
-    }
-
-    function formStuff () {
-        console.log('hello form stuff');
-        document.addEventListener('change', otherFunc);
-    }
-    setTimeout(() => {
-        formStuff();
-    }, 150)
 
     // company name
     const formFieldCompany = createMoleculeInputLabel({
@@ -119,7 +94,7 @@ export const createForm = ({
         dataStyle: dataStyle,
         placeholder: ' ',
         autocomplete: 'organization',
-        isShown: false,
+        dataIf: 'radio-business'
     })
 
     const formField1 = createMoleculeInputLabel({
@@ -198,6 +173,25 @@ export const createForm = ({
         })
     )
 
+    // add feedbackDisplay here
+    // connect to POSTNL API
+    const feedbackDisplayElement = document.createElement('div');
+    feedbackDisplayElement.className = 'cmp-feedback-display';
+    feedbackDisplayElement.innerHTML = 'Hello !';
+
+    /*function getAddress () {
+        console.log('getting address');
+        // do fetch here
+        // with apikey in header
+    }*/
+
+    const fbButton = `
+        <button type="button" id="buttonGetAddress">get address</button>
+    `;
+
+    feedbackDisplayElement.insertAdjacentHTML('beforeend', fbButton);
+
+
     // telephone number field here
     const formFieldTelephone = createMoleculeInputLabel({
         name: 'txt_telephone',
@@ -208,37 +202,42 @@ export const createForm = ({
         dataStyle: dataStyle,
         placeholder: '12345678',
         autocomplete: 'tel-national',
+        helpText: 'Verklaren waar we het telefoon nummer voor gebruiken',
     })
+
+    // add fieldset for delivery checkbox
+    const fieldsetElementAltAddress = document.createElement('fieldset');
+    fieldsetElementAltAddress.className = ['molecule-form-checkout__fieldset atom-fieldset'].join(' ');
+    fieldsetElementAltAddress.setAttribute('data-style', 'no-panel');
+
+    // create checkbox for other delivery address
+    // Levering op ander adres
+    fieldsetElementAltAddress.appendChild(
+        createMoleculeLabelCheckbox({
+            checked: false,
+            disabled: false,
+            // required: checkbox2Required,
+            id: 'input_cb_alt_delivery_address',
+            name: 'input_cb_alt_delivery_address',
+            forAttr: 'input_cb_alt_delivery_address',
+            labelText: 'Levering op ander adres',
+            customCheckbox: true,
+            order: 'reverse',
+            alignment: 'between',
+        })
+    )
+
+    // add placeholder div for alt adress fields
+    const altAddressContainer = document.createElement('div');
+    altAddressContainer.className = 'molecule-form-checkout__fields-container';
+    altAddressContainer.innerHTML = 'hello placeholder for other fields.';
+    // altAddressContainer.setAttribute('data-show', 'no');
+    altAddressContainer.setAttribute('data-if', 'input_cb_alt_delivery_address');
 
     // add fieldset for checkboxes
     const fieldsetElement = document.createElement('fieldset');
     fieldsetElement.className = ['molecule-form-checkout__fieldset atom-fieldset'].join(' ');
     fieldsetElement.setAttribute('data-style', 'no-panel');
-
-    function runTelField() {
-        var input = document.querySelector("#txt_telephone");
-        window.intlTelInput(input, {
-            // options here
-            // preferredCountries: ["nl", "be"],
-            initialCountry: "nl",
-            separateDialCode: true,
-            onlyCountries: ["at", "be", "nl", "de", "fr", "it", "lu"],
-            autoPlaceholder: "aggressive",
-            utilsScript: "./intlTelInput/js/utils.js"
-        });
-        // remove country names between ()
-        const countryElems = document.querySelectorAll('.iti__country-name');
-        for (const countryElem of countryElems) {
-            let countryName = countryElem.innerText;
-            if (countryName.includes('(')) {
-                const newCountryName = countryName.replace(/\s*\(.*?\)\s*/g, '');
-                countryElem.innerText = newCountryName;
-            }
-        }
-    };
-    setTimeout(() => {
-        runTelField();
-    }, 50)
 
     // create checkbox and label for terms of condition etc
     fieldsetElement.appendChild(
@@ -269,18 +268,6 @@ export const createForm = ({
         })
     )
 
-    // submit form fake
-    function submitForm() {
-        event.preventDefault();
-        // store button
-        const thisButton = event.target;
-        // set button state to loading
-        thisButton.setAttribute('data-state', 'loading');
-        setTimeout(() => {
-            thisButton.removeAttribute('data-state');
-        }, 2000)
-    }
-
     const formButton = createAtomButton({
         buttonText: buttonText,
         onClick: submitForm,
@@ -294,11 +281,50 @@ export const createForm = ({
     formElement.append(formField3Select);
     formElement.append(formField4);
     formElement.appendChild(gridElement);
+    formElement.appendChild(feedbackDisplayElement);
     formElement.appendChild(formFieldTelephone);
+    formElement.appendChild(fieldsetElementAltAddress);
+    formElement.appendChild(altAddressContainer);
     formElement.appendChild(fieldsetElement);
     formElement.append(formButton);
 
     wrapperElement.append(formElement);
+
+    function runTelField() {
+        var input = document.querySelector("#txt_telephone");
+        window.intlTelInput(input, {
+            // options here
+            // preferredCountries: ["nl", "be"],
+            initialCountry: "nl",
+            separateDialCode: true,
+            onlyCountries: ["at", "be", "nl", "de", "fr", "it", "lu"],
+            autoPlaceholder: "aggressive",
+            utilsScript: "./intlTelInput/js/utils.js"
+        });
+        // remove country names between ()
+        const countryElems = document.querySelectorAll('.iti__country-name');
+        for (const countryElem of countryElems) {
+            let countryName = countryElem.innerText;
+            if (countryName.includes('(')) {
+                countryElem.innerText = countryName.replace(/\s*\(.*?\)\s*/g, '');
+            }
+        }
+    }
+    setTimeout(() => {
+        runTelField();
+    }, 50)
+
+    // submit form fake
+    function submitForm(event) {
+        event.preventDefault();
+        // store button
+        const thisButton = event.target;
+        // set button state to loading
+        thisButton.setAttribute('data-state', 'loading');
+        setTimeout(() => {
+            thisButton.removeAttribute('data-state');
+        }, 2000)
+    }
 
     return wrapperElement;
 };

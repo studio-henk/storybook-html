@@ -5,7 +5,8 @@
 
 .sh-atom-checkbox-label[data-order="reverse"] {
   flex-direction: row-reverse;
-    position: relative;
+  justify-content: flex-start;
+  position: relative;
 }
 
 [data-custom-checkbox="true"] {
@@ -72,7 +73,8 @@
 
 .sh-atom-checkbox-label[data-order="reverse"][data-custom-checkbox="true"] .atom-label {
     padding-left: 0;
-    padding-right: 1.25rem;
+    /*padding-right: 1.25rem;*/
+    padding-right: calc(28 / var(--size-font-root) * 1rem);
 }
 
 .sh-atom-checkbox-label[data-order="reverse"][data-custom-checkbox="true"][data-variant="circle"] .atom-label {
@@ -85,7 +87,7 @@
 }
 
 .sh-atom-checkbox-label[data-order="reverse"][data-custom-checkbox="true"] input[type=checkbox]:checked +.atom-label::before {
-    right: 0;
+    /*right: 0;*/
 }
 
 [data-custom-checkbox="true"][data-variant="circle"] .atom-label {
@@ -135,6 +137,10 @@
 [data-custom-checkbox="true"][data-variant="circle"][data-order="reverse"] input[type=checkbox]:checked + .atom-label .icon-checkmark {
     left: auto;
     right: 4px;
+}
+
+[data-variant="circle"][data-order="reverse"][data-custom-checkbox="true"] input[type="checkbox"]:checked +.atom-label::before {
+    right: 0;
 }
 
 /* state: disabled */
@@ -207,4 +213,41 @@
     width: auto;
     height: auto;
     right: 20px;
+}
+
+/* alignment of input and label */
+.sh-atom-checkbox-label[data-alignment] {
+}
+.sh-atom-checkbox-label[data-alignment="left"] {
+    justify-content: flex-start;
+}
+.sh-atom-checkbox-label[data-alignment="right"] {
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.sh-atom-checkbox-label[data-alignment="between"] {
+    justify-content: space-between;
+    width: 100%;
+}
+
+.sh-atom-checkbox-label[data-alignment="right"][data-order="reverse"] {
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.sh-atom-checkbox-label[data-alignment="between"][data-custom-checkbox="true"] .atom-label {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.sh-atom-checkbox-label[data-alignment="between"][data-custom-checkbox="true"][data-order="reverse"] .atom-label {
+    justify-content: flex-start;
+}
+
+.sh-atom-checkbox-label[data-alignment="between"][data-custom-checkbox="true"][data-order="reverse"] .molecule-label-checkbox__hint-required {
+    position: relative;
+    left: auto;
+    right: 0;
 }

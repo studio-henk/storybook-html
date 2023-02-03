@@ -12,23 +12,23 @@ export const createMoleculeLabelRadio = ({
   data = [
       {
           id: 'radio1',
-          checked: false,
+          checked: true,
           disabled: false,
-          //required: required,
           groupName: 'group1',
           customRadio: false,
           labelText: 'Radio label text',
           forAttr: 'radio1',
+          value: 'value 1'
       },
       {
           id: 'radio2',
           checked: false,
           disabled: false,
-          //required: required,
           groupName: 'group1',
+          customRadio: false,
           labelText: 'Radio label text',
           forAttr: 'radio2',
-          customRadio: false,
+          value: 'value 2',
       }
   ],
 }) => {
@@ -71,12 +71,6 @@ export const createMoleculeLabelRadio = ({
     moleculeLabelRadio.setAttribute('data-order', order);
   }
 
-  // custom
-  /*if (variant === 'circle') {
-    moleculeLabelRadio.setAttribute('data-variant', variant);
-    checkmarkCircle = true;
-  }*/
-
   // loop over data-items
   fieldSet.data = data;
   fieldSet.data.forEach(
@@ -93,11 +87,12 @@ export const createMoleculeLabelRadio = ({
         container.appendChild(
           createAtomRadio({
               checked: element.checked,
+              // checked: checked,
               id: element.id,
               name: element.groupName,
               disabled: element.disabled,
-              // required: element.required,
               required: required,
+              value: element.value,
           })
         )
 
@@ -113,17 +108,6 @@ export const createMoleculeLabelRadio = ({
         fieldSet.appendChild(container);
     }
   );
-
-
-  /*if (dataStyle === 'labels-as-placeholders' && useCSSvalidation) {
-    const errorMSGspan = `
-      <span class="molecule-input-label__message-invalid">${patternTooltipText}</span>
-    `;
-
-    wrapperElement.insertAdjacentHTML('beforeend', errorMSGspan);
-  }*/
-
-  // fieldSet.appendChild(container);
 
   moleculeLabelRadio.appendChild(fieldSet);
 

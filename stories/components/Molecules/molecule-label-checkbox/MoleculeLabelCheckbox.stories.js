@@ -12,6 +12,10 @@ export default {
     labelText: { control: 'text' },
     forAttr: { control: 'text' },
     id: { control: 'text' },
+    alignment: {
+        control: {type: 'select'},
+        options: ['left', 'right', 'between']
+    },
     order: {
       /*control: { type: 'radio' },
       options: ['base', 'reverse'],*/
@@ -66,8 +70,8 @@ export const ReversedOrder = Template.bind({});
 ReversedOrder.args = {
   checked: false,
   labelText: 'Ik heb de algemene voorwaarden, aflevervoorwaarden en het retourbeleid gelezen en ga hiermee akkoord.',
-  forAttr: 'hocker2',
-  id: 'hocker2',
+  forAttr: 'cb_order_reverse',
+  id: 'cb_order_reverse',
   order: 'reverse'
 };
 
@@ -79,6 +83,15 @@ ReversedOrderRequired.args = {
   forAttr: 'hocker2',
   id: 'hocker2',
   order: 'reverse'
+};
+
+export const Alignment = Template.bind({});
+Alignment.args = {
+  checked: false,
+  labelText: 'Ik heb de algemene voorwaarden, aflevervoorwaarden en het retourbeleid gelezen en ga hiermee akkoord.',
+  forAttr: 'hocker',
+  id: 'hocker',
+  alignment: 'left',
 };
 
 /*export const EmptyLabel = Template.bind({});
