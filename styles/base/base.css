@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/**:focus {
+    outline: none;
+}*/
+:focus,
+:focus-visible {
+    /*outline: 1px solid var(--color-outline, blue);*/
+    /*outline-color: var(--color-outline, revert);*/
+    outline-width: 1px;
+    /*outline-offset: -8px;*/
+}
+
+@media only screen and (max-width: 767px) {
+    :focus,
+    :focus-visible {
+        /*outline-width: 1px;
+        outline-offset: -8px;*/
+    }
+}
+
+:focus-visible:not(:valid) {
+    /*outline-color: var(--color-henk-danger, revert);*/
+}
+
+::selection {
+    color: var(--color-text-selection-text, var(--color-white, #fff));
+    background-color: var(--color-text-selection-bg, var(--color-accent5, pink));
+}
+
+html, body {
+    background-color: var(--color-background-page, #fff);
+    color: var(--color-text-page, #000);
+}
+
+html {
+    line-height: calc(var(--size-font-lineheight-body) / var(--size-font-body) * 1rem);
+    /*
+    figma dictates letter-spacing of 0.5px for body fontsize of 16px
+    converted to ems
+    */
+    /*letter-spacing: calc(var(--size-font-letterspacing-body) * 1px);*/
+    /*letter-spacing: calc(var(--size-font-letterspacing-body) / 16 * 1em);*/
+    letter-spacing: calc(var(--size-font-letterspacing-body) / var(--size-font-body) * 1em);
+    height: 100%;
+    font-size: 100%;
+    font-feature-settings: "pnum" on, "lnum" on;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    transition: background-color 1s, color 0.3s;
+    margin: 0;
+    font-family: ff-scala-sans-pro, sans-serif;
+    font-size: calc(var(--size-font-body, 16px) / 16 * 1rem);
+    font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 300;
+    text-align: left;
+    margin-top: 28px;
+}
+
+h1, .h1 {
+    font-size: 35px;
+    line-height: 45px;
+    letter-spacing: 1.5px;
+}
+
+@media only screen and (min-width: 768px) {
+    h1, .h1 {
+        font-size: 53px;
+        line-height: 70px;
+        letter-spacing: 0.04em;
+    }
+}
+
+h2, .h2 {
+    font-size: 24px;
+    line-height: 38px;
+    letter-spacing: 1.2px;
+}
+
+@media only screen and (min-width: 768px) {
+    h2, .h2 {
+        font-size: 33px;
+        line-height: 50px;
+        letter-spacing: 0.07em;
+    }
+}
+
+h3, .h3 {
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 1.2px;
+}
+
+@media only screen and (min-width: 768px) {
+    h3, .h3 {
+        font-size: 27px;
+        line-height: 41px;
+        letter-spacing: 0.07em;
+    }
+}
+
+h4, .h4, h5, .h5, h6, .h6 {
+    font-size: 1rem;
+}
+
+h1:first-child {
+    margin-top: 0;
+}
+
+a {
+    color: var(--color-henk-black);
+    text-decoration-line: underline;
+    text-underline-offset: 0.4em;
+    text-decoration-thickness: 1px;
+}
+
+a[href*="mailto:"], a[href*="tel:"] {
+    text-decoration: none;
+}
+
+a[href*="mailto:"]:focus, a[href*="tel:"]:focus, a[href*="mailto:"]:hover, a[href*="tel:"]:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 0.5px;
+}
+
+/*p {
+    margin: var(--size-vertical-rhythm) 0 0;
+}*/
+
+header {
+    width: 100%;
+}
+
+footer {
+    width: 100%;
+}
+
+div, section {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    border: none;
+}
+
+address {
+    font-style: normal;
+}
+
+/* * Remove the gap between audio, canvas, iframes, * images, videos and the bottom of their containers: * https://github.com/h5bp/html5-boilerplate/issues/440 */
+audio, canvas, iframe, img, svg, video {
+    vertical-align: middle;
+}
+
+/* * Remove default fieldset styles. */
+fieldset {
+    /*border: 0;
+    margin: 0;
+    padding: 0;*/
+}
+
+fieldset {
+    padding: 0 12px;
+    margin: 0;
+    border: 1px solid hsl(0deg 0% 0%);
+    border-radius: 5px;
+    width: 100%;
+}
+
+[data-style="no-panel"] fieldset,
+fieldset[data-style="no-panel"] {
+    border: 0;
+    padding: 0;
+}
+
+fieldset legend {
+    /*TODO: calc to ems or rems */
+    font-size: 12px;
+    padding: 0 4px;
+    color: hsla(0, 0%, 0%, 0.54);
+}
+
+strong {
+    font-weight: 400;
+}
+
+ul, ol {
+    margin: 28px 0 28px 20px;
+}
+
+ul.--no-bullets, ol.--no-bullets {
+    list-style: none;
+    margin-left: 0;
+}
+
+ul li > ul, ol li > ul, ul li ol, ol li ol {
+    margin-top: 0;
+}
+
+dt {
+    font-weight: 400;
+}
+
+figure {
+    margin: 0;
+}
+
+figure img {
+    display: block;
+}
+
+figure img + figcaption {
+    text-align: left;
+}
+
+/*
+label {
+    color: magenta;
+}*/
