@@ -21,6 +21,9 @@
 
 /* from storybook components */
 @import "../stories/components/Atoms/atom-radio/atom-radio.css";
+@import "../stories/components/Atoms/atom-checkbox/_atom-checkbox.css";
+@import "../stories/components/Atoms/_atom-label.css";
+@import "../stories/components/Atoms/_atom-input.css";
 
 /* temporarily */
 @import "./tmp-feedback-display.css";

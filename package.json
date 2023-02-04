@@ -9,7 +9,8 @@
     "storybook": "start-storybook -p 6006",
     "storybook-secure": "start-storybook --https --ssl-cert --ssl-key -p 6006",
     "build-storybook": "build-storybook",
-    "chromatic": "npx chromatic --project-token=d65f4025a0d9"
+    "chromatic": "npx chromatic --project-token=d65f4025a0d9",
+    "postcss:watch": "postcss ./styles/toolkit-all.css -o ./styles/toolkit-all-prefixed.css  --watch"
   },
   "repository": {
     "type": "git",
@@ -39,7 +40,11 @@
     "@storybook/testing-library": "^0.0.13",
     "babel-loader": "^9.1.2",
     "chromatic": "^6.14.0",
+    "cssnano": "^5.1.14",
     "html-webpack-plugin": "^5.5.0",
+    "postcss": "^8.4.21",
+    "postcss-cli": "^10.1.0",
+    "postcss-import": "^15.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "storybook-addon-designs": "^6.3.1",
@@ -55,5 +60,8 @@
     "intl-tel-input": "^17.0.19",
     "lodash.camelcase": "^4.3.0",
     "webpack": "^5.75.0"
-  }
+  },
+  "browserslist": [
+    ">0.25% and since 2021 and not dead"
+  ]
 }
