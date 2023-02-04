@@ -1,0 +1,16 @@
+[data-skeleton] {}
+/*
+[data-skeleton="true"] {
+    color: hsl(0deg 0% 87%);
+    background: hsl(0deg 0% 87%);
+    display: inline;
+}*/
+[data-skeleton="true"] {
+    /*position: relative;*/
+}
+[data-skeleton="true"] address:first-child {
+    color: hsl(0deg 0% 87%);
+    background: hsl(0deg 0% 87%);
+    display: inline;
+    /*position: absolute;*/
+}

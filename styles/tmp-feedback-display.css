@@ -1,0 +1,15 @@
+.cmp-feedback-display {
+
+}
+
+.cmp-feedback-display input[readonly] {
+    appearance: none;
+    -webkit-appearance: none;
+    border: 0;
+    background-color: transparent;
+    color: black;
+    outline: 0;
+    font-family: ff-scala-sans-pro, sans-serif;
+    font-size: calc(var(--size-font-body, 16px) / 16 * 1rem);
+    font-weight: 300;
+}

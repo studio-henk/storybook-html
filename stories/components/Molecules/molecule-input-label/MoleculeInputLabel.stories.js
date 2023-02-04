@@ -128,7 +128,6 @@ export default {
     },
 };
 
-// More on component templates: https://storybook.js.org/docs/html/writing-stories/introduction#using-args
 const Template = ({labelText, ...args}) => {
     return createMoleculeInputLabel({labelText, ...args});
 };
@@ -145,6 +144,20 @@ Default.parameters = {
     controls: {include: ['labelText']},
 }
 
+export const DefaultWithHelp = Template.bind({});
+DefaultWithHelp.args = {
+    labelText: 'label text',
+    name: 'txt_default',
+    id: 'txt_default',
+    forAttr: 'txt_default',
+    helpText: 'help!',
+};
+Default.parameters = {
+    badges: [BADGE.BETA],
+    controls: {include: ['labelText']},
+}
+
+/*
 export const DefaultRequired = Template.bind({});
 DefaultRequired.args = {
     labelText: 'label text',
@@ -163,6 +176,7 @@ DefaultRequired.parameters = {
         },
     },
 }
+*/
 
 export const ShowRequired = Template.bind({});
 ShowRequired.args = {
@@ -215,6 +229,37 @@ UseCSSValidationEmail.parameters = {
     },
 }
 
+export const Stacked = Template.bind({});
+Stacked.argTypes = {}
+Stacked.args = {
+    labelText: 'label text',
+    forAttr: 'txt_stacked',
+    id: 'txt_stacked',
+    name: 'txt_stacked',
+    placeholder: ' ',
+    dataStyle: 'labels-as-placeholders'
+};
+Stacked.parameters = {
+    badges: [BADGE.BETA],
+    controls: {include: ['labelText']}
+}
+
+export const StackedWithHelp = Template.bind({});
+StackedWithHelp.argTypes = {}
+StackedWithHelp.args = {
+    labelText: 'label text',
+    forAttr: 'txt_stacked',
+    id: 'txt_stacked',
+    name: 'txt_stacked',
+    placeholder: ' ',
+    dataStyle: 'labels-as-placeholders',
+    helpText: 'Help me! please!',
+};
+StackedWithHelp.parameters = {
+    badges: [BADGE.BETA],
+    controls: {include: ['labelText']}
+}
+
 export const StackedUseCSSValidationEmail = Template.bind({});
 StackedUseCSSValidationEmail.argTypes = {}
 StackedUseCSSValidationEmail.args = {
@@ -243,23 +288,6 @@ StackedUseCSSValidationEmail.parameters = {
             story: 'This email field uses a regex pattern to validate an entered value. Taken from [W3C](https://www.w3.org/TR/2012/WD-html-markup-20120329/datatypes.html#form.data.emailaddress-def). Note that ```a@b``` is officially a valid email adress.',
         },
     },
-}
-
-
-
-export const Stacked = Template.bind({});
-Stacked.argTypes = {}
-Stacked.args = {
-    labelText: 'label text',
-    forAttr: 'txt_stacked',
-    id: 'txt_stacked',
-    name: 'txt_stacked',
-    placeholder: ' ',
-    dataStyle: 'labels-as-placeholders'
-};
-Stacked.parameters = {
-    badges: [BADGE.BETA],
-    controls: {include: ['labelText']}
 }
 
 export const StackedAutoComplete = Template.bind({});

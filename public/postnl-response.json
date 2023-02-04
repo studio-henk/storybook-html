@@ -1,0 +1,31 @@
+[
+    {
+        "buildingName": null,
+        "bus": null,
+        "cityName": "AMSTERDAM",
+        "companyName": null,
+        "countryIso2": "NL",
+        "countryIso3": "NLD",
+        "countryName": "Netherlands",
+        "door": null,
+        "flat": null,
+        "floor": null,
+        "formattedAddress": [
+            "Carolina MacGillavrylaan 516",
+            "1098XB AMSTERDAM",
+            "Netherlands"
+        ],
+        "houseNumber": 516,
+        "houseNumberAddition": "",
+        "latitude": 52.357040255667414,
+        "localityName": null,
+        "longitude": 4.9453930849484475,
+        "mailabilityScore": 100,
+        "postalCode": "1098XB",
+        "resultNumber": 1,
+        "resultPercentage": 100,
+        "stairs": null,
+        "stateName": "Noord-Holland",
+        "streetName": "Carolina MacGillavrylaan"
+    }
+]

@@ -241,30 +241,59 @@ export const LayoutHorizontal = Template.bind({});
 LayoutHorizontal.args = {
     legendText: 'Kies uw type aankoop',
     required: true,
-    customRadio: true,
+    customRadio: false,
     layout: 'horizontal',
     data: [
         {
-            id: 'radio-custom1',
+            id: 'radio-horizontal1',
             checked: true,
             disabled: false,
-            groupName: 'group-custom',
+            groupName: 'group-horizontal1',
             customRadio: false,
             labelText: 'Particulier',
-            forAttr: 'radio-custom1',
+            forAttr: 'radio-horizontal1',
         },
         {
-            id: 'radio-custom2',
+            id: 'radio-horizontal2',
             checked: false,
             disabled: false,
-            groupName: 'group-custom',
+            groupName: 'group-horizontal1',
             customRadio: false,
             labelText: 'Zakelijk',
-            forAttr: 'radio-custom2',
+            forAttr: 'radio-horizontal2',
         }
     ]
 };
 LayoutHorizontal.storyName = "Horizontal Layout";
+
+export const LayoutHorizontalCustom = Template.bind({});
+LayoutHorizontalCustom.args = {
+    legendText: 'Kies uw type aankoop',
+    required: true,
+    customRadio: true,
+    layout: 'horizontal',
+    data: [
+        {
+            id: 'radio-horizontal-custom1',
+            checked: true,
+            disabled: false,
+            groupName: 'group-horizontal-custom',
+            customRadio: false,
+            labelText: 'Particulier',
+            forAttr: 'radio-horizontal-custom1',
+        },
+        {
+            id: 'radio-horizontal-custom2',
+            checked: false,
+            disabled: false,
+            groupName: 'group-horizontal-custom',
+            customRadio: false,
+            labelText: 'Zakelijk',
+            forAttr: 'radio-horizontal-custom2',
+        }
+    ]
+};
+LayoutHorizontalCustom.storyName = "Horizontal Layout Custom";
 
 export const LayoutHorizontalNoPanel = Template.bind({});
 LayoutHorizontalNoPanel.args = {

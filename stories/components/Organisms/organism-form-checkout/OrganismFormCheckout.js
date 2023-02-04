@@ -94,7 +94,9 @@ export const createForm = ({
         dataStyle: dataStyle,
         placeholder: ' ',
         autocomplete: 'organization',
-        dataIf: 'radio-business'
+        // dataIf: 'radio-business',
+        dataIfSelector: 'radio-business',
+        dataIfValue: true,
     })
 
     const formField1 = createMoleculeInputLabel({
@@ -142,6 +144,19 @@ export const createForm = ({
         autocomplete: 'postal-code',
     })
 
+    // plaatsnaam (BE)
+    const formFieldCityName = createMoleculeInputLabel({
+        name: 'txt_city_name',
+        id: 'txt_city_name',
+        forAttr: 'txt_city_name',
+        labelText: 'Plaatsnaam',
+        required: true,
+        dataStyle: dataStyle,
+        placeholder: ' ',
+        autocomplete: 'address-level2',
+        // dataIf: 'select_country === "BE"'
+    })
+
     // 2 columns here
     // create 2 column grid here
     const gridElement = document.createElement('div');
@@ -156,7 +171,8 @@ export const createForm = ({
             forAttr: 'txt_housenumber',
             dataStyle: 'labels-as-placeholders',
             placeholder: ' ',
-            autocomplete: 'off'
+            autocomplete: 'off',
+            required: true,
         })
     )
 
@@ -177,19 +193,49 @@ export const createForm = ({
     // connect to POSTNL API
     const feedbackDisplayElement = document.createElement('div');
     feedbackDisplayElement.className = 'cmp-feedback-display';
-    feedbackDisplayElement.innerHTML = 'Hello !';
+    /*feedbackDisplayElement.innerHTML = 'Hello !';
+    feedbackDisplayElement.style.backgroundColor = 'beige';
+    feedbackDisplayElement.style.padding = '2rem';*/
+    feedbackDisplayElement.style.width = '100%';
 
-    /*function getAddress () {
-        console.log('getting address');
-        // do fetch here
-        // with apikey in header
-    }*/
+    const infoBox = `<div class="info-section__box">
+        <header class="info-section__header">
+            <p class="info-section__header-heading">
+                <small>Jouw adres</small>
+            </p>
+        </header>
+        <div class="info-section__body">
+            <!--<address class="info-section__body-address" xid="result-address" xdata-hasfadein="true" [data-skeleton="true"]>
+                Straatnaam 123-2<br>
+                1234 AB, AMSTERDAM<br>
+                THE NETHERLANDS
+            </address>-->
+            <address class="info-section__body-address" id="result-address" data-hasfadein="true">
+                Straatnaam 123-2<br>
+                1234 AB, AMSTERDAM<br>
+                THE NETHERLANDS
+            </address>
+            <!--<div>
+                <input type="text" name="txt_streetName" id="txt_streetName" readonly>
+                <input type="text" name="txt_houseNumber" id="txt_houseNumber" readonly>
+                <br>
+                <input type="text" name="txt_postCode" id="txt_postCode" readonly>
+            </div>-->
+        </div>
+        <footer class="info-section__footer">
+            <a href="#" class="info-section__footer-link" style="color: dodgerblue; border: 1px solid dodgerblue;">dit
+                klopt niet</a>
+        </footer>
+    </div>
+    `;
 
     const fbButton = `
         <button type="button" id="buttonGetAddress">get address</button>
     `;
 
-    feedbackDisplayElement.insertAdjacentHTML('beforeend', fbButton);
+    // feedbackDisplayElement.insertAdjacentHTML('beforeend', fbButton);
+
+    feedbackDisplayElement.insertAdjacentHTML('beforeend', infoBox);
 
 
     // telephone number field here
@@ -280,6 +326,7 @@ export const createForm = ({
     formElement.append(formField2);
     formElement.append(formField3Select);
     formElement.append(formField4);
+    formElement.append(formFieldCityName);
     formElement.appendChild(gridElement);
     formElement.appendChild(feedbackDisplayElement);
     formElement.appendChild(formFieldTelephone);

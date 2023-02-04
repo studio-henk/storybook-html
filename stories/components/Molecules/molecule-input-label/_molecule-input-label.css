@@ -2,8 +2,10 @@
 .layout-container-input-label {
     display: flex;
     /* dont remember why I did this, but causes issue on mobile */
-    /*flex-direction: column-reverse;*/
-    flex-direction: column;
+    /* something to with telephone field and message below and or alignment of space between checkboxes radio buttons? */
+    /* case order to be wrong for base input labels, label below input */
+    flex-direction: column-reverse;
+    /*flex-direction: column;*/
     width: 100%;
     /* in case child label has [data-style="labels-as-placeholders"]   */
     position: relative;
@@ -57,11 +59,23 @@
     display: block;
 }
 
-.molecule-input-label .atom-label + .molecule-input-label__message-help {
-    margin: 5px 0 5px 1rem;
+.molecule-input-label .molecule-input-label__message-help {
+    margin: 5px 0 5px 0;
     /*position: absolute;
     top: 42px;*/
     font-size: 12px;
     line-height: 20px;
     color: hsla(0, 0%, 0%, 0.5);
+}
+
+.molecule-input-label[data-style="is-stacked"] .molecule-input-label__message-help {
+    margin: 5px 0 5px 1rem;
+}
+
+.molecule-input-label[data-alert="warning"] {
+    border-radius: 5px;
+}
+
+[data-alert="warning"] {
+    animation: 1s ease-in .1s forwards fadeInWithBoxShadow;
 }

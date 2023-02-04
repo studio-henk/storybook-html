@@ -17,12 +17,13 @@ input.atom-radio[type="radio"] + .atom-label {
     padding-left: 14px;
 }
 
-input.atom-radio[type="radio"]:checked {
+/*input.atom-radio[type="radio"]:checked {
     color: hsl(120deg 100% 25%);
-}
-input.atom-radio[type="radio"]:checked + label {
+}*/
+
+/*input.atom-radio[type="radio"]:checked + label {
     color: hsl(120deg 100% 25%);
-}
+}*/
 
 [data-custom-radio="true"] .atom-radio {
     appearance: none;

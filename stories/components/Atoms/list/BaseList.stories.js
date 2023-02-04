@@ -27,13 +27,6 @@ const Template = ({ element, variant, data, ...args }) => {
 
 // default ul
 export const BaseUnorderedList = Template.bind({});
-// Base.args = {
-//
-// };
-//
-// Base.parameters = {
-//     controls: { exclude: ['width', 'height'] },
-// }
 
 export const UnOrderedListEmDash = Template.bind({});
 UnOrderedListEmDash.args = {
@@ -74,6 +67,46 @@ BaseOrderedList.args = {
         {
             id: 2,
             text: 'second item in ordered list'
+        }
+    ]
+};
+
+export const OrderedListLinks = Template.bind({});
+OrderedListLinks.args = {
+    element: 'ol',
+    data: [
+        {
+            id: 1,
+            text: '<a href="#">first item</a> in ordered list'
+        },
+        {
+            id: 2,
+            text: 'second item in ordered list',
+            href: '#somewhere'
+        }
+    ]
+};
+
+export const NoBullets = Template.bind({});
+NoBullets.args = {
+    element: 'ol',
+    dataStyle: 'no-bullets',
+    data: [
+        {
+            id: 1,
+            text: 'step 1',
+            href: '#somewhere1',
+            isActive: true,
+        },
+        {
+            id: 2,
+            text: 'step 2',
+            href: '#somewhere2'
+        },
+        {
+            id: 3,
+            text: 'step 3',
+            href: '#somewhere3'
         }
     ]
 };

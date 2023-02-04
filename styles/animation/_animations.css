@@ -1,0 +1,31 @@
+/* @keyframes duration | easing-function | delay |
+iteration-count | direction | fill-mode | play-state | name */
+/*animation: 3s ease-in 1s 2 reverse both paused slidein;*/
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+/* use:
+animation: 1s ease-in 1s forwards;
+*/
+/*
+.molecule-input-label[data-alert="warning"] {
+    animation: 1s ease-in 1s forwards fadeIn;
+}*/
+
+@keyframes fadeInWithBoxShadow {
+  from {
+      opacity: 0;
+      box-shadow: 0px 0px 8px 4px darkorange;
+  }
+  to {
+      opacity: 1;
+      box-shadow: 0px 0px 0px 0px darkorange;
+  }
+}

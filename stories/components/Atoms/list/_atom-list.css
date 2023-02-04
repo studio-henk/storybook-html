@@ -11,3 +11,8 @@
 [data-style="list-style-em-dash"] li {
     margin-left: 30px;
 }
+
+[data-style="no-bullets"] {
+    list-style: none;
+    margin-left: 0;
+}

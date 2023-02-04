@@ -10,26 +10,18 @@ import { Meta } from '@storybook/addon-docs';
 - action console
 - info boxes
 ### Customer Data / Delivery
-- action console
-- info boxes
+- create page/template for customer data step
+- add steps component
+- add action console
+- add info boxes
+- add form
 
+- fix mcl radio button horizontal reverse ✅
 #### Form
+- fix form checkout js: functions on stories show up on all pages (event listeners etc);
 - CSS validation
     - other fields (patterns)
-- fix isSHown prop for field visibility ✅
-    - rename to showField ✅
-    - boolean? or string, yes / no? ✅
-- rename form functions ✅
-    - add eventlistener for page ✅
-    - sub func for form ✅
-- radio buttons
-    - add values for radio buttons, optional with text control, otherwise selected value will be "on" ✅
-    - story private vs business: use correct ID's ✅
-    - animate something for showing company field?
-- add help text below phone field. 'Verklaren waar we het telefoon nummer voor gebruiken' ✅
-- check if telephone dropdown menu can be wide on mobile. ✅
 - toggle for 'Levering op ander adres'
-    - use basic custom checkbox for now ✅
     - show form again but for different address -> change field names, form name? form in form?
     - special toggle button? for "levering op ander adres"
 - rename CSS class ```sh-atom-checkbox-label```
@@ -42,21 +34,22 @@ import { Meta } from '@storybook/addon-docs';
     tel,
     search,
     url
-- radio buttons
-- autocomplete
 - JS validation
 - submit handling
+##### Later
+    - add same alignment options to radio buttons as for checkboxes ie left, right and space-between
 ### Delivery
 ### Payment
 
 ## general
+- check all components and hide controls on stories that are not needed.
 - get all styles from v10 (what branch? checkout?) into storybook as CSS.
 - remove console logs from ? (homepage)
     - blog brick? blogbreakpointtchecker2
-    - reviewbrick
+    - review-brick
     - blogSwiper
-- get postcss autoprefix working in storybook?
-- fix vertical-rhytm variable issue
+- get postcss autoprefixer working in storybook?
+- fix vertical-rhythm variable issue
     ```
         p {
             margin: var(--size-vertical-rhythm) 0 0;
@@ -65,7 +58,7 @@ import { Meta } from '@storybook/addon-docs';
 - icon position left to text
 - search form
     - check with Yvy about rounded corners input, a bit weird with button
-- integrate Slack hook: [slackhook](https://www.chromatic.com/docs/integrations)
+- integrate Slack-hook: [slack-hook](https://www.chromatic.com/docs/integrations)
 
 ## research results
 - autocomplete="off" is ignored by all browsers: https://bugs.chromium.org/p/chromium/issues/detail?id=46543
