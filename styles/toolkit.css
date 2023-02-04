@@ -1,27 +1,25 @@
 @charset "utf-8";
 /*reset*/
-/*@import "base/_reset.css";*/
-@import "./base/_reset.css";
-@import "./screen-reader/_screen-reader.css";
+@import "./base/reset.css";
+@import "./screen-reader/screen-reader.css";
 /*tokens*/
-@import url(./tokens/_tokens-colors.css);
-@import url(./tokens/_tokens-size-font.css);
-@import url(./tokens/_tokens-size-spacings.css);
+@import url(./tokens/tokens-colors.css);
+@import url(./tokens/tokens-size-font.css);
+@import url(./tokens/tokens-size-spacings.css);
 
-@import "./transitions/_fadeIns.css";
-@import "./skeletons/_skeletons.css";
-@import "./state/_data-loading.css";
+@import "./transitions/fadeIns.css";
+@import "./skeletons/skeletons.css";
+@import "./state/data-loading.css";
 
-@import "./_config.css";
-/*@import "./base/_base.css";*/
+@import "./config.css";
 @import "./base/base.css";
-@import "./layout/_layout.css";
+@import "./layout/layout.css";
 
-@import "./alerts/_alerts.css";
-@import "./animation/_animations.css";
+@import "./alerts/alerts.css";
+@import "./animation/animations.css";
 
 /* temporarily */
 @import "./tmp-feedback-display.css";
 @import "./tmp-org-infobox.css";
 /*@import "_theme-dark.css";*/
-@import "./base/test-gh.css";
+/*@import "./base/test-gh.css";*/
