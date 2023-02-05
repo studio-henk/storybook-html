@@ -15,15 +15,20 @@ import { Meta } from '@storybook/addon-docs';
 - add action console
 - add info boxes
 - add form
-
-- fix mcl radio button horizontal reverse ✅
 #### Form
+- **rename form containers classnames. add div as first child of form element for layout. add row divs around elements**.
+- **add all needed fields for alt delivery address**
+    - rename them with _alt_delivery_address suffix
+    - do all countries
+    - toggle for 'Levering op ander adres' (special toggle button? for "levering op ander adres")
+- **add vue transitions around hidden fields that show when toggled a switch**
+- add several postnl-response.json files for different cases:
+    - for every country
+    - for errors?
+- add helpful hints: ie: NL, after typing postcode and house-number, vue should start connect to api and if no results or more than one show feedback tip that we might need the field Toevoeging to find it.
 - fix form checkout js: functions on stories show up on all pages (event listeners etc);
 - CSS validation
     - other fields (patterns)
-- toggle for 'Levering op ander adres'
-    - show form again but for different address -> change field names, form name? form in form?
-    - special toggle button? for "levering op ander adres"
 - rename CSS class ```sh-atom-checkbox-label```
 - fix Firefox indent in select dropdown.
 - check why stefan's chrome still shows blue background when autofill for select element
@@ -42,13 +47,12 @@ import { Meta } from '@storybook/addon-docs';
 ### Payment
 
 ## general
-- check all components and hide controls on stories that are not needed.
-- get all styles from v10 (what branch? checkout?) into storybook as CSS.
+- **check all components and hide controls on stories that are not needed**.
+- **get all styles from v10 (what branch? checkout?) into storybook as CSS**.
 - remove console logs from ? (homepage)
     - blog brick? blogbreakpointtchecker2
     - review-brick
     - blogSwiper
-- get postcss autoprefixer working in storybook?
 - fix vertical-rhythm variable issue
     ```
         p {
