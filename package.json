@@ -10,7 +10,8 @@
     "storybook-secure": "start-storybook --https --ssl-cert --ssl-key -p 6006",
     "build-storybook": "build-storybook",
     "chromatic": "npx chromatic --project-token=d65f4025a0d9",
-    "postcss:watch": "postcss ./styles/toolkit-all.css -o ./styles/toolkit-all-prefixed.css  --watch"
+    "postcss:watch": "postcss ./styles/toolkit-all.css -o ./styles/toolkit-all-prefixed.css  --watch",
+    "a11y-report": "npx storybook-a11y-report"
   },
   "repository": {
     "type": "git",
