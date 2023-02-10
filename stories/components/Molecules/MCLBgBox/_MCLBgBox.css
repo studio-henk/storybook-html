@@ -1,6 +1,8 @@
+/* configurable via style css variables 1 unit is 4px so calc is unit size * unit num */
 .sh-molecule-bg-box {
   background-color: var(--color-background-component-bgbox, transparent);
-  color: var(--color-text-component-bgbox, #000);
+  color: var(--color-text-component-bgbox, currentcolor);
+  border-radius: inherit;
 }
 
 .sh-molecule-bg-box > *:first-child {

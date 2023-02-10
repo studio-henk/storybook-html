@@ -1,19 +1,14 @@
 import { createMoleculeCheckoutSteps } from './moleculeCheckoutSteps';
-import {NoBullets} from "../../Atoms/list/BaseList.stories";
+import {BADGE} from "@geometricpanda/storybook-addon-badges";
 
 export default {
   title: 'Components/Molecules/Checkout Steps',
-  argTypes: {
-    h1text: { control: 'text' },
-    h2text: { control: 'text' },
-    order: {
-      control: { type: 'radio' },
-      options: ['base', 'reverse'],
-      table: {
-        type: { summary: 'string' },
-        defaultValue: { summary: 'base' },
-      },
+  parameters: {
+        badges: [BADGE.BETA, BADGE.EXPERIMENTAL],
+        controls: {sort: 'requiredFirst'}
     },
+  argTypes: {
+    data: { control: 'object' },
   },
 };
 
@@ -44,3 +39,7 @@ Base.args = {
         }
     ]
 };
+Base.parameters = {
+    badges: [BADGE.BETA],
+    controls: {include: ['data']},
+}

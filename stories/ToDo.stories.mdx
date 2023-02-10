@@ -5,19 +5,63 @@ import { Meta } from '@storybook/addon-docs';
 # my TODO
 - tets build
 
+- check with yvy if she uses adobe scala sans or local installed version. ✅
+- copy or cherry pick stuff from here to separate branch from staging branch
+- checkout steps
+- pages
+- table
+
 ## new checkout
 ### PDP
 ### Cart/List
-- action console
-- info boxes
+- page template
+    - infobox padding desktop ✅
+        - update infobox in form (feedback box) ✅
+        - update infobox comp with footer and link inside (right aligned) ✅
+    - fix title undefined form ✅
+    - build and send review requests
+    - **infoBox grid, html, css -> v10**
+    - grid with 4 rows mobile, 5 rows desktop
+    - grid area names?
+    - override width and height for truck icon ✅
+    - icon trashcan
+    - animated icon-trashcan -> storybook
+
+    #### page components / elements
+        - molecule-heading-badge ✅
+
+        - cart list
+        - action console
+        - info boxes
+    ##### InfoBox
+        - rename createMCLBgBox etc
+        - rename paddingBox etc
+        - icon in title, left side? (Not in first version)
+        - publish to chromatic (own branch or main?)
+        - add storybook comp to jira ticket IT-1983
+        - add storybook comp back to figma
+
+
 ### Customer Data / Delivery
+- create molecule table (base and custom)
 - create page/template for customer data step
-- add steps component
+    - placeholders for all blocks
+        - **CheckoutSteps component**
+            - turn off unneeded controls in SB. ✅
+            - SB layout? ✅
+            - **in storybook already, publish and share in ticket**
+            - add to v10?
+    - add heading (mobile)
+    - add button (desktop)
+    - add info boxes
+
 - add action console
-- add info boxes
 - add form
 #### Form
 - **rename form containers classnames. add div as first child of form element for layout. add row divs around elements**.
+- add 2nd custom version with check mark inside circle
+- fix story “horizontal no panel“, issue: now both can be selected due to wrong naming
+- **fix form checkout js: functions on stories show up on all pages (event listeners etc)**
 - **add all needed fields for alt delivery address**
     - rename them with _alt_delivery_address suffix
     - do all countries
@@ -48,12 +92,17 @@ import { Meta } from '@storybook/addon-docs';
 ### Payment
 
 ## general
+- try v10 with styles from storybook or github pages url main branch?
 - **check all components and hide controls on stories that are not needed**.
 - **get all styles from v10 (what branch? checkout?) into storybook as CSS**.
 - remove console logs from ? (homepage)
     - blog brick? blogbreakpointtchecker2
     - review-brick
     - blogSwiper
+
+
+## storybook
+- **get all styles from v10 (what branch? checkout?) into storybook as CSS**.
 - fix vertical-rhythm variable issue
     ```
         p {

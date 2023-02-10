@@ -60,6 +60,13 @@ export const parameters = {
     viewport: {
         viewports: INITIAL_VIEWPORTS,
     },
+    grid: {
+        gridOn: true,
+        columns: 12,
+        gap: '20px',
+        gutter: '50px',
+        maxWidth: '1024px',
+    },
     backgrounds: {
         default: 'transparent',
         values: [
@@ -86,10 +93,12 @@ export const parameters = {
         ],
         grid: {
             cellSize: 4,
-            opacity: 0.5,
+            opacity: 0.25,
             cellAmount: 7,
             offsetX: 0, // default is 0 if story has 'fullscreen' layout, 16 if layout is 'padded'
             offsetY: 7, // default is 0 if story has 'fullscreen' layout, 16 if layout is 'padded'
         },
     },
+    /*layout: 'centered'*/
+    /*layout: 'fullscreen'*/
 }

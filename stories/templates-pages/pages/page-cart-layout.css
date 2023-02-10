@@ -1,0 +1,9 @@
+.cart-page-layout-container {
+    background-color: #eee;
+    display: grid;
+    gap: 28px;
+}
+
+.cart-page__grid-item {
+    background-color: pink;
+}
