@@ -11,13 +11,13 @@ module.exports = {
         '@storybook/addon-essentials',
         '@storybook/addon-interactions',
         '@storybook/addon-a11y',
-        'storybook-addon-grid',
+        /*'storybook-addon-grid',*/
         'storybook-addon-grid/chromatic',
         'storybook-addon-designs',
         //'storybook-jira-addon',
         {name: 'storybook-design-token', options: {preserveCSSVars: true}},
         '@geometricpanda/storybook-addon-badges',
-        "@whitespace/storybook-addon-html",
+        /*"@whitespace/storybook-addon-html",*/
     ],
     framework: '@storybook/html',
     staticDirs: ['../public'],

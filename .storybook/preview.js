@@ -2,34 +2,7 @@
 import '../styles/toolkit.css'
 import {INITIAL_VIEWPORTS} from '@storybook/addon-viewport';
 
-/*
-export const globalTypes = {
-  locale: {
-    name: 'Locale',
-    description: 'Internationalization locale',
-    defaultValue: 'en',
-    toolbar: {
-      icon: 'globe',
-      items: [
-        { value: 'en', right: '🇺🇸', title: 'English' },
-        { value: 'nl', right: '🇳🇱', title: 'Nederlands' },
-        { value: 'fr', right: '🇫🇷', title: 'Français' },
-        { value: 'jp', right: '🇯🇵', title: '日本' },
-      ],
-    },
-  },
-};
-*/
-
 export const parameters = {
-    /*darkMode: {
-        // Override the default dark theme
-        dark: {...themes.dark, appBg: 'black'},
-        // Override the default light theme
-        light: {...themes.normal, appBg: 'white'},
-        classTarget: 'html',
-        stylePreview: true
-    },*/
     actions: {argTypesRegex: "^on[A-Z].*"},
     controls: {
         expanded: true,
@@ -60,13 +33,13 @@ export const parameters = {
     viewport: {
         viewports: INITIAL_VIEWPORTS,
     },
-    grid: {
+    /*grid: {
         gridOn: true,
         columns: 12,
         gap: '20px',
         gutter: '50px',
         maxWidth: '1024px',
-    },
+    },*/
     backgrounds: {
         default: 'transparent',
         values: [
