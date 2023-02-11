@@ -13,9 +13,20 @@ module.exports = {
         '@storybook/addon-a11y',
         /*'storybook-addon-grid',*/
         'storybook-addon-grid/chromatic',
-        'storybook-addon-designs',
+        // 'storybook-addon-designs',
         //'storybook-jira-addon',
-        {name: 'storybook-design-token', options: {preserveCSSVars: true}},
+        {
+            name: 'storybook-design-token',
+            options: {
+                preserveCSSVars: true
+            }
+        },
+        {
+            name: 'storybook-addon-designs',
+            options: {
+                // renderTarget: "tab",
+            },
+        },
         '@geometricpanda/storybook-addon-badges',
         /*"@whitespace/storybook-addon-html",*/
     ],

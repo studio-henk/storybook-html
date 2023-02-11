@@ -11,7 +11,7 @@ export const createHomePage = ({
   homepage.className = 'sh-page';
   // homepage.innerText = text;
   const h1 = createBaseH1({
-    text: title,
+    titleText: title,
   })
 
   function onModalOpen() {
