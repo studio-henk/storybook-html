@@ -1,9 +1,9 @@
 import { createMoleculePaddingBox } from './molecule-padding-box';
 
 export default {
-  title: 'Components/Molecules/padding-box_hidden_',
+  title: 'Components/Molecules/padding-box',
   argTypes: {
-    text: { control: 'text' },
+    dummyText: { control: 'text' },
     paddingTopUnits : {
         control: { type: 'number', min: 0 },
     },
@@ -19,15 +19,15 @@ export default {
   },
 };
 
-const Template = ({ title, ...args }) => {
+const Template = ({ ...args }) => {
   // You can either use a function to create DOM elements or use a plain html string!
   // return `<div>${label}</div>`;
-  return createMoleculePaddingBox({ title, ...args });
+  return createMoleculePaddingBox({ ...args });
 };
 
 export const Base = Template.bind({});
 Base.args = {
-    text: 'This box only controls its padding',
+    dummyText: 'This box only controls its padding',
     paddingTopUnits: 4,
     paddingRightUnits: 4,
     paddingBottomUnits: 4,

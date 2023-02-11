@@ -11,6 +11,10 @@ export const createMCLBgBox = ({
        paddingRightUnits,
        paddingBottomUnits,
        paddingLeftUnits,
+       paddingTopUnitsDesktop,
+       paddingRightUnitsDesktop,
+       paddingBottomUnitsDesktop,
+       paddingLeftUnitsDesktop,
     }) => {
     const mclBgBox = document.createElement('div');
     mclBgBox.className = ['sh-molecule-bg-box'].join(' ');
@@ -32,6 +36,10 @@ export const createMCLBgBox = ({
                 paddingRightUnits: paddingRightUnits,
                 paddingBottomUnits: paddingBottomUnits,
                 paddingLeftUnits: paddingLeftUnits,
+                paddingTopUnitsDesktop: paddingTopUnitsDesktop,
+                paddingRightUnitsDesktop: paddingRightUnitsDesktop,
+                paddingBottomUnitsDesktop: paddingBottomUnitsDesktop,
+                paddingLeftUnitsDesktop: paddingLeftUnitsDesktop,
             })
         )
 

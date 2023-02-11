@@ -4,16 +4,41 @@ configurable via style css variables
 so calc is unit size * unit num
 */
 .sh-molecule-padding-box {
-  --size-spacing-units: 0;
-  --size-spacing-units-top: 4;
-  --size-spacing-units-right: 4;
-  --size-spacing-units-left: 4;
-  --size-spacing-units-bottom: 4;
-  /*padding: calc(var(--size-vertical-rhythm) * 1rem) calc(var(--size-horizontal-rhythm) * 1rem);*/
-  /*padding: 28px 16px;*/
-  padding: calc(var(--size-spacing-units-top, 0) * var(--size-spacing-unit-base)) calc(var(--size-spacing-units-right, 0) * var(--size-spacing-unit-base)) calc(var(--size-spacing-units-bottom, 0) * var(--size-spacing-unit-base)) calc(var(--size-spacing-units-left, 0) * var(--size-spacing-unit-base));
+    --size-spacing-units: 0;
+    --size-spacing-units-top: 11;
+    --size-spacing-units-right: 5;
+    --size-spacing-units-bottom: 11;
+    --size-spacing-units-left: 5;
+    --size-spacing-units-top-desktop: 11;
+    --size-spacing-units-right-desktop: 5;
+    --size-spacing-units-bottom-desktop: 11;
+    --size-spacing-units-left-desktop: 5;
+    padding: calc(var(--size-spacing-units-top, 11) * var(--size-spacing-unit-base)) calc(var(--size-spacing-units-right, 5) * var(--size-spacing-unit-base)) calc(var(--size-spacing-units-bottom, 11) * var(--size-spacing-unit-base)) calc(var(--size-spacing-units-left, 5) * var(--size-spacing-unit-base));
 }
 
-.sh-molecule-padding-box > *:first-child {
-  margin-top: 0;
+@media only screen and (min-width: 992px) {
+    .sh-molecule-padding-box {
+        padding: calc(var(--size-spacing-units-top-desktop, 11) * var(--size-spacing-unit-base)) calc(var(--size-spacing-units-right-desktop, 5) * var(--size-spacing-unit-base)) calc(var(--size-spacing-units-bottom-desktop, 11) * var(--size-spacing-unit-base)) calc(var(--size-spacing-units-left-desktop, 5) * var(--size-spacing-unit-base));
+    }
 }
+
+.sh-molecule-padding-box > * {
+    margin-top: 0;
+}
+
+
+
+/*.sh-molecule-padding-box {*/
+/*  --size-spacing-units: 0;*/
+/*  --size-spacing-units-top: 4;*/
+/*  --size-spacing-units-right: 4;*/
+/*  --size-spacing-units-left: 4;*/
+/*  --size-spacing-units-bottom: 4;*/
+/*  !*padding: calc(var(--size-vertical-rhythm) * 1rem) calc(var(--size-horizontal-rhythm) * 1rem);*!*/
+/*  !*padding: 28px 16px;*!*/
+/*  padding: calc(var(--size-spacing-units-top, 0) * var(--size-spacing-unit-base)) calc(var(--size-spacing-units-right, 0) * var(--size-spacing-unit-base)) calc(var(--size-spacing-units-bottom, 0) * var(--size-spacing-unit-base)) calc(var(--size-spacing-units-left, 0) * var(--size-spacing-unit-base));*/
+/*}*/
+
+/*.sh-molecule-padding-box > *:first-child {*/
+/*  margin-top: 0;*/
+/*}*/

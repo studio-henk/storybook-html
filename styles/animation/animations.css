@@ -22,10 +22,10 @@ animation: 1s ease-in 1s forwards;
 @keyframes fadeInWithBoxShadow {
   from {
       opacity: 0;
-      box-shadow: 0px 0px 8px 4px darkorange;
+      box-shadow: 0 0 8px 4px darkorange;
   }
   to {
       opacity: 1;
-      box-shadow: 0px 0px 0px 0px darkorange;
+      box-shadow: 0 0 0 0 darkorange;
   }
 }

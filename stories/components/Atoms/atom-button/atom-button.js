@@ -1,7 +1,6 @@
 import './atom-button.css';
 import './_atom-button-loading.css';
 import camelcase from "lodash.camelcase";
-// import { returnIconSVG } from "./_icons-function";
 import { returnIconSVG } from "../atom-icon/_icons-function";
 
 export const createAtomButton = ({

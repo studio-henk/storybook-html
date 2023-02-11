@@ -1,16 +1,16 @@
 import { createMCLBgBox } from './MCLBgBox';
 
 export default {
-  title: 'Components/Molecules/bg-box_hidden_',
+  title: 'Components/Molecules/bg-box',
   argTypes: {
     text: { control: 'text' },
     bgColor: {
         control: { type: 'select' },
         options: [
-            'var(--color-Black)',
-            'var(--color-HENK-Black)',
-            'var(--color-White)',
-            'var(--color-HENK-White)',
+            'var(--color-black)',
+            'var(--color-henk-black)',
+            'var(--color-white)',
+            'var(--color-henk-white)',
             'var(--color-accent1)',
             'var(--color-accent2)',
             'var(--color-accent3)',
@@ -34,10 +34,10 @@ export default {
     fgColor: {
         control: { type: 'select' },
         options: [
-            'var(--color-Black)',
-            'var(--color-HENK-Black)',
-            'var(--color-White)',
-            'var(--color-HENK-White)',
+            'var(--color-black)',
+            'var(--color-henk-black)',
+            'var(--color-white)',
+            'var(--color-henk-white)',
             'var(--color-accent1)',
             'var(--color-accent2)',
             'var(--color-accent3)',
@@ -69,6 +69,18 @@ export default {
     },
     paddingLeftUnits : {
         control: { type: 'number', min: 0 },
+    },
+    paddingTopUnitsDesktop : {
+        control: { type: 'number', min: 0 },
+    },
+    paddingRightUnitsDesktop : {
+        control: { type: 'number', min: 0 },
+    },
+    paddingBottomUnitsDesktop : {
+        control: { type: 'number', min: 0 },
+    },
+    paddingLeftUnitsDesktop : {
+        control: { type: 'number', min: 0 },
     }
     // fgColor: {
     //     control: {
@@ -80,8 +92,6 @@ export default {
 };
 
 const Template = ({ title, ...args }) => {
-  // You can either use a function to create DOM elements or use a plain html string!
-  // return `<div>${label}</div>`;
   return createMCLBgBox({ title, ...args });
 };
 
@@ -114,10 +124,14 @@ export const WithPaddingBox = Template.bind({});
 WithPaddingBox.args = {
     text: 'My text is orange',
     bgColor: 'var(--color-accent1)',
-    fgColor: 'var(--color-HENK-Black)',
+    fgColor: 'var(--color-henk-black)',
     hasPaddingBox: true,
     paddingTopUnits: 4,
     paddingRightUnits: 4,
     paddingBottomUnits: 4,
-    paddingLeftUnits: 4
+    paddingLeftUnits: 4,
+    paddingTopUnitsDesktop: 20,
+    paddingRightUnitsDesktop: 20,
+    paddingBottomUnitsDesktop: 20,
+    paddingLeftUnitsDesktop: 20
 };

@@ -1,0 +1,41 @@
+/*
+.cart-page-layout-container {
+    background-color: #eee;
+    display: grid;
+    gap: 28px;
+}
+
+.cart-page__grid-item {
+    background-color: pink;
+}*/
+.cart-page-layout-container.skeleton {
+    background-color: #eee;
+}
+
+.cart-page__grid-item.skeleton {
+    background-color: #ddd;
+    padding: 1rem;
+}
+
+.h2.skeleton {
+    background-color: #ccc;
+}
+.cart-page__grid-item.skeleton .grid {
+    background-color: #ccc;
+    display: grid;
+    gap: 20px;
+}
+
+@media only screen and (min-width: 992px) {
+    .cart-page__grid-item.skeleton .grid {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 20px;
+        padding: 28px
+    }
+}
+
+.cart-page__grid-item.skeleton .grid__item {
+    background-color: #bbb;
+    display: inline;
+    color: hsl(0deg 0% 73%);
+}

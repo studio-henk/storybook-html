@@ -17,8 +17,7 @@ export const createAtomLabel = ({
   // ie: <em> or <a href>
   const parser = new DOMParser();
   // const htmlString = "<strong>Beware of the leopard</strong>";
-  const htmlString = labelText;
-  const doc3 = parser.parseFromString(htmlString, "text/html");
+  const doc3 = parser.parseFromString(labelText, "text/html");
   // console.log(doc3.body.firstChild);
 
   // BaseLabel.innerText = labelText;

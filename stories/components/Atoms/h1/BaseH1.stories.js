@@ -9,21 +9,21 @@ export default {
     badges: [BADGE.NEEDS_REVISION],
   },
   argTypes: {
-      text: {control: 'text'},
+      titleText: {control: 'text'},
   },
   decorators: [withDesign],
 };
 
-const Template = ({ text, ...args }) => {
+const Template = ({ titleText, ...args }) => {
   // You can either use a function to create DOM elements or use a plain html string!
   // return `<p>${label}</p>`;
-  return createBaseH1({ text, ...args });
+  return createBaseH1({ titleText, ...args });
 };
 
 export const Base = Template.bind({});
 // More on args: https://storybook.js.org/docs/html/writing-stories/args
 Base.args = {
-  text: 'This is a Heading level 1.',
+  titleText: 'This is a Heading level 1.',
 };
 
 Base.parameters = {

@@ -30,6 +30,9 @@
     --color-text-selection-bg: var(--color-accent5);
     --color-text-selection-text: var(--color-henk-black);
 
+    /* info-box */
+    /*--color-background-info-box: var(--color-accent15);*/
+
     /*
     outline color for focused elements
     turned off it falls back to browser default (blue)

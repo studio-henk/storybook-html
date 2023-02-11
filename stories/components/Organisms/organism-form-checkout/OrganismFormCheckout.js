@@ -80,7 +80,7 @@ export const createForm = ({
 
     // title
     const h1 = createBaseH1({
-        text: formTitle,
+        titleText: formTitle,
         className: 'h2',
     })
 
@@ -193,9 +193,6 @@ export const createForm = ({
     // connect to POSTNL API
     const feedbackDisplayElement = document.createElement('div');
     feedbackDisplayElement.className = 'cmp-feedback-display';
-    /*feedbackDisplayElement.innerHTML = 'Hello !';
-    feedbackDisplayElement.style.backgroundColor = 'beige';
-    feedbackDisplayElement.style.padding = '2rem';*/
     feedbackDisplayElement.style.width = '100%';
 
     const infoBox = `<div class="info-section__box">
@@ -229,13 +226,45 @@ export const createForm = ({
     </div>
     `;
 
+    const infoBoxNew = `
+        <div class="molecule-info-box" style="--color-background-component-bgbox:var(--color-accent15); --color-text-component-bgbox:var(--color-black);">
+            <div class="sh-molecule-padding-box" style="--size-spacing-units-top:3; --size-spacing-units-right:5; --size-spacing-units-bottom:4; --size-spacing-units-left:5;--size-spacing-units-top-desktop:7; --size-spacing-units-right-desktop:7; --size-spacing-units-bottom-desktop:7; --size-spacing-units-left-desktop:7;">
+                <div class="component-layout-box">
+                    <header class="info-box__header">
+                        <small class="info-box__subtitle">Jouw adres</small>
+                    </header>
+                    <div class="info-box__body">
+                        <!--<address class="info-section__body-address" xid="result-address" xdata-hasfadein="true" [data-skeleton="true"]>
+                            Straatnaam 123-2<br>
+                            1234 AB, AMSTERDAM<br>
+                            THE NETHERLANDS
+                        </address>-->
+                        <address class="info-section__body-address" id="result-address" data-hasfadein="true">
+                            Straatnaam 123-2<br>
+                            1234 AB, AMSTERDAM<br>
+                            THE NETHERLANDS
+                        </address>
+                        <!--<div>
+                            <input type="text" name="txt_streetName" id="txt_streetName" readonly>
+                            <input type="text" name="txt_houseNumber" id="txt_houseNumber" readonly>
+                            <br>
+                            <input type="text" name="txt_postCode" id="txt_postCode" readonly>
+                        </div>-->
+                    </div>
+                    <footer class="info-box__footer">
+                        <a href="#" class="info-box__footer-link">dit
+                            klopt niet</a>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    `;
+
     const fbButton = `
         <button type="button" id="buttonGetAddress">get address</button>
     `;
 
-    // feedbackDisplayElement.insertAdjacentHTML('beforeend', fbButton);
-
-    feedbackDisplayElement.insertAdjacentHTML('beforeend', infoBox);
+    feedbackDisplayElement.insertAdjacentHTML('beforeend', infoBoxNew);
 
 
     // telephone number field here

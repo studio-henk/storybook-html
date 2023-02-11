@@ -54,7 +54,7 @@ Bringhurst.args = {
 Bringhurst.parameters = {
     docs: {
         description: {
-            story: '> _Anything from 45 to 75 characters is widely regarded as a satisfactory length of line for a single-column page set in a serifed text face in a text size. The 66-character line (counting both letters and spaces) is widely regarded as ideal. For multiple column work, a better average is 40 to 50 characters_. See http://webtypography.net/2.1.2'
+            story: '> _Anything from 45 to 75 characters is widely regarded as a satisfactory length of line for a single-column page set in a serifed text face in a text size. The 66-character line (counting both letters and spaces) is widely regarded as ideal. For multiple column work, a better average is 40 to 50 characters_. See https://webtypography.net/2.1.2'
         },
     },
 }

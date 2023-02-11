@@ -10,7 +10,9 @@
     "storybook-secure": "start-storybook --https --ssl-cert --ssl-key -p 6006",
     "build-storybook": "build-storybook",
     "chromatic": "npx chromatic --project-token=d65f4025a0d9",
-    "postcss:watch": "postcss ./styles/toolkit-all.css -o ./styles/toolkit-all-prefixed.css  --watch"
+    "postcss:watch": "postcss ./styles/toolkit-all.css -o ./styles/toolkit-all-prefixed.css  --watch",
+    "a11y-report": "npx storybook-a11y-report",
+    "storybook-docs": "start-storybook --docs --no-manager-cache"
   },
   "repository": {
     "type": "git",
@@ -27,7 +29,6 @@
     "@babel/core": "^7.18.5",
     "@storybook/addon-a11y": "^6.5.9",
     "@storybook/addon-actions": "^6.5.16",
-    "@storybook/addon-console": "^1.2.3",
     "@storybook/addon-docs": "^6.5.16",
     "@storybook/addon-essentials": "^6.5.9",
     "@storybook/addon-interactions": "^6.5.9",
