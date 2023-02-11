@@ -28,7 +28,7 @@ module.exports = {
             },
         },
         '@geometricpanda/storybook-addon-badges',
-        /*"@whitespace/storybook-addon-html",*/
+        '@whitespace/storybook-addon-html',
     ],
     framework: '@storybook/html',
     staticDirs: ['../public'],

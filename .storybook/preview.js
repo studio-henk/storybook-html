@@ -72,6 +72,17 @@ export const parameters = {
             offsetY: 7, // default is 0 if story has 'fullscreen' layout, 16 if layout is 'padded'
         },
     },
+    html: {
+        prettier: {
+            tabWidth: 4,
+            useTabs: false,
+            htmlWhitespaceSensitivity: "ignore",
+        },
+        highlighter: {
+            showLineNumbers: true, // default: false
+            wrapLines: true, // default: true
+        },
+    },
     /*layout: 'centered'*/
     /*layout: 'fullscreen'*/
 }
