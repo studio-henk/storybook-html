@@ -1,15 +1,27 @@
-import { createTable } from './molecule-table';
+import {createTable} from './molecule-table';
+import {BADGE} from "@geometricpanda/storybook-addon-badges";
+
 export default {
-  title: 'Components/Molecules/Table',
-  argTypes: {
-    label: { control: 'text' },
-    buttonText: { control: 'text' },
-    placeholder: { control: 'text' },
-  },
+    title: 'Components/Molecules/Table',
+    component: createTable,
+    parameters: {
+        badges: [BADGE.BETA],
+        controls: {sort: 'requiredFirst'},
+        docs: {
+            description: {
+                component: 'Table',
+            },
+        },
+    },
+    argTypes: {
+        label: {control: 'text'},
+        buttonText: {control: 'text'},
+        placeholder: {control: 'text'},
+    },
 };
 
-const Template = ({ label, buttonText, placeholder, ...args }) => {
-  return createTable({ ...args });
+const Template = ({label, buttonText, placeholder, ...args}) => {
+    return createTable({...args});
 };
 
 export const Base = Template.bind({});

@@ -1,3 +1,30 @@
+.sbdocs.sbdocs-wrapper .css-1p8ieni {
+    font-size: unset;
+    line-height: unset;
+}
+
+/*.sbdocs-h1.css-7tx5az {
+    font-family: unset;
+    font-weight: unset;
+    font-size: unset;
+    line-height: unset;
+}*/
+
+.sbdocs-h1 {
+    font-size: 35px !important;
+    font-weight: 300 !important;
+    line-height: normal;
+}
+
+@media only screen and (min-width: 992px) {
+    .sbdocs-h1 {
+        font-size: 53px !important;
+    }
+
+}
+
+/*css-zgt7u1*/
+
 .sbdocs strong {
     font-weight: 700;
 }

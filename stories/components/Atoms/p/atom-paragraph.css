@@ -1,3 +1,31 @@
 p {
   margin-top: 28px;
 }
+
+.book-style,
+.book-style p {
+  text-align: justify;
+  /*font-size: 17px;*/
+  /*text-justify: auto;*/
+}
+
+.book-style p {
+  font-weight: 400;
+  letter-spacing: normal;
+  max-width: 66ch;
+  hyphens: auto;
+}
+
+@supports (initial-letter: 7) or (-webkit-initial-letter: 7) {
+  .book-style::first-letter {
+    color: hsl(350, 50%, 50%);
+    initial-letter: 3;
+    -webkit-initial-letter: 3;
+    margin-right: 8px;
+  }
+}
+
+/*.book-style p::first-letter {
+  -webkit-initial-letter: 3;
+  initial-letter: 3;
+}*/

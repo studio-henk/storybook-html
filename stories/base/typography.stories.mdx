@@ -12,145 +12,263 @@ export const typography = {
         primary: '"ff-scala-sans-pro",  sans-serif',
     },
     weight: {
-        light: '300',
-        regular: '400',
-        bold: '700',
-        extrabold: '800',
-        black: '900',
+        light: 300,
+        regular: 400,
+        bold: 700,
     },
     size: {
         s1: 12,
-        s2: 14,
-        s3: 16,
-        m1: 20,
-        m2: 24,
-        m3: 28,
-        l1: 32,
-        l2: 40,
-        l3: 48,
+        s2: 13,
+        s3: 14,
+        m1: 16,
+        m2: 20,
+        m3: 21,
+        l1: 24,
+        l2: 27,
+        l3: 33,
+        l4: 35,
+        l5: 53,
     },
 };
 
 export const SampleText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
 
 # Typography
+HENK uses the _Scala Sans_ font family.
 
 **Font:** ff-scala-sans-pro
 
-**Weights:** 300(light), 400(regular), 700(bold)
+Designed by _Martin Majoor_ in 1993. Published by FontFont.
 
+**Weights:** 300(light), 400(regular)
+
+## Light  (font-weight: 300)
 <Typeset
-    fontSizes={[
-        Number(typography.size.s1),
-        Number(typography.size.s2),
-        Number(typography.size.s3),
-        Number(typography.size.m1),
-        Number(typography.size.m2),
-        Number(typography.size.m3),
-        Number(typography.size.l1),
-        Number(typography.size.l2),
-        Number(typography.size.l3),
-    ]}
+    fontSizes={
+        [
+            Number(typography.size.s1),
+            Number(typography.size.s2),
+            Number(typography.size.s3),
+            Number(typography.size.m1),
+            Number(typography.size.m2),
+            Number(typography.size.m3),
+            Number(typography.size.l1),
+            Number(typography.size.l2),
+            Number(typography.size.l3),
+            Number(typography.size.l4),
+            Number(typography.size.l5),
+        ]
+    }
     fontWeight={typography.weight.light}
     sampleText={SampleText}
     fontFamily={typography.type.primary}
 />
 
-## test story h1
+## Regular (font-weight: 400)
 
-<Story id="components-atoms-base-h1--base"/>
+<Typeset
+    fontSizes={
+        [
+            Number(typography.size.s1),
+            Number(typography.size.s2),
+            Number(typography.size.s3),
+            Number(typography.size.m1),
+            Number(typography.size.m2),
+            Number(typography.size.m3),
+            Number(typography.size.l1),
+            Number(typography.size.l2),
+            Number(typography.size.l3),
+            Number(typography.size.l4),
+            Number(typography.size.l5),
+        ]
+    }
+    fontWeight={typography.weight.regular}
+    sampleText={SampleText}
+    fontFamily={typography.type.primary}
+/>
 
-## test AtomIcon component arrow left
+[//]: # (## test story h1)
 
-<Story id="components-atoms-icon-icon-stories--icon-arrow-left"/>
+[//]: # ()
+[//]: # (<Story id="components-atoms-base-h1--base"/>)
 
-## default html text input element: ```input```
-<Canvas>
-    <input type="text"/>
-</Canvas>
+[//]: # ()
+[//]: # (## test AtomIcon component arrow left)
 
-## current HENK text input element: ```class="basic-input__input"```
-<Canvas>
-    <input type="text" className="basic-input__input"/>
-</Canvas>
+[//]: # ()
+[//]: # (<Story id="components-atoms-icon-icon-stories--icon-arrow-left"/>)
 
-## 2 columns
+[//]: # ()
+[//]: # (## default html text input element: ```input```)
 
-<Canvas>
-    <div className="doc-flex">
-        <div className="doc-flex__grid-item">
-            <h1>Current</h1>
-            <div className="basic-select-container">
-                <div className="basic-select">
-                    <select className="basic-select__select" id="form_howDidYouFindUs" name="form[howDidYouFindUs]">
-                        <option value="">Hoe heb je ons gevonden?</option>
-                        <option value="Eijerkamp">Eijerkamp</option>
-                        <option value="VT Wonen">VT Wonen</option>
-                        <option value="Flinders">Flinders</option>
-                        <option value="Instagram">Instagram</option>
-                        <option value="Facebook">Facebook</option>
-                        <option value="Google">Google</option>
-                        <option value="Loods 5">Loods 5</option>
-                        <option value="E-living">E-living</option>
-                        <option value="Andere woonwinkel">different shop</option>
-                        <option value="Beurs">Fair</option>
-                        <option value="Familie/Vrienden">Family/Friends</option>
-                        <option value="Tijdschrift">Magazine</option>
-                        <option value="Overig">Others</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-        <div className="doc-flex__grid-item">
-            <h1>New</h1>
-            <select
-                name="select_country"
-                id="country-select"
-                className="atom-select"
-                required
-            >
-                <option value="nederland">Nederland</option>
-                <option value="AT">Austria (€ 149)</option>
-                <option value="BE">Belgium</option>
-                <option value="DE">Germany (€ 149)</option>
-                <option value="FR">France (€ 149)</option>
-                <option value="IT">Italy (€ 199)</option>
-                <option value="LU">Luxembourg (€ 149)</option>
-            </select>
-        </div>
-    </div>
-</Canvas>
+[//]: # (<Canvas>)
 
-## select
-<Canvas>
-    <div className="basic-select-container">
-        <div className="basic-select">
-            <select className="basic-select__select" id="form_howDidYouFindUs" name="form[howDidYouFindUs]">
-                <option value="">Hoe heb je ons gevonden?</option>
-                <option value="Eijerkamp">Eijerkamp</option>
-                <option value="VT Wonen">VT Wonen</option>
-                <option value="Flinders">Flinders</option>
-                <option value="Instagram">Instagram</option>
-                <option value="Facebook">Facebook</option>
-                <option value="Google">Google</option>
-                <option value="Loods 5">Loods 5</option>
-                <option value="E-living">E-living</option>
-                <option value="Andere woonwinkel">different shop</option>
-                <option value="Beurs">Fair</option>
-                <option value="Familie/Vrienden">Family/Friends</option>
-                <option value="Tijdschrift">Magazine</option>
-                <option value="Overig">Others</option>
-            </select>
-        </div>
-    </div>
-</Canvas>
+[//]: # (    <input type="text"/>)
 
-## fieldset
-<Canvas>
-    <fieldset>
-        <legend>Do you agree?</legend>
-        <input type="checkbox" id="chbx" name="agree" value="Yes!"/>
-        <label htmlFor="chbx">I agree</label>
-    </fieldset>
-</Canvas>
+[//]: # (</Canvas>)
+
+[//]: # ()
+[//]: # (## current HENK text input element: ```class="basic-input__input"```)
+
+[//]: # (<Canvas>)
+
+[//]: # (    <input type="text" className="basic-input__input"/>)
+
+[//]: # (</Canvas>)
+
+[//]: # ()
+[//]: # (## 2 columns)
+
+[//]: # ()
+[//]: # (<Canvas>)
+
+[//]: # (    <div className="doc-flex">)
+
+[//]: # (        <div className="doc-flex__grid-item">)
+
+[//]: # (            <h1>Current</h1>)
+
+[//]: # (            <div className="basic-select-container">)
+
+[//]: # (                <div className="basic-select">)
+
+[//]: # (                    <select className="basic-select__select" id="form_howDidYouFindUs" name="form[howDidYouFindUs]">)
+
+[//]: # (                        <option value="">Hoe heb je ons gevonden?</option>)
+
+[//]: # (                        <option value="Eijerkamp">Eijerkamp</option>)
+
+[//]: # (                        <option value="VT Wonen">VT Wonen</option>)
+
+[//]: # (                        <option value="Flinders">Flinders</option>)
+
+[//]: # (                        <option value="Instagram">Instagram</option>)
+
+[//]: # (                        <option value="Facebook">Facebook</option>)
+
+[//]: # (                        <option value="Google">Google</option>)
+
+[//]: # (                        <option value="Loods 5">Loods 5</option>)
+
+[//]: # (                        <option value="E-living">E-living</option>)
+
+[//]: # (                        <option value="Andere woonwinkel">different shop</option>)
+
+[//]: # (                        <option value="Beurs">Fair</option>)
+
+[//]: # (                        <option value="Familie/Vrienden">Family/Friends</option>)
+
+[//]: # (                        <option value="Tijdschrift">Magazine</option>)
+
+[//]: # (                        <option value="Overig">Others</option>)
+
+[//]: # (                    </select>)
+
+[//]: # (                </div>)
+
+[//]: # (            </div>)
+
+[//]: # (        </div>)
+
+[//]: # (        <div className="doc-flex__grid-item">)
+
+[//]: # (            <h1>New</h1>)
+
+[//]: # (            <select)
+
+[//]: # (                name="select_country")
+
+[//]: # (                id="country-select")
+
+[//]: # (                className="atom-select")
+
+[//]: # (                required)
+
+[//]: # (            >)
+
+[//]: # (                <option value="nederland">Nederland</option>)
+
+[//]: # (                <option value="AT">Austria &#40;€ 149&#41;</option>)
+
+[//]: # (                <option value="BE">Belgium</option>)
+
+[//]: # (                <option value="DE">Germany &#40;€ 149&#41;</option>)
+
+[//]: # (                <option value="FR">France &#40;€ 149&#41;</option>)
+
+[//]: # (                <option value="IT">Italy &#40;€ 199&#41;</option>)
+
+[//]: # (                <option value="LU">Luxembourg &#40;€ 149&#41;</option>)
+
+[//]: # (            </select>)
+
+[//]: # (        </div>)
+
+[//]: # (    </div>)
+
+[//]: # (</Canvas>)
+
+[//]: # ()
+[//]: # (## select)
+
+[//]: # (<Canvas>)
+
+[//]: # (    <div className="basic-select-container">)
+
+[//]: # (        <div className="basic-select">)
+
+[//]: # (            <select className="basic-select__select" id="form_howDidYouFindUs" name="form[howDidYouFindUs]">)
+
+[//]: # (                <option value="">Hoe heb je ons gevonden?</option>)
+
+[//]: # (                <option value="Eijerkamp">Eijerkamp</option>)
+
+[//]: # (                <option value="VT Wonen">VT Wonen</option>)
+
+[//]: # (                <option value="Flinders">Flinders</option>)
+
+[//]: # (                <option value="Instagram">Instagram</option>)
+
+[//]: # (                <option value="Facebook">Facebook</option>)
+
+[//]: # (                <option value="Google">Google</option>)
+
+[//]: # (                <option value="Loods 5">Loods 5</option>)
+
+[//]: # (                <option value="E-living">E-living</option>)
+
+[//]: # (                <option value="Andere woonwinkel">different shop</option>)
+
+[//]: # (                <option value="Beurs">Fair</option>)
+
+[//]: # (                <option value="Familie/Vrienden">Family/Friends</option>)
+
+[//]: # (                <option value="Tijdschrift">Magazine</option>)
+
+[//]: # (                <option value="Overig">Others</option>)
+
+[//]: # (            </select>)
+
+[//]: # (        </div>)
+
+[//]: # (    </div>)
+
+[//]: # (</Canvas>)
+
+[//]: # ()
+[//]: # (## fieldset)
+
+[//]: # (<Canvas>)
+
+[//]: # (    <fieldset>)
+
+[//]: # (        <legend>Do you agree?</legend>)
+
+[//]: # (        <input type="checkbox" id="chbx" name="agree" value="Yes!"/>)
+
+[//]: # (        <label htmlFor="chbx">I agree</label>)
+
+[//]: # (    </fieldset>)
+
+[//]: # (</Canvas>)
 
