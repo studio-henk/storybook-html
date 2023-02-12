@@ -2,7 +2,7 @@
 import { createHomePage } from './homepage';
 
 export default {
-  title: 'Templates Pages/Pages/Homepage',
+  title: 'Templates Pages/Pages/Homepage_hidden',
   argTypes: {
     title: {control: 'text'},
     text: {control: 'text'},

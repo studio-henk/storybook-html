@@ -58,6 +58,7 @@
   "dependencies": {
     "@geometricpanda/storybook-addon-badges": "^0.2.2",
     "@storybook/addon-viewport": "^6.5.15",
+    "@storybook/addons": "^6.5.16",
     "@storybook/jest": "^0.0.10",
     "@storybook/test-runner": "^0.9.3",
     "@storybook/theming": "^6.5.15",

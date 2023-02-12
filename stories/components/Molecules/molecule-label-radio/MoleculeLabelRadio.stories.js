@@ -304,22 +304,22 @@ LayoutHorizontalNoPanel.args = {
     dataStyle: 'no-panel',
     data: [
         {
-            id: 'radio-custom-hor1',
+            id: 'radio-custom-hor-np-1',
             checked: true,
             disabled: false,
-            groupName: 'group-custom',
+            groupName: 'group-custom-np',
             customRadio: false,
             labelText: 'Particulier',
-            forAttr: 'radio-custom-hor1',
+            forAttr: 'radio-custom-hor-np-1',
         },
         {
-            id: 'radio-custom-hor2',
+            id: 'radio-custom-hor-np-2',
             checked: false,
             disabled: false,
-            groupName: 'group-custom-hor',
+            groupName: 'group-custom-np',
             customRadio: false,
             labelText: 'Zakelijk',
-            forAttr: 'radio-custom-hor2',
+            forAttr: 'radio-custom-hor-np-2',
         }
     ]
 };

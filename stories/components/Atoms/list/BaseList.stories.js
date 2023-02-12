@@ -51,7 +51,7 @@ UnOrderedListEmDash.parameters = {
     badges: [BADGE.BETA],
     design: {
         type: "figma",
-        url: "https://www.figma.com/file/DHpJJWTOUv4MpfeCEx3pe6/UI?node-id=25%3A64&t=rsNgWdfYtt2CC04f-1",
+        url: "https://www.figma.com/file/DHpJJWTOUv4MpfeCEx3pe6/UI?node-id=301%3A141&t=WtPlV87oWjwLzZQx-1",
     },
 }
 UnOrderedListEmDash.storyName = 'Em dash list'
@@ -70,6 +70,13 @@ BaseOrderedList.args = {
         }
     ]
 };
+BaseOrderedList.parameters = {
+    badges: [BADGE.BETA],
+    design: {
+        type: "figma",
+        url: "https://www.figma.com/file/DHpJJWTOUv4MpfeCEx3pe6/UI?node-id=301%3A147&t=WtPlV87oWjwLzZQx-1",
+    },
+}
 
 export const OrderedListLinks = Template.bind({});
 OrderedListLinks.args = {

@@ -1,6 +1,6 @@
 import { createAtomCheckbox } from './AtomCheckbox';
 export default {
-  title: 'Components/Atoms/Base/Input Checkbox',
+  title: 'Components/Atoms/Base/Input Checkbox_hidden',
   parameters: { controls: { sort: 'requiredFirst' } },
   argTypes: {
     checked: { control: 'boolean' },

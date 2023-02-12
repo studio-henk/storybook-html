@@ -3,7 +3,7 @@ import {createMoleculeInputLabel} from "../molecule-input-label/MoleculeInputLab
 import {createAtomButton} from "../../Atoms/atom-button/atom-button";
 
 export default {
-    title: 'Components/Molecules/Search Form',
+    title: 'Components/Molecules/Search Form_hidden',
     argTypes: {
         labelText: {control: 'text'},
         buttonText: {control: 'text'},

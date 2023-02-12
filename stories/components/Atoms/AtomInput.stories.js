@@ -2,7 +2,7 @@ import {createAtomInput} from './AtomInput';
 import {BADGE} from "@geometricpanda/storybook-addon-badges";
 
 export default {
-    title: 'Components/Atoms/Base/Input Text',
+    title: 'Components/Atoms/Base/Input Text_hidden',
     component: createAtomInput,
     parameters: {
         docs: {
