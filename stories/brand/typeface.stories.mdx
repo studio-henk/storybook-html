@@ -1,0 +1,103 @@
+import {Meta, Typeset} from '@storybook/addon-docs';
+// import {Story} from '@storybook/addon-docs';
+// import {Canvas} from '@storybook/addon-docs';
+// import { Icon } from '../components/Atoms/atom-icon/_atom-icon';
+// import { createAtomButton as Button } from "../components/Atoms/atom-button/atom-button";
+// import {createBaseH1 as BaseH1} from "../components/Atoms/h1/BaseH1";
+
+<Meta title="Brand/Typeface"/>
+
+# Typeface
+
+**Font:** ff-scala-sans-pro
+
+**Weights:** 300(light), 400(regular)
+
+HENK uses the _Scala Sans_ font family.
+Designed by _Martin Majoor_ in 1993. Published by FontFont.
+
+export const typography = {
+    type: {
+        primary: '"ff-scala-sans-pro",  sans-serif',
+    },
+    weight: {
+        light: 300,
+        regular: 400,
+        bold: 700,
+    },
+    size: {
+        s1: 12,
+        s2: 13,
+        s3: 14,
+        m1: 16,
+        m2: 20,
+        m3: 21,
+        l1: 24,
+        l2: 27,
+        l3: 33,
+        l4: 35,
+        l5: 53,
+    },
+};
+
+export const SampleText = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+<Typeset
+    fontSizes={
+        [
+            Number(typography.size.l5),
+        ]
+    }
+    fontWeight={typography.weight.regular}
+    sampleText={SampleText}
+    fontFamily={typography.type.primary}
+/>
+
+export const typographyLowercase = {
+    type: {
+        primary: '"ff-scala-sans-pro",  sans-serif',
+    },
+    weight: {
+        regular: 400,
+    },
+    size: {
+        l5: 53,
+    },
+};
+
+export const SampleTextLowercase = 'abcdefghijklmnopqrstuvwxyz()&?!';
+
+<Typeset
+    fontSizes={
+        [
+            Number(typographyLowercase.size.l5),
+        ]
+    }
+    fontWeight={typographyLowercase.weight.regular}
+    sampleText={SampleTextLowercase}
+    fontFamily={typographyLowercase.type.primary}
+/>
+
+export const typographyNumerals = {
+    type: {
+        primary: '"ff-scala-sans-pro",  sans-serif',
+    },
+    weight: {
+        regular: 400,
+    },
+    size: {
+        l5: 53,
+    },
+};
+export const SampleTextNumerals = '1234567890 .,;-_/';
+
+<Typeset
+    fontSizes={
+        [
+            Number(typographyNumerals.size.l5),
+        ]
+    }
+    fontWeight={typographyNumerals.weight.regular}
+    sampleText={SampleTextNumerals}
+    fontFamily={typographyNumerals.type.primary}
+/>
