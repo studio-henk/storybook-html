@@ -2,7 +2,7 @@ import {createTable} from './molecule-table';
 import {BADGE} from "@geometricpanda/storybook-addon-badges";
 
 export default {
-    title: 'Components/Molecules/Table',
+    title: 'Components/Molecules/Table_hidden',
     component: createTable,
     parameters: {
         badges: [BADGE.BETA],

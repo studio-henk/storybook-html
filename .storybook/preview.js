@@ -91,12 +91,11 @@ export const parameters = {
                 'Intro',
                 'Getting-Started',
                 'Changelog',
+                'Brand', ['Logo', 'Color', 'Typography'],
                 'Design Tokens', ['Intro', 'Color', 'Fontsize', 'Spacings'],
                 'Configuration', ['Intro', 'Config'],
-                'Base',
-                'Components', ['Intro', 'Atoms', ['Intro', 'Base', 'Icon', 'Button', ['Intro', '*'], 'Input Controls', '*'], '*'],
-                'Templates Pages', ['Intro'],
-                '*'
+                'Components', ['Intro', 'Atoms', ['Intro', 'Base', ['H1', 'H2', 'H3', 'Paragraph', 'Small', 'List', '*'], 'Icon', 'Button', ['Intro', '*'], 'Input Controls', '*'], '*'],
+                'Templates Pages', ['Intro', 'Pages'],
             ]
         },
     },

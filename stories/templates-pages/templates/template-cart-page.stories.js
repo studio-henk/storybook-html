@@ -3,7 +3,7 @@ import {BADGE} from '@geometricpanda/storybook-addon-badges';
 import { createTemplateCartPage } from './template-cart-page';
 
 export default {
-  title: 'Templates Pages/Templates/Template Cart page',
+  title: 'Templates Pages/Templates/Template Cart page_hidden',
   parameters: {
         badges: [BADGE.BETA],
         docs: {

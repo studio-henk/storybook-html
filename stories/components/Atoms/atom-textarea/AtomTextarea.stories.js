@@ -2,7 +2,7 @@ import {createAtomTextarea} from './AtomTextarea';
 import {BADGE} from "@geometricpanda/storybook-addon-badges";
 
 export default {
-    title: 'Components/Atoms/Base/Textarea',
+    title: 'Components/Atoms/Base/Textarea_hidden',
     component: createAtomTextarea,
     parameters: {controls: {sort: 'requiredFirst'}},
     argTypes: {

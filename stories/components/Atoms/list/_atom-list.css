@@ -1,5 +1,6 @@
 [data-style="list-style-em-dash"] {
     list-style: none;
+    margin-left: 0;
 }
 
 [data-style="list-style-em-dash"] li::before {

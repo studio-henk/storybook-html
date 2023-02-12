@@ -1,6 +1,6 @@
 import { createAtomRadio } from './AtomRadio';
 export default {
-  title: 'Components/Atoms/Base/Input Radio',
+  title: 'Components/Atoms/Base/Input Radio_hidden',
   parameters: { controls: { sort: 'requiredFirst' } },
   argTypes: {
     checked: { control: 'boolean' },

@@ -1,0 +1,297 @@
+import {Meta} from '@storybook/addon-docs';
+import { ColorPalette, ColorItem } from '@storybook/addon-docs';
+
+<Meta title="Brand/Color"/>
+
+# Color
+The HENK color palette. AKA _Fifty Shades of Beige_.
+
+<ColorPalette>
+  <ColorItem
+    title="color.base"
+    subtitle="base"
+    colors={{ white: '#FFFFFF', black: '#000'}}
+  />
+  <ColorItem
+    title="color.henk"
+    subtitle="henk"
+    colors={{ 'henk-white': 'hsla(90deg 12% 97% / 100%)', 'henk-black': 'hsla(0deg 0% 12% / 100%)' }}
+  />
+  <ColorItem
+    title="color.accent1-3"
+    subtitle="accent1-3"
+    colors={{ 'accent1': '#f3f1ec', 'accent2': '#f1efe9', 'accent3': '#f2f0e9' }}
+  />
+  <ColorItem
+    title="color.accent4-5"
+    subtitle="accent4-5"
+    colors={{ 'accent4': '#f1ebdf', 'accent5': 'hsla(41deg 31% 88% / 100%)' }}
+  />
+  <ColorItem
+    title="color.accent6"
+    subtitle="accent6"
+    colors={{ 'accent6': 'hsla(31deg 36% 69% / 100%)' }}
+  />
+  <ColorItem
+    title="color.accent7"
+    subtitle="accent7"
+    colors={{ 'accent7': '#b5af9b' }}
+  />
+  <ColorItem
+    title="color.accent8"
+    subtitle="accent8"
+    colors={{ 'accent8': 'hsla(26deg 60% 39% / 100%)' }}
+  />
+  <ColorItem
+    title="color.accent9"
+    subtitle="This slot is still available. Orange is a placeholder."
+    colors={{ 'accent9': 'orange' }}
+  />
+  <ColorItem
+    title="color.accent10"
+    subtitle="accent10"
+    colors={{ 'accent10': '#563f24' }}
+  />
+  <ColorItem
+    title="color.accent11"
+    subtitle="accent11"
+    colors={{ 'accent11': '#9aabbc' }}
+  />
+  <ColorItem
+    title="color.accent12"
+    subtitle="accent12"
+    colors={{ 'accent12': '#60563e' }}
+  />
+  <ColorItem
+    title="color.accent13"
+    subtitle="accent13"
+    colors={{ 'accent13': '#988367' }}
+  />
+  <ColorItem
+    title="color.accent14"
+    subtitle="accent14"
+    colors={{ 'accent14': 'hsla(40deg 13% 77% / 100%)' }}
+  />
+  <ColorItem
+    title="color.accent15"
+    subtitle="accent15"
+    colors={{ 'accent15': '#f1f0ee' }}
+  />
+  <ColorItem
+    title="color.accent16"
+    subtitle="accent16"
+    colors={{ 'accent16': '#6b7156' }}
+  />
+  <ColorItem
+    title="color.accent17"
+    subtitle="accent17"
+    colors={{ 'accent17': '#9E5B28' }}
+  />
+  <ColorItem
+    title="color.danger"
+    subtitle="danger"
+    colors={{ 'danger': 'hsl(0deg 100% 50% / 100%)', 'danger-dark': 'hsl(0deg 100% 40% / 100%)' }}
+  />
+  <ColorItem
+    title="color.henk.success"
+    subtitle="success"
+    colors={{ 'henk.success': 'green' }}
+  />
+  <ColorItem
+    title="color.henk.warning"
+    subtitle="warning"
+    colors={{ 'henk.warning': 'orange' }}
+  />
+  <ColorItem
+    title="color.henk.disabled"
+    subtitle="disabled"
+    colors={{ 'henk.disabled': 'lightgrey' }}
+  />
+</ColorPalette>
+
+
+[//]: # (## test story h1)
+
+[//]: # ()
+[//]: # (<Story id="components-atoms-base-h1--base"/>)
+
+[//]: # ()
+[//]: # (## test AtomIcon component arrow left)
+
+[//]: # ()
+[//]: # (<Story id="components-atoms-icon-icon-stories--icon-arrow-left"/>)
+
+[//]: # ()
+[//]: # (## default html text input element: ```input```)
+
+[//]: # (<Canvas>)
+
+[//]: # (    <input type="text"/>)
+
+[//]: # (</Canvas>)
+
+[//]: # ()
+[//]: # (## current HENK text input element: ```class="basic-input__input"```)
+
+[//]: # (<Canvas>)
+
+[//]: # (    <input type="text" className="basic-input__input"/>)
+
+[//]: # (</Canvas>)
+
+[//]: # ()
+[//]: # (## 2 columns)
+
+[//]: # ()
+[//]: # (<Canvas>)
+
+[//]: # (    <div className="doc-flex">)
+
+[//]: # (        <div className="doc-flex__grid-item">)
+
+[//]: # (            <h1>Current</h1>)
+
+[//]: # (            <div className="basic-select-container">)
+
+[//]: # (                <div className="basic-select">)
+
+[//]: # (                    <select className="basic-select__select" id="form_howDidYouFindUs" name="form[howDidYouFindUs]">)
+
+[//]: # (                        <option value="">Hoe heb je ons gevonden?</option>)
+
+[//]: # (                        <option value="Eijerkamp">Eijerkamp</option>)
+
+[//]: # (                        <option value="VT Wonen">VT Wonen</option>)
+
+[//]: # (                        <option value="Flinders">Flinders</option>)
+
+[//]: # (                        <option value="Instagram">Instagram</option>)
+
+[//]: # (                        <option value="Facebook">Facebook</option>)
+
+[//]: # (                        <option value="Google">Google</option>)
+
+[//]: # (                        <option value="Loods 5">Loods 5</option>)
+
+[//]: # (                        <option value="E-living">E-living</option>)
+
+[//]: # (                        <option value="Andere woonwinkel">different shop</option>)
+
+[//]: # (                        <option value="Beurs">Fair</option>)
+
+[//]: # (                        <option value="Familie/Vrienden">Family/Friends</option>)
+
+[//]: # (                        <option value="Tijdschrift">Magazine</option>)
+
+[//]: # (                        <option value="Overig">Others</option>)
+
+[//]: # (                    </select>)
+
+[//]: # (                </div>)
+
+[//]: # (            </div>)
+
+[//]: # (        </div>)
+
+[//]: # (        <div className="doc-flex__grid-item">)
+
+[//]: # (            <h1>New</h1>)
+
+[//]: # (            <select)
+
+[//]: # (                name="select_country")
+
+[//]: # (                id="country-select")
+
+[//]: # (                className="atom-select")
+
+[//]: # (                required)
+
+[//]: # (            >)
+
+[//]: # (                <option value="nederland">Nederland</option>)
+
+[//]: # (                <option value="AT">Austria &#40;€ 149&#41;</option>)
+
+[//]: # (                <option value="BE">Belgium</option>)
+
+[//]: # (                <option value="DE">Germany &#40;€ 149&#41;</option>)
+
+[//]: # (                <option value="FR">France &#40;€ 149&#41;</option>)
+
+[//]: # (                <option value="IT">Italy &#40;€ 199&#41;</option>)
+
+[//]: # (                <option value="LU">Luxembourg &#40;€ 149&#41;</option>)
+
+[//]: # (            </select>)
+
+[//]: # (        </div>)
+
+[//]: # (    </div>)
+
+[//]: # (</Canvas>)
+
+[//]: # ()
+[//]: # (## select)
+
+[//]: # (<Canvas>)
+
+[//]: # (    <div className="basic-select-container">)
+
+[//]: # (        <div className="basic-select">)
+
+[//]: # (            <select className="basic-select__select" id="form_howDidYouFindUs" name="form[howDidYouFindUs]">)
+
+[//]: # (                <option value="">Hoe heb je ons gevonden?</option>)
+
+[//]: # (                <option value="Eijerkamp">Eijerkamp</option>)
+
+[//]: # (                <option value="VT Wonen">VT Wonen</option>)
+
+[//]: # (                <option value="Flinders">Flinders</option>)
+
+[//]: # (                <option value="Instagram">Instagram</option>)
+
+[//]: # (                <option value="Facebook">Facebook</option>)
+
+[//]: # (                <option value="Google">Google</option>)
+
+[//]: # (                <option value="Loods 5">Loods 5</option>)
+
+[//]: # (                <option value="E-living">E-living</option>)
+
+[//]: # (                <option value="Andere woonwinkel">different shop</option>)
+
+[//]: # (                <option value="Beurs">Fair</option>)
+
+[//]: # (                <option value="Familie/Vrienden">Family/Friends</option>)
+
+[//]: # (                <option value="Tijdschrift">Magazine</option>)
+
+[//]: # (                <option value="Overig">Others</option>)
+
+[//]: # (            </select>)
+
+[//]: # (        </div>)
+
+[//]: # (    </div>)
+
+[//]: # (</Canvas>)
+
+[//]: # ()
+[//]: # (## fieldset)
+
+[//]: # (<Canvas>)
+
+[//]: # (    <fieldset>)
+
+[//]: # (        <legend>Do you agree?</legend>)
+
+[//]: # (        <input type="checkbox" id="chbx" name="agree" value="Yes!"/>)
+
+[//]: # (        <label htmlFor="chbx">I agree</label>)
+
+[//]: # (    </fieldset>)
+
+[//]: # (</Canvas>)
+

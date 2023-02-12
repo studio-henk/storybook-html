@@ -1,11 +1,11 @@
 import {Meta, Typeset} from '@storybook/addon-docs';
-import {Story} from '@storybook/addon-docs';
-import {Canvas} from '@storybook/addon-docs';
+// import {Story} from '@storybook/addon-docs';
+// import {Canvas} from '@storybook/addon-docs';
 // import { Icon } from '../components/Atoms/atom-icon/_atom-icon';
 // import { createAtomButton as Button } from "../components/Atoms/atom-button/atom-button";
 // import {createBaseH1 as BaseH1} from "../components/Atoms/h1/BaseH1";
 
-<Meta title="Base/Typography"/>
+<Meta title="Brand/Typography"/>
 
 export const typography = {
     type: {
@@ -34,13 +34,14 @@ export const typography = {
 export const SampleText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
 
 # Typography
-HENK uses the _Scala Sans_ font family.
-
 **Font:** ff-scala-sans-pro
 
+**Weights:** 300(light), 400(regular)
+
+HENK uses the _Scala Sans_ font family.
 Designed by _Martin Majoor_ in 1993. Published by FontFont.
 
-**Weights:** 300(light), 400(regular)
+HENK's body text is set in _Light_ with ```font-size: 16px;``` and ```line-height:28px;``` (1.75).
 
 ## Light  (font-weight: 300)
 <Typeset
@@ -63,6 +64,8 @@ Designed by _Martin Majoor_ in 1993. Published by FontFont.
     sampleText={SampleText}
     fontFamily={typography.type.primary}
 />
+
+The _Regular_ version is used in different places like headings and button text.
 
 ## Regular (font-weight: 400)
 

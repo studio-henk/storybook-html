@@ -2,7 +2,7 @@ import {createAtomSelect} from './AtomSelect';
 import {BADGE} from "@geometricpanda/storybook-addon-badges";
 
 export default {
-    title: 'Components/Atoms/Base/Select',
+    title: 'Components/Atoms/Base/Select_hidden',
     component: createAtomSelect,
     parameters: {controls: {sort: 'requiredFirst'}},
     argTypes: {
