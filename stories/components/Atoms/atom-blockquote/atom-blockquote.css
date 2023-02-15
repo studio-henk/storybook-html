@@ -25,8 +25,7 @@ blockquote > a > p,
   blockquote > a > p,
   .quote__text {
     font-size: calc(
-      var(--var-global-fontsize-x-large, 27) /
-        var(--var-global-fontsize-root, 16) * 1rem
+      var(--size-font-xxlarge, 27) / var(--size-font-root, 16) * 1rem
     );
     line-height: 41px;
   }
@@ -64,7 +63,7 @@ blockquote .quote__text:first-child::after {
   text-align: center;
   letter-spacing: 0.2em;
   line-height: calc(
-    var(--var-global-lineheight, 28) / var(--var-global-fontsize-small, 14)
+    var(--size-lineheight-root, 28) / var(--size-font-small, 14)
   );
   text-transform: uppercase;
   font-feature-settings: "pnum" on, "lnum" on;
@@ -82,13 +81,20 @@ blockquote .quote__text:first-child::after {
     font-size: 14px;
   }
 }
+
 /* TODO: use css variables */
 .quote__jobtitle {
   font-size: 12px;
   line-height: 20px;
   text-align: center;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
   margin-top: 8px;
+}
+/* support for floating numbers on high res screens */
+@media (min-resolution: 2dppx) {
+  .quote__jobtitle {
+    letter-spacing: 0.5px;
+  }
 }
 
 @media only screen and (min-width: 992px) {
@@ -96,8 +102,14 @@ blockquote .quote__text:first-child::after {
     font-size: 14px;
     font-weight: 400;
     line-height: 28px;
-    letter-spacing: 2.8px;
+    letter-spacing: 3px;
     text-transform: uppercase;
+  }
+
+  @media (min-resolution: 2dppx) {
+    .quote__jobtitle {
+      letter-spacing: 2.8px;
+    }
   }
 }
 

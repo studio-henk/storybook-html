@@ -53,3 +53,4 @@
 @import "./tmp-org-infobox.css";
 /*@import "_theme-dark.css";*/
 /*@import "./base/test-gh.css";*/
+@import "../stories/components/Atoms/atom-blockquote/atom-blockquote.css";
