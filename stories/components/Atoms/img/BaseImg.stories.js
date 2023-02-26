@@ -4,7 +4,7 @@ import { createBaseImg } from './BaseImg';
 import {BADGE} from "@geometricpanda/storybook-addon-badges";
 
 export default {
-  title: 'Components/Atoms/Base/Image_hidden',
+  title: 'Components/Atoms/Base/Image',
   parameters: {
     badges: [BADGE.BETA, BADGE.EXPERIMENTAL],
   },

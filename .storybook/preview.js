@@ -94,7 +94,7 @@ export const parameters = {
                 'Brand', ['Logo', 'Color', 'Typography'],
                 'Design Tokens', ['Intro', 'Color', 'Fontsize', 'Spacings'],
                 'Configuration', ['Intro', 'Config'],
-                'Components', ['Intro', 'Atoms', ['Intro', 'Base', ['H1', 'H2', 'H3', 'Paragraph', 'Small', 'List', '*'], 'Icon', 'Button', ['Intro', '*'], 'Input Controls', '*'], '*'],
+                'Components', ['Intro', 'Atoms', ['Intro', 'Base', ['H1', 'H2', 'H3', 'Paragraph', 'Small', 'List', '*'], 'Icon', 'Button', ['Intro', '*'], 'Input Controls', '*'], 'Molecules', 'Organisms', '*'],
                 'Templates Pages', ['Intro', 'Pages'],
             ]
         },
