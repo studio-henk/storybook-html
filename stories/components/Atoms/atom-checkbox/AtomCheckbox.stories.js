@@ -1,22 +1,22 @@
-import { createAtomCheckbox } from './AtomCheckbox';
+import { createAtomCheckbox } from "./AtomCheckbox";
 export default {
-  title: 'Components/Atoms/Base/Input Checkbox_hidden',
-  parameters: { controls: { sort: 'requiredFirst' } },
+  title: "Components/Atoms/Base/Input Checkbox",
+  parameters: { controls: { sort: "requiredFirst" } },
   argTypes: {
-    checked: { control: 'boolean' },
-    disabled: { control: 'boolean' },
+    checked: { control: "boolean" },
+    disabled: { control: "boolean" },
     id: {
-      control: 'text',
+      control: "text",
       type: {
-          name: 'string',
-          required: true
+        name: "string",
+        required: true,
       },
     },
     name: {
-      control: 'text',
+      control: "text",
       type: {
-          name: 'string',
-          required: true
+        name: "string",
+        required: true,
       },
     },
   },
@@ -29,15 +29,14 @@ const Template = ({ ...args }) => {
 export const Default = Template.bind({});
 Default.args = {
   checked: false,
-  id: 'checkbox_id_01',
-  name: 'checkbox_name_01'
+  id: "checkbox_id_01",
+  name: "checkbox_name_01",
 };
 
 export const Disabled = Template.bind({});
 Disabled.args = {
   disabled: true,
   checked: false,
-  id: 'checkbox_id_02',
-  name: 'checkbox_name_02'
+  id: "checkbox_id_02",
+  name: "checkbox_name_02",
 };
-
