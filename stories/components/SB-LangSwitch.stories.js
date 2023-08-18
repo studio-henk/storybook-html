@@ -7,30 +7,36 @@ export default {
   parameters: {
     badges: [BADGE.NEEDS_REVISION],
   },
-  /*  argTypes: {
-    labelText: { control: 'text' },
-    forAttr: {
-      control: 'text',
-      type: {
-          name: 'string',
-          required: true
-      },
+  argTypes: {
+    lang: {
+      control: { type: "select" },
+      options: ["NL", "EN"],
     },
-  },*/
+    /*    forAttr: {
+      control: "text",
+      type: {
+        name: "string",
+        required: true,
+      },
+    },*/
+  },
 };
 
-/*
-const Template = ({ dataUrl, forAttr, ...args }) => {
-  return LangSwitch({ dataUrl, forAttr, ...args });
+const Template = ({ dataUrl, lang, ...args }) => {
+  return LangSwitch({ dataUrl, lang, ...args });
 };
+
 export const Default = Template.bind({});
 Default.args = {
   dataUrl: "/nl/cart/list",
+  lang: "nl",
 };
-/!*Default.parameters= {
+Default.parameters = {
   badges: [BADGE.BETA],
-  // controls: {include: ['labelText', '']},
-}*!/
-Default.storyName = "LangSwitch";*/
+  controls: { include: ["lang", "NL"] },
+};
+Default.storyName = "LangSwitch";
+
+/*
 export const Default = () =>
-  `<lang-switch data-url="/nl/test" checked></lang-switch>`;
+  `<lang-switch data-url="/nl/test" lang="en"></lang-switch>`;*/
